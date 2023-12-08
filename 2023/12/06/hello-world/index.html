@@ -185,9 +185,20 @@
 
     </div>
 
-	{% if theme.git_talk.enabled and not is_index %}
-	<div>{% include 'git-talk.swig' %}</div>
-	{% endif %}
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<div id="gitalk-container"></div>
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+    var gitalk = new Gitalk({
+        clientID: '3d3a266c2ad76e8adafb',
+        clientSecret: '52a90c765f99f87faa13bd5a314983062b047fb7',
+        id: window.location.pathname,
+        repo: 'COc1cccc.github.io',
+        owner: 'COc1cccc',
+        admin: 'COc1cccc'
+    })
+    gitalk.render('gitalk-container')
+</script>
 </div>
                      
 <footer id="footer">
