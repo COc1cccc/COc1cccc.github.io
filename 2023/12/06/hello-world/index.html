@@ -185,13 +185,9 @@
 
     </div>
 
-    
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-    <div id="comments">
-        <div id="gitalk-container">
-        </div>
-    </div>
-    
+	{% if theme.git_talk.enabled and not is_index %}
+	<div>{% include 'git-talk.swig' %}</div>
+	{% endif %}
 </div>
                      
 <footer id="footer">
@@ -262,7 +258,7 @@
     const gitalk = new Gitalk({
         clientID: '3d3a266c2ad76e8adafb',
         clientSecret: '52a90c765f99f87faa13bd5a314983062b047fb7',
-        repo: 'hexo-theme-particle',      // The repository of store comments,
+        repo: 'COc1cccc.github.io',      // The repository of store comments,
         owner: 'COc1cccc',
         admin: ['COc1cccc'],
         language: 'en',
