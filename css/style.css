@@ -1,11 +1,11 @@
 :root {
-  --color-background: #fff;
-  --color-background-secondary: #f6f8fa;
+  --color-background: #dac9a6;
+  --color-background-secondary: #e9a368;
   --color-background-rgb: 255, 255, 255;
   --color-text: #33333d;
   --color-text-secondary: #4e4e4e;
   --color-text-third: #999;
-  --color-border: #eee;
+  --color-border: #e9cd4c;
   --background-image: url("/images/theme/welcome-image.jpg");
   --loading-image: url("/images/theme/loading.gif");
   --lazyload-image: url("/images/theme/loading.gif");
@@ -15,8 +15,8 @@
     --color-mode: 'dark';
   }
   :root:not([color-mode]) {
-    --color-background: #1e2128;
-    --color-background-secondary: #1a1d22;
+    --color-background: #4b4e2a;
+    --color-background-secondary: #4d5139;
     --color-background-rgb: 30, 33, 40;
     --color-text: #ddd;
     --color-text-secondary: #9899ab;
@@ -28,8 +28,8 @@
   }
 }
 [color-mode='dark'] {
-  --color-background: #1e2128;
-  --color-background-secondary: #1a1d22;
+  --color-background: #4b4e2a;
+  --color-background-secondary: #4d5139;
   --color-background-rgb: 30, 33, 40;
   --color-text: #ddd;
   --color-text-secondary: #9899ab;
