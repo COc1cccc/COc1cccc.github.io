@@ -1,0 +1,342 @@
+
+
+<!DOCTYPE html>
+<html lang="en" color-mode=light>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Solution --- 309. Best Time to Buy and Sell Stock with Cooldown - Avidya</title>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="google" content="notranslate" />
+  
+  <meta name="description" content="DescriptionYou are given an...">
+  <meta name="author" content="Kou">
+  <link rel="icon" href="/images/icons/favicon-16x16.png" type="image/png" sizes="16x16">
+  <link rel="icon" href="/images/icons/favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/images/icons/apple-touch-icon.png" sizes="180x180">
+  <meta rel="mask-icon" href="/images/icons/stun-logo.svg" color="#333333">
+  
+    <meta rel="msapplication-TileImage" content="/images/icons/favicon-144x144.png">
+    <meta rel="msapplication-TileColor" content="#000000">
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+    
+<link rel="stylesheet" href="https://at.alicdn.com/t/font_1445822_p6ry5n7lrr.css">
+
+  
+
+  
+    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+
+  
+
+  
+    
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/foundation.min.css" name="highlight-style" mode="light">
+
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/solarized-dark.min.css" name="highlight-style" mode="dark">
+
+      
+  
+
+  <script>
+    var CONFIG = window.CONFIG || {};
+    var ZHAOO = window.ZHAOO || {};
+    CONFIG = {
+      isHome: false,
+      fancybox: true,
+      pjax: false,
+      loading: {
+        gif: '/images/theme/loading.gif',
+        lottie: ''
+      },
+      lazyload: {
+        enable: true,
+        only_post: 'false',
+        loading: {
+          gif: '/images/theme/loading.gif',
+          lottie: ''
+        }
+      },
+      donate: {
+        enable: false,
+        alipay: 'https://pic.izhaoo.com/alipay.jpg',
+        wechat: 'https://pic.izhaoo.com/wechat.jpg'
+      },
+      galleries: {
+        enable: true
+      },
+      fab: {
+        enable: true,
+        always_show: false
+      },
+      carrier: {
+        enable: true
+      },
+      daovoice: {
+        enable: false
+      },
+      preview: {
+        background: {
+          default: '',
+          api: ''
+        },
+        motto: {
+          default: 'もしも僕が主人公なら、僕は人の心が見えて',
+          typing: true,
+          api: '',
+          data_contents: '["data","content"]'
+        },
+      },
+      qrcode: {
+        enable: false,
+        type: 'url',
+        image: 'https://pic.izhaoo.com/weapp-code.jpg',
+      },
+      toc: {
+        enable: true
+      },
+      scrollbar: {
+        type: 'default'
+      },
+      notification: {
+        enable: false,
+        delay: 4500,
+        list: '',
+        page_white_list: '',
+        page_black_list: ''
+      },
+      search: {
+        enable: false,
+        path: ''
+      }
+    }
+  </script>
+
+  
+
+  
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body class="lock-screen">
+  <div class="loading" id="loading"></div>
+  
+    
+
+
+  <nav class="navbar">
+    <div class="left">
+      
+        <i class="iconfont iconhome j-navbar-back-home"></i>
+      
+      
+      
+        <i class="iconfont iconmoono" id="color-toggle" color-toggle="light"></i>
+      
+      
+    </div>
+    <div class="center">Solution --- 309. Best Time to Buy and Sell Stock with Cooldown</div>
+    <div class="right">
+      <i class="iconfont iconmenu j-navbar-menu"></i>
+    </div>
+    
+  </nav>
+
+  
+  
+
+<nav class="menu">
+  <div class="menu-container">
+    <div class="menu-close">
+      <i class="iconfont iconbaseline-close-px"></i>
+    </div>
+    <ul class="menu-content"><li class="menu-item">
+        <a href="/ " class="underline "> home</a>
+      </li><li class="menu-item">
+        <a href="/archives/ " class="underline "> archives</a>
+      </li><li class="menu-item">
+        <a href="/about/ " class="underline "> about</a>
+      </li></ul>
+    
+  </div>
+</nav>
+  <main id="main">
+  <div class="article-wrap">
+    <div class="row container">
+      <div class="col-xl-3"></div>
+      <div class="col-xl-6"><article class="article">
+  <div class="wrap">
+    <section class="head">
+  <img   class="lazyload" data-original="/images/theme/post-image.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+  <div class="head-mask">
+    <h1 class="head-title">Solution --- 309. Best Time to Buy and Sell Stock with Cooldown</h1>
+    <div class="head-info">
+      <span class="post-info-item"><i class="iconfont iconcalendar"></i>April 06, 2022</span>
+      
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>5721</span>
+    </div>
+  </div>
+</section>
+    <section class="main">
+      <section class="content">
+        
+        <h1 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h1><p>You are given an array prices where prices[i] is the price of a given stock on the i t h i^{th} day.</p>
+<p>Find the maximum profit you can achieve. You may complete as many transactions as you like (i.e., buy one and sell one share of the stock multiple times) with the following restrictions:</p>
+<p>After you sell your stock, you cannot buy stock on the next day (i.e., cooldown one day).<br>Note: You may not engage in multiple transactions simultaneously (i.e., you must sell the stock before you buy again).</p>
+<h2 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h2><p>Example 1:</p>
+<p>Input: prices &#x3D; [1,2,3,0,2]<br>Output: 3<br>Explanation: transactions &#x3D; [buy, sell, cooldown, buy, sell]</p>
+<p>Example 2:</p>
+<p>Input: prices &#x3D; [1]<br>Output: 0</p>
+<p>Constraints:</p>
+<p>1 &lt;&#x3D; prices.length &lt;&#x3D; 5000<br>0 &lt;&#x3D; prices[i] &lt;&#x3D; 1000</p>
+<h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h1><p>This problem is different from a similar problem, “122. Best Time to Buy and Sell Stock II,” in that it adds a cooldown restriction after selling stocks. This cooldown means that after selling stocks, you cannot buy again the next day; you have to wait at least one day before buying again. The days in between where no trading can occur are called “cooldown” periods. Now, the question is, what is the maximum profit achievable?</p>
+<p>For each day, we can consider three possible scenarios:</p>
+<p>Buying stocks.<br>Selling stocks.<br>Cooldown (doing nothing, unable to trade).<br>We realize that only buying and selling affect the cumulative profit until a certain day. When we buy stocks, our cumulative profit decreases because we spend money, and when we sell stocks, our cumulative profit increases because we earn money. Ultimately, we need to calculate the maximum cumulative profit, so we only need to update our maximum profit whenever we sell stocks.</p>
+<p>Since this problem requires dynamic programming (DP), we set up two arrays, buy and sell, with the following purposes:</p>
+<p>buy[i] represents the maximum cumulative profit when the status on the ith day is “buying stocks.”<br>sell[i] represents the maximum cumulative profit when the status on the ith day is “selling stocks.”<br>Consider what buy[0] represents:<br>buy[0] represents the maximum profit when buying stocks on the 0th day. Some might say there’s no profit from buying stocks on the 0th day, but that’s incorrect. When you buy stocks, you spend money, so your current profit is negative. In the future, no matter when you sell, it will be based on this current negative value. Therefore, buy[0] &#x3D; -prices[0]. Similarly, buy[1] &#x3D; -prices[1].</p>
+<p>Now, consider what sell[0] represents:<br>Selling on the 0th day? But you haven’t bought anything before to sell. Therefore, sell[0] &#x3D; 0. Sell[1] is different; if prices[1] &gt; prices[0], sell[1] should be prices[1] - prices[0]; otherwise, it remains 0.</p>
+<p>Let’s think about what affects the value of buy[i]? We discuss two scenarios:</p>
+<p>Previously, there was an incomplete transaction. If the operation performed the previous day was also buying, would buying today increase the cumulative profit? This depends on which price, yesterday’s or today’s, is cheaper. Note that since buying reduces cumulative profit, we’re comparing which reduction is less, i.e., which expenditure is lower, leading to higher profit. Some might ask why we don’t consider the day before yesterday performing a “buy” operation. It’s because when calculating buy[i], we’ve already considered buy[i-1], so we only need to compare with the previous day.</p>
+<p>There was no incomplete transaction before. Therefore, if we buy today, yesterday must be a cooldown. Of course, the day before yesterday could also be a cooldown, but what we need to consider here is, if stocks were sold the day before yesterday, what’s the current maximum profit? This is simple because buying stocks reduces cumulative profit, so today’s cumulative profit is sell[i-2] - prices[i].</p>
+<p>Someone might ask again, since you said the day before yesterday could also be a cooldown, why don’t you consider sell[i-3] - prices[i]? As mentioned earlier, when calculating sell[i-2], we’ve considered sell[i-3].</p>
+<p>In summary, we obtain the first state transition equation:</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs stylus">delta = price<span class="hljs-selector-attr">[i]</span> - price<span class="hljs-selector-attr">[i - 1]</span><br>buys<span class="hljs-selector-attr">[i]</span> = <span class="hljs-built_in">max</span>(sells<span class="hljs-selector-attr">[i - 2]</span> - prices<span class="hljs-selector-attr">[i]</span>, buys<span class="hljs-selector-attr">[i - 1]</span> - delta)<br></code></pre></td></tr></table></figure>
+<p>Similarly, let’s consider what affects the value of sell[i]? We discuss two scenarios:</p>
+<p>There was a completed transaction before. If the operation performed the previous day was also selling, would selling today increase the cumulative profit? This depends on which price, yesterday’s or today’s, is higher. So here, we need to consider the value of sells[i - 1] + delta.</p>
+<p>There was an incomplete transaction before. This is simple; it’s just a straightforward sale, so the cumulative profit only needs to include the price of selling on this day.</p>
+<p>In summary, we obtain the second state transition equation:</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs stylus">delta = price<span class="hljs-selector-attr">[i]</span> - price<span class="hljs-selector-attr">[i - 1]</span><br>sells<span class="hljs-selector-attr">[i]</span> = <span class="hljs-built_in">max</span>(buys<span class="hljs-selector-attr">[i - 1]</span> + prices<span class="hljs-selector-attr">[i]</span>, sells<span class="hljs-selector-attr">[i - 1]</span> + delta) <br></code></pre></td></tr></table></figure>
+<h1 id="Codes"><a href="#Codes" class="headerlink" title="Codes"></a>Codes</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span>:<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">maxProfit</span>(<span class="hljs-params">self, prices: <span class="hljs-type">List</span>[<span class="hljs-built_in">int</span>]</span>) -&gt; <span class="hljs-built_in">int</span>:<br>        length = <span class="hljs-built_in">len</span>(prices)<br>        <span class="hljs-keyword">if</span> length == <span class="hljs-number">0</span> <span class="hljs-keyword">or</span> length == <span class="hljs-number">1</span>:<br>            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span><br>        <br>        buy = [<span class="hljs-number">0</span>] * length  <span class="hljs-comment"># buy[i] represents the maximum profit obtained by buying stocks on day i</span><br>        sell = [<span class="hljs-number">0</span>] * length  <span class="hljs-comment"># sell[i] represents the maximum profit obtained by selling stocks on day i</span><br>        <br>        buy[<span class="hljs-number">0</span>] = -prices[<span class="hljs-number">0</span>]<br>        buy[<span class="hljs-number">1</span>] = -prices[<span class="hljs-number">1</span>]<br>        sell[<span class="hljs-number">1</span>] = <span class="hljs-built_in">max</span>(<span class="hljs-number">0</span>, prices[<span class="hljs-number">1</span>] - prices[<span class="hljs-number">0</span>])<br>        max_profit = <span class="hljs-built_in">max</span>(<span class="hljs-number">0</span>, sell[<span class="hljs-number">1</span>])<br>        <br>        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">2</span>, length):<br>            delta = prices[i] - prices[i - <span class="hljs-number">1</span>]<br>            sell[i] = <span class="hljs-built_in">max</span>(sell[i - <span class="hljs-number">1</span>] + delta, buy[i - <span class="hljs-number">1</span>] + prices[i])<br>            buy[i] = <span class="hljs-built_in">max</span>(buy[i - <span class="hljs-number">1</span>] - delta, sell[i - <span class="hljs-number">2</span>] - prices[i])<br>            max_profit = <span class="hljs-built_in">max</span>(max_profit, sell[i])<br>        <br>        <span class="hljs-keyword">return</span> max_profit<br></code></pre></td></tr></table></figure>
+      </section>
+      <section class="extra">
+        
+          
+        
+        
+        
+        
+  <nav class="nav">
+    <a href="/2024/03/25/test1/"><i class="iconfont iconleft"></i>test1</a>
+    <a href="/2022/01/02/hello-world/">Hello World<i class="iconfont iconright"></i></a>
+  </nav>
+
+      </section>
+      
+    </section>
+  </div>
+</article></div>
+      <div class="col-xl-3">
+        
+          
+  <aside class="toc-wrap">
+    <h3 class="toc-title">Index</h3>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Description"><span class="toc-text">Description</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Examples"><span class="toc-text">Examples</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Solution"><span class="toc-text">Solution</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Codes"><span class="toc-text">Codes</span></a></li></ol>
+  </aside>
+
+        
+      </div>
+    </div>
+  </div>
+</main>
+  
+
+  <footer class="footer">
+    <div class="footer-social"><a href="mailto:izhaoo@163.com " target="_blank"
+  class="footer-social-item" onMouseOver="this.style.color=#FF3B00"
+  onMouseOut="this.style.color='#33333D'">
+  <i class="iconfont  iconmail"></i>
+  </a></div>
+    
+  </footer>
+  
+      <div class="fab fab-plus">
+    <i class="iconfont iconplus"></i>
+  </div>
+  
+  
+  
+  <div class="fab fab-up">
+    <i class="iconfont iconcaret-up"></i>
+  </div>
+  
+  
+  
+    
+<script src="/js/color-mode.js"></script>
+
+  
+  
+</body>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+
+
+
+  
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+
+
+
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+
+
+
+
+
+
+
+<script src="/js/utils.js"></script>
+<script src="/js/script.js"></script>
+
+
+
+
+
+
+
+  <script>
+    (function () {
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      } else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
