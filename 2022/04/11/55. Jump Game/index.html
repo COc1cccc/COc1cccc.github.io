@@ -6,12 +6,12 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>test1 - Avidya</title>
+  <title>Solution --- 55. Jump Game - Avidya</title>
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="google" content="notranslate" />
   
-  
+  <meta name="description" content="DescriptionYou are given an...">
   <meta name="author" content="Kou">
   <link rel="icon" href="/images/icons/favicon-16x16.png" type="image/png" sizes="16x16">
   <link rel="icon" href="/images/icons/favicon-32x32.png" type="image/png" sizes="32x32">
@@ -150,7 +150,7 @@
       
       
     </div>
-    <div class="center">test1</div>
+    <div class="center">Solution --- 55. Jump Game</div>
     <div class="right">
       <i class="iconfont iconmenu j-navbar-menu"></i>
     </div>
@@ -184,18 +184,28 @@
     <section class="head">
   <img   class="lazyload" data-original="/images/theme/post-image.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
   <div class="head-mask">
-    <h1 class="head-title">test1</h1>
+    <h1 class="head-title">Solution --- 55. Jump Game</h1>
     <div class="head-info">
-      <span class="post-info-item"><i class="iconfont iconcalendar"></i>March 25, 2024</span>
+      <span class="post-info-item"><i class="iconfont iconcalendar"></i>April 11, 2022</span>
       
-      <span class="post-info-item"><i class="iconfont iconfont-size"></i>0</span>
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>1936</span>
     </div>
   </div>
 </section>
     <section class="main">
       <section class="content">
         
-        
+        <h1 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h1><p>You are given an integer array nums. You are initially positioned at the array’s first index, and each element in the array represents your maximum jump length at that position.</p>
+<p>Return true if you can reach the last index, or false otherwise.</p>
+<h2 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h2><p>Example 1:</p>
+<p>Input: nums &#x3D; [2,3,1,1,4]<br>Output: true<br>Explanation: Jump 1 step from index 0 to 1, then 3 steps to the last index.</p>
+<p>Example 2:</p>
+<p>Input: nums &#x3D; [3,2,1,0,4]<br>Output: false<br>Explanation: You will always arrive at index 3 no matter what. Its maximum jump length is 0, which makes it impossible to reach the last index.</p>
+<p>Constraints:</p>
+<p>1 &lt;&#x3D; nums.length &lt;&#x3D; 104<br>0 &lt;&#x3D; nums[i] &lt;&#x3D; 105</p>
+<h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h1><p>The greedy approach for this problem is to use a variable called “reach” to save the current furthest index we can reach. So, at each position, we check if this position can be reached. If the index of the position exceeds “reach”, it means no matter how we move, we cannot reach this position from the previous positions, so we return False. If the position can be reached, we update “reach” by adding the number representing how many steps we can move to the right from the current position. This number represents the furthest distance we can reach when arriving at the current position. Any position within this furthest distance can be reached because the number of steps we can take may decrease. After this loop, every position is judged to be reachable, so we return True.</p>
+<p>The time complexity is O(N), and the space complexity is O(1).</p>
+<h1 id="Codes"><a href="#Codes" class="headerlink" title="Codes"></a>Codes</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span>(<span class="hljs-title class_ inherited__">object</span>):<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">canJump</span>(<span class="hljs-params">self, nums</span>):<br>        <span class="hljs-string">&quot;&quot;&quot;</span><br><span class="hljs-string">        :type nums: List[int]</span><br><span class="hljs-string">        :rtype: bool</span><br><span class="hljs-string">        &quot;&quot;&quot;</span><br>        reach = <span class="hljs-number">0</span><br>        n = <span class="hljs-built_in">len</span>(nums)<br>        <span class="hljs-keyword">if</span> n == <span class="hljs-number">1</span>:<br>            <span class="hljs-keyword">return</span> <span class="hljs-literal">True</span><br>        <span class="hljs-keyword">for</span> i, num <span class="hljs-keyword">in</span> <span class="hljs-built_in">enumerate</span>(nums):<br>            <span class="hljs-keyword">if</span> i &gt; reach:<br>                <span class="hljs-keyword">return</span> <span class="hljs-literal">False</span><br>            reach = <span class="hljs-built_in">max</span>(reach, i+num)<br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">True</span><br></code></pre></td></tr></table></figure>
       </section>
       <section class="extra">
         
@@ -205,8 +215,8 @@
         
         
   <nav class="nav">
-    <a href="/2024/03/26/test/"><i class="iconfont iconleft"></i></a>
-    <a href="/2022/04/11/55.%20Jump%20Game/">Solution --- 55. Jump Game<i class="iconfont iconright"></i></a>
+    <a href="/2024/03/25/test1/"><i class="iconfont iconleft"></i>test1</a>
+    <a href="/2022/04/06/309.%20Best%20Time%20to%20Buy%20and%20Sell%20Stock%20with%20Cooldown/">Solution --- 309. Best Time to Buy and Sell Stock with Cooldown<i class="iconfont iconright"></i></a>
   </nav>
 
       </section>
@@ -219,7 +229,7 @@
           
   <aside class="toc-wrap">
     <h3 class="toc-title">Index</h3>
-    
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Description"><span class="toc-text">Description</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Examples"><span class="toc-text">Examples</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Solution"><span class="toc-text">Solution</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Codes"><span class="toc-text">Codes</span></a></li></ol>
   </aside>
 
         
