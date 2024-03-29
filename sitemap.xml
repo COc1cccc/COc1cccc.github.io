@@ -38,36 +38,9 @@
   </url>
   
   <url>
-    <loc>http://example.com/2022/01/02/hello-world/</loc>
-    
-    <lastmod>2024-03-26</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://example.com/about/index.html</loc>
     
     <lastmod>2024-03-26</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/2024/03/26/test/</loc>
-    
-    <lastmod>2024-03-26</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/2024/03/25/test1/</loc>
-    
-    <lastmod>2024-03-25</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
