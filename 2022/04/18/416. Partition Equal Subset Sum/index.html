@@ -6,12 +6,12 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Solution --- 306. Additive Number - Avidya</title>
+  <title>Solution --- 416. Partition Equal Subset Sum - Avidya</title>
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="google" content="notranslate" />
   
-  <meta name="description" content="DescriptionAn additive numb...">
+  <meta name="description" content="DescriptionGiven an integer...">
   <meta name="author" content="Kou">
   <link rel="icon" href="/images/icons/favicon-16x16.png" type="image/png" sizes="16x16">
   <link rel="icon" href="/images/icons/favicon-32x32.png" type="image/png" sizes="32x32">
@@ -150,7 +150,7 @@
       
       
     </div>
-    <div class="center">Solution --- 306. Additive Number</div>
+    <div class="center">Solution --- 416. Partition Equal Subset Sum</div>
     <div class="right">
       <i class="iconfont iconmenu j-navbar-menu"></i>
     </div>
@@ -184,29 +184,29 @@
     <section class="head">
   <img   class="lazyload" data-original="/images/theme/post-image.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
   <div class="head-mask">
-    <h1 class="head-title">Solution --- 306. Additive Number</h1>
+    <h1 class="head-title">Solution --- 416. Partition Equal Subset Sum</h1>
     <div class="head-info">
-      <span class="post-info-item"><i class="iconfont iconcalendar"></i>April 13, 2022</span>
+      <span class="post-info-item"><i class="iconfont iconcalendar"></i>April 18, 2022</span>
       
-      <span class="post-info-item"><i class="iconfont iconfont-size"></i>1864</span>
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>1513</span>
     </div>
   </div>
 </section>
     <section class="main">
       <section class="content">
         
-        <h1 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h1><p>An additive number is a string whose digits can form an additive sequence.</p>
-<p>A valid additive sequence should contain at least three numbers. Except for the first two numbers, each subsequent number in the sequence must be the sum of the preceding two.</p>
-<p>Given a string containing only digits, return true if it is an additive number or false otherwise.</p>
-<p>Note: Numbers in the additive sequence cannot have leading zeros, so sequence 1, 2, 03 or 1, 02, 3 is invalid.</p>
+        <h1 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h1><p>Given an integer array nums, return true if you can partition the array into two subsets such that the sum of the elements in both subsets is equal or false otherwise.</p>
 <h2 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h2><p>Example 1:</p>
-<p>Input: “112358”<br>Output: true<br>Explanation:<br>The digits can form an additive sequence: 1, 1, 2, 3, 5, 8.<br>1 + 1 &#x3D; 2, 1 + 2 &#x3D; 3, 2 + 3 &#x3D; 5, 3 + 5 &#x3D; 8</p>
+<p>Input: nums &#x3D; [1,5,11,5]<br>Output: true<br>Explanation: The array can be partitioned as [1, 5, 5] and [11].</p>
 <p>Example 2:</p>
-<p>Input: “199100199”<br>Output: true<br>Explanation:<br>The additive sequence is: 1, 99, 100, 199.<br>1 + 99 &#x3D; 100, 99 + 100 &#x3D; 199</p>
+<p>Input: nums &#x3D; [1,2,3,5]<br>Output: false<br>Explanation: The array cannot be partitioned into equal sum subsets.</p>
 <p>Constraints:</p>
-<p>1 &lt;&#x3D; num.length &lt;&#x3D; 35<br>num consists only of digits.</p>
-<h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h1><p>The topic mentions that numbers may overflow, so it is necessary to implement large number addition by oneself. Depth-first search traverses all possibilities to determine if there exists a combination that satisfies the requirements. It is important to note that each combination of numbers cannot have leading zeros.</p>
-<h1 id="Codes"><a href="#Codes" class="headerlink" title="Codes"></a>Codes</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span>(<span class="hljs-title class_ inherited__">object</span>):<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">isAdditiveNumber</span>(<span class="hljs-params">self, num</span>):<br>        <span class="hljs-string">&quot;&quot;&quot;</span><br><span class="hljs-string">        :type num: str</span><br><span class="hljs-string">        :rtype: bool</span><br><span class="hljs-string">        &quot;&quot;&quot;</span><br>        <span class="hljs-keyword">return</span> self.dfs(num, [])<br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">dfs</span>(<span class="hljs-params">self, num_str, path</span>):<br>        <span class="hljs-keyword">if</span> <span class="hljs-built_in">len</span>(path) &gt;= <span class="hljs-number">3</span> <span class="hljs-keyword">and</span>  path[-<span class="hljs-number">1</span>] != path[-<span class="hljs-number">2</span>] + path[-<span class="hljs-number">3</span>]:<br>            <span class="hljs-keyword">return</span> <span class="hljs-literal">False</span><br>        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> num_str <span class="hljs-keyword">and</span> <span class="hljs-built_in">len</span>(path) &gt;= <span class="hljs-number">3</span>:<br>            <span class="hljs-keyword">return</span> <span class="hljs-literal">True</span><br>        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-built_in">len</span>(num_str)):<br>            curr = num_str[:i+<span class="hljs-number">1</span>]<br>            <span class="hljs-keyword">if</span> (curr[<span class="hljs-number">0</span>] == <span class="hljs-string">&#x27;0&#x27;</span> <span class="hljs-keyword">and</span> <span class="hljs-built_in">len</span>(curr) != <span class="hljs-number">1</span>):<br>                <span class="hljs-keyword">continue</span><br>            <span class="hljs-keyword">if</span> self.dfs(num_str[i+<span class="hljs-number">1</span>:], path + [<span class="hljs-built_in">int</span>(curr)]):<br>                <span class="hljs-keyword">return</span> <span class="hljs-literal">True</span><br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">False</span><br></code></pre></td></tr></table></figure>
+<p>1 &lt;&#x3D; nums.length &lt;&#x3D; 200<br>1 &lt;&#x3D; nums[i] &lt;&#x3D; 100</p>
+<h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h1><p>This problem is a variant of the 0&#x2F;1 knapsack problem, which can be formulated as follows: ‘Given an array, determine whether there exists a subset whose sum equals a given target sum.’</p>
+<p>There are two main aspects to consider: determining the target sum and defining the recurrence formula.</p>
+<p>In this problem, the target sum is implicitly defined as half of the total sum of all numbers in the array.</p>
+<p>The recurrence formula is dp[sum] &#x3D; dp[sum - num], where dp[sum] indicates whether the target sum can be achieved by summing up numbers. In this case, we only need to initialize dp[0].</p>
+<h1 id="Codes"><a href="#Codes" class="headerlink" title="Codes"></a>Codes</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span>:<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">canPartition</span>(<span class="hljs-params">self, nums: <span class="hljs-type">List</span>[<span class="hljs-built_in">int</span>]</span>) -&gt; <span class="hljs-built_in">bool</span>:<br>        <span class="hljs-keyword">if</span> <span class="hljs-built_in">sum</span>(nums)%<span class="hljs-number">2</span> != <span class="hljs-number">0</span>:<br>            <span class="hljs-keyword">return</span> <span class="hljs-literal">False</span><br>        target = <span class="hljs-built_in">sum</span>(nums)//<span class="hljs-number">2</span><br>        n = <span class="hljs-built_in">len</span>(nums)<br>        dp = [<span class="hljs-literal">False</span>] * (target+<span class="hljs-number">1</span>)<br>        dp[<span class="hljs-number">0</span>] = <span class="hljs-literal">True</span><br>        <span class="hljs-keyword">for</span> num <span class="hljs-keyword">in</span> nums:<br>            <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(target, num-<span class="hljs-number">1</span>, -<span class="hljs-number">1</span>):<br>                dp[i] = dp[i] <span class="hljs-keyword">or</span> dp[i - num]<br>        <span class="hljs-built_in">print</span>(dp)<br>        <span class="hljs-keyword">return</span> dp[-<span class="hljs-number">1</span>]<br></code></pre></td></tr></table></figure>
       </section>
       <section class="extra">
         
@@ -216,8 +216,8 @@
         
         
   <nav class="nav">
-    <a href="/2022/04/18/416.%20Partition%20Equal%20Subset%20Sum/"><i class="iconfont iconleft"></i>Solution --- 416. Partition Equal Subset Sum</a>
-    <a href="/2022/04/11/55.%20Jump%20Game/">Solution --- 55. Jump Game<i class="iconfont iconright"></i></a>
+    <a href="/2024/02/07/LLM%E3%82%A8%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%88%E3%81%AE%E7%8F%BE%E7%8A%B6%E3%80%81%E3%81%9D%E3%81%97%E3%81%A6%E6%9C%AA%E6%9D%A5/"><i class="iconfont iconleft"></i>LLMエージェントの現状、そして未来</a>
+    <a href="/2022/04/13/306.%20Additive%20Number/">Solution --- 306. Additive Number<i class="iconfont iconright"></i></a>
   </nav>
 
       </section>
