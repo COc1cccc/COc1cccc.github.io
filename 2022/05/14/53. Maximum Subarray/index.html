@@ -6,12 +6,12 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Archive - Avidya: 2022</title>
+  <title>Solution --- 53. Maximum Subarray - Avidya</title>
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="google" content="notranslate" />
   
-  
+  <meta name="description" content="DescriptionGiven an integer...">
   <meta name="author" content="Kou">
   <link rel="icon" href="/images/icons/favicon-16x16.png" type="image/png" sizes="16x16">
   <link rel="icon" href="/images/icons/favicon-32x32.png" type="image/png" sizes="32x32">
@@ -150,7 +150,7 @@
       
       
     </div>
-    <div class="center">归档</div>
+    <div class="center">Solution --- 53. Maximum Subarray</div>
     <div class="right">
       <i class="iconfont iconmenu j-navbar-menu"></i>
     </div>
@@ -176,123 +176,68 @@
   </div>
 </nav>
   <main id="main">
-  <section class="archive">
-    <div class="archive-container">
-      <div class="archive-post">
-        <h3 class="archive-total">Archives: 10 articles</h3>
+  <div class="article-wrap">
+    <div class="row container">
+      <div class="col-xl-3"></div>
+      <div class="col-xl-6"><article class="article">
+  <div class="wrap">
+    <section class="head">
+  <img   class="lazyload" data-original="/images/theme/post-image.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+  <div class="head-mask">
+    <h1 class="head-title">Solution --- 53. Maximum Subarray</h1>
+    <div class="head-info">
+      <span class="post-info-item"><i class="iconfont iconcalendar"></i>May 14, 2022</span>
+      
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>1392</span>
+    </div>
+  </div>
+</section>
+    <section class="main">
+      <section class="content">
+        
+        <h1 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h1><p>Given an integer array nums, find the subarray with the largest sum, and return its sum.</p>
+<h2 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h2><p>Example 1:<br>Input: nums &#x3D; [-2,1,-3,4,-1,2,1,-5,4]<br>Output: 6<br>Explanation: The subarray [4,-1,2,1] has the largest sum 6.</p>
+<p>Example 2:<br>Input: nums &#x3D; [1]<br>Output: 1<br>Explanation: The subarray [1] has the largest sum 1.</p>
+<p>Example 3:<br>Input: nums &#x3D; [5,4,-1,7,8]<br>Output: 23<br>Explanation: The subarray [5,4,-1,7,8] has the largest sum 23.</p>
+<p>Constraints:</p>
+<p>1 &lt;&#x3D; nums.length &lt;&#x3D; 105<br>-104 &lt;&#x3D; nums[i] &lt;&#x3D; 104</p>
+<h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h1><p>By constructing an array of the same length as the original one, the DP array implies the maximum sum of the subarray ending at dp[i].</p>
+<p>Therefore, the following state transition formulas apply:</p>
+<ul>
+<li>dp[i] &#x3D; dp[i - 1] + nums[i] when nums[i] &gt;&#x3D; 0.</li>
+<li>dp[i] &#x3D; nums[i] when nums[i] &lt; 0.<br>The maximum sum of the subarray, which is sought by the problem, corresponds to the maximum value of the DP array.</li>
+</ul>
+<h1 id="Codes"><a href="#Codes" class="headerlink" title="Codes"></a>Codes</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span>(<span class="hljs-title class_ inherited__">object</span>):<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">maxSubArray</span>(<span class="hljs-params">self, nums</span>):<br>        <span class="hljs-string">&quot;&quot;&quot;</span><br><span class="hljs-string">        :type nums: List[int]</span><br><span class="hljs-string">        :rtype: int</span><br><span class="hljs-string">        &quot;&quot;&quot;</span><br>        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> nums: <span class="hljs-keyword">return</span> <span class="hljs-number">0</span><br>        N = <span class="hljs-built_in">len</span>(nums)<br>        cur, prev = <span class="hljs-number">0</span>, <span class="hljs-number">0</span><br>        res = <span class="hljs-built_in">float</span>(<span class="hljs-string">&quot;-inf&quot;</span>)<br>        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(N):<br>            cur = nums[i] + (prev <span class="hljs-keyword">if</span> prev &gt; <span class="hljs-number">0</span> <span class="hljs-keyword">else</span> <span class="hljs-number">0</span>)<br>            prev = cur<br>            res = <span class="hljs-built_in">max</span>(res, cur)<br>        <span class="hljs-keyword">return</span> res<br></code></pre></td></tr></table></figure>
+      </section>
+      <section class="extra">
         
           
-            
-              <h3 class="archive-year">
-                2024
-              </h3>
-              
-                <div class="archive-item">
-                  <a class="archive-date" href="/2024/02/07/LLM%E3%82%A8%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%88%E3%81%AE%E7%8F%BE%E7%8A%B6%E3%80%81%E3%81%9D%E3%81%97%E3%81%A6%E6%9C%AA%E6%9D%A5/">
-                    February 07
-                  </a>
-                  <a class="archive-title" href="/2024/02/07/LLM%E3%82%A8%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%88%E3%81%AE%E7%8F%BE%E7%8A%B6%E3%80%81%E3%81%9D%E3%81%97%E3%81%A6%E6%9C%AA%E6%9D%A5/">
-                    LLMエージェントの現状、そして未来
-                  </a>
-                </div>
-                
-            
-              <h3 class="archive-year">
-                2022
-              </h3>
-              
-                <div class="archive-item">
-                  <a class="archive-date" href="/2022/09/30/triumph/">
-                    September 30
-                  </a>
-                  <a class="archive-title" href="/2022/09/30/triumph/">
-                    😤
-                  </a>
-                </div>
-                
-            
-                <div class="archive-item">
-                  <a class="archive-date" href="/2022/05/14/53.%20Maximum%20Subarray/">
-                    May 14
-                  </a>
-                  <a class="archive-title" href="/2022/05/14/53.%20Maximum%20Subarray/">
-                    Solution --- 53. Maximum Subarray
-                  </a>
-                </div>
-                
-            
-                <div class="archive-item">
-                  <a class="archive-date" href="/2022/05/13/%E5%A4%8F%E3%81%A0/">
-                    May 13
-                  </a>
-                  <a class="archive-title" href="/2022/05/13/%E5%A4%8F%E3%81%A0/">
-                    夏だ
-                  </a>
-                </div>
-                
-            
-                <div class="archive-item">
-                  <a class="archive-date" href="/2022/04/27/dmv%20road%20test/">
-                    April 27
-                  </a>
-                  <a class="archive-title" href="/2022/04/27/dmv%20road%20test/">
-                    Road test
-                  </a>
-                </div>
-                
-            
-                <div class="archive-item">
-                  <a class="archive-date" href="/2022/04/18/416.%20Partition%20Equal%20Subset%20Sum/">
-                    April 18
-                  </a>
-                  <a class="archive-title" href="/2022/04/18/416.%20Partition%20Equal%20Subset%20Sum/">
-                    Solution --- 416. Partition Equal Subset Sum
-                  </a>
-                </div>
-                
-            
-                <div class="archive-item">
-                  <a class="archive-date" href="/2022/04/13/306.%20Additive%20Number/">
-                    April 13
-                  </a>
-                  <a class="archive-title" href="/2022/04/13/306.%20Additive%20Number/">
-                    Solution --- 306. Additive Number
-                  </a>
-                </div>
-                
-            
-                <div class="archive-item">
-                  <a class="archive-date" href="/2022/04/11/55.%20Jump%20Game/">
-                    April 11
-                  </a>
-                  <a class="archive-title" href="/2022/04/11/55.%20Jump%20Game/">
-                    Solution --- 55. Jump Game
-                  </a>
-                </div>
-                
-            
-                <div class="archive-item">
-                  <a class="archive-date" href="/2022/04/06/309.%20Best%20Time%20to%20Buy%20and%20Sell%20Stock%20with%20Cooldown/">
-                    April 06
-                  </a>
-                  <a class="archive-title" href="/2022/04/06/309.%20Best%20Time%20to%20Buy%20and%20Sell%20Stock%20with%20Cooldown/">
-                    Solution --- 309. Best Time to Buy and Sell Stock with Cooldown
-                  </a>
-                </div>
-                
-            
-                <div class="archive-item">
-                  <a class="archive-date" href="/2022/02/11/%E3%81%88/">
-                    February 11
-                  </a>
-                  <a class="archive-title" href="/2022/02/11/%E3%81%88/">
-                    え
-                  </a>
-                </div>
-                
+        
+        
+        
+        
+  <nav class="nav">
+    <a href="/2022/09/30/triumph/"><i class="iconfont iconleft"></i>😤</a>
+    <a href="/2022/05/13/%E5%A4%8F%E3%81%A0/">夏だ<i class="iconfont iconright"></i></a>
+  </nav>
+
+      </section>
+      
+    </section>
+  </div>
+</article></div>
+      <div class="col-xl-3">
+        
+          
+  <aside class="toc-wrap">
+    <h3 class="toc-title">Index</h3>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Description"><span class="toc-text">Description</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Examples"><span class="toc-text">Examples</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Solution"><span class="toc-text">Solution</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Codes"><span class="toc-text">Codes</span></a></li></ol>
+  </aside>
+
+        
       </div>
     </div>
-  </section>
+  </div>
 </main>
   
 
