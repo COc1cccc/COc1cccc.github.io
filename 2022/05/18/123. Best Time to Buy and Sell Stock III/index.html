@@ -6,12 +6,12 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Solution --- 78. Subsets - Avidya</title>
+  <title>Solution --- 123. Best Time to Buy and Sell Stock III - Avidya</title>
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="google" content="notranslate" />
   
-  <meta name="description" content="DescriptionGiven an integer...">
+  <meta name="description" content="DescriptionYou are given an...">
   <meta name="author" content="Kou">
   <link rel="icon" href="/images/icons/favicon-32x32.png" type="image/png" sizes="16x16">
   <link rel="icon" href="/images/icons/favicon-64x64.png" type="image/png" sizes="32x32">
@@ -150,7 +150,7 @@
       
       
     </div>
-    <div class="center">Solution --- 78. Subsets</div>
+    <div class="center">Solution --- 123. Best Time to Buy and Sell Stock III</div>
     <div class="right">
       <i class="iconfont iconmenu j-navbar-menu"></i>
     </div>
@@ -184,23 +184,30 @@
     <section class="head">
   <img   class="lazyload" data-original="/images/theme/post-image.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
   <div class="head-mask">
-    <h1 class="head-title">Solution --- 78. Subsets</h1>
+    <h1 class="head-title">Solution --- 123. Best Time to Buy and Sell Stock III</h1>
     <div class="head-info">
-      <span class="post-info-item"><i class="iconfont iconcalendar"></i>May 16, 2022</span>
+      <span class="post-info-item"><i class="iconfont iconcalendar"></i>May 18, 2022</span>
       
-      <span class="post-info-item"><i class="iconfont iconfont-size"></i>1230</span>
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>2635</span>
     </div>
   </div>
 </section>
     <section class="main">
       <section class="content">
         
-        <h1 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h1><p>Given an integer array nums of unique elements, return all possible subsets (the power set).<br>The solution set must not contain duplicate subsets. Return the solution in any order.</p>
-<h2 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h2><p>Example 1:<br>Input: nums &#x3D; [1,2,3]<br>Output: [[],[1],[2],[1,2],[3],[1,3],[2,3],[1,2,3]]</p>
-<p>Example 2:<br>Input: nums &#x3D; [0]<br>Output: [[],[0]]</p>
-<p>Constraints:<br>1 &lt;&#x3D; nums.length &lt;&#x3D; 10<br>-10 &lt;&#x3D; nums[i] &lt;&#x3D; 10<br>All the numbers of nums are unique.</p>
-<h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h1><p>In the case where the current element at index is included, we extract either 0 or all elements from the index onwards in nums and append them to the path. The purpose of the for loop is to determine the starting point of the subsequent elements if the current element is used, which in turn determines how many elements are chosen thereafter.</p>
-<h1 id="Codes"><a href="#Codes" class="headerlink" title="Codes"></a>Codes</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span>(<span class="hljs-title class_ inherited__">object</span>):<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">subsets</span>(<span class="hljs-params">self, nums</span>):<br>        <span class="hljs-string">&quot;&quot;&quot;</span><br><span class="hljs-string">        :type nums: List[int]</span><br><span class="hljs-string">        :rtype: List[List[int]]</span><br><span class="hljs-string">        &quot;&quot;&quot;</span><br>        res = []<br>        self.dfs(nums, <span class="hljs-number">0</span>, res, [])<br>        <span class="hljs-keyword">return</span> res<br>    <br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">dfs</span>(<span class="hljs-params">self, nums, index, res, path</span>):<br>        res.append(path)<br>        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(index, <span class="hljs-built_in">len</span>(nums)):<br>            self.dfs(nums, i + <span class="hljs-number">1</span>, res, path + [nums[i]])<br></code></pre></td></tr></table></figure>
+        <h1 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h1><p>You are given an array prices where prices[i] is the price of a given stock on the ith day.</p>
+<p>Find the maximum profit you can achieve. You may complete at most two transactions.</p>
+<p>Note: You may not engage in multiple transactions simultaneously (i.e., you must sell the stock before you buy again).</p>
+<h2 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h2><p>Example 1:<br>Input: prices &#x3D; [3,3,5,0,0,3,1,4]<br>Output: 6<br>Explanation: Buy on day 4 (price &#x3D; 0) and sell on day 6 (price &#x3D; 3), profit &#x3D; 3-0 &#x3D; 3.<br>Then buy on day 7 (price &#x3D; 1) and sell on day 8 (price &#x3D; 4), profit &#x3D; 4-1 &#x3D; 3.</p>
+<p>Example 2:<br>Input: prices &#x3D; [1,2,3,4,5]<br>Output: 4<br>Explanation: Buy on day 1 (price &#x3D; 1) and sell on day 5 (price &#x3D; 5), profit &#x3D; 5-1 &#x3D; 4.<br>Note that you cannot buy on day 1, buy on day 2 and sell them later, as you are engaging multiple transactions at the same time. You must sell before buying again.</p>
+<p>Example 3:<br>Input: prices &#x3D; [7,6,4,3,1]<br>Output: 0<br>Explanation: In this case, no transaction is done, i.e. max profit &#x3D; 0.</p>
+<p>Constraints:<br>1 &lt;&#x3D; prices.length &lt;&#x3D; 105<br>0 &lt;&#x3D; prices[i] &lt;&#x3D; 105</p>
+<h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h1><p>Initialize two 2D arrays, g and l, both of size Nx3, where N is the length of the prices array. g[i][j] represents the maximum profit up to day i with j transactions allowed and the last transaction being a sell. Similarly, l[i][j] represents the maximum profit up to day i with j transactions allowed and the last transaction being a buy.<br>Iterate through the prices array starting from the second day (index 1). For each day i, calculate the difference between the current day’s price and the previous day’s price.<br>For each day i and for each possible number of transactions j (from 1 to 2), update l[i][j] and g[i][j] according to the following rules:</p>
+<ul>
+<li>l[i][j] is updated based on whether it’s more profitable to start a new transaction at day i or extend the previous transaction from day i-1.</li>
+<li>g[i][j] is updated as the maximum profit obtained so far with j transactions allowed.<br>The maximum profit achievable is stored in g[-1][-1], which represents the maximum profit up to the last day with at most two transactions allowed.</li>
+</ul>
+<h1 id="Codes"><a href="#Codes" class="headerlink" title="Codes"></a>Codes</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span>:<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">maxProfit</span>(<span class="hljs-params">self, prices: <span class="hljs-type">List</span>[<span class="hljs-built_in">int</span>]</span>) -&gt; <span class="hljs-built_in">int</span>:<br>        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> prices: <span class="hljs-keyword">return</span> <span class="hljs-number">0</span><br>        N = <span class="hljs-built_in">len</span>(prices)<br>        g = [[<span class="hljs-number">0</span>] * <span class="hljs-number">3</span> <span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(N)]<br>        l = [[<span class="hljs-number">0</span>] * <span class="hljs-number">3</span> <span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(N)]<br>        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>, N):<br>            diff = prices[i] - prices[i - <span class="hljs-number">1</span>]<br>            <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>, <span class="hljs-number">3</span>):<br>                l[i][j] = <span class="hljs-built_in">max</span>(g[i - <span class="hljs-number">1</span>][j - <span class="hljs-number">1</span>] + <span class="hljs-built_in">max</span>(diff, <span class="hljs-number">0</span>), l[i - <span class="hljs-number">1</span>][j] + diff)<br>                g[i][j] = <span class="hljs-built_in">max</span>(l[i][j], g[i - <span class="hljs-number">1</span>][j])<br>        <span class="hljs-keyword">return</span> g[-<span class="hljs-number">1</span>][-<span class="hljs-number">1</span>]<br></code></pre></td></tr></table></figure>
       </section>
       <section class="extra">
         
@@ -210,8 +217,8 @@
         
         
   <nav class="nav">
-    <a href="/2022/05/18/123.%20Best%20Time%20to%20Buy%20and%20Sell%20Stock%20III/"><i class="iconfont iconleft"></i>Solution --- 123. Best Time to Buy and Sell Stock III</a>
-    <a href="/2022/05/14/53.%20Maximum%20Subarray/">Solution --- 53. Maximum Subarray<i class="iconfont iconright"></i></a>
+    <a href="/2022/05/21/188.%20Best%20Time%20to%20Buy%20and%20Sell%20Stock%20IV/"><i class="iconfont iconleft"></i>Solution --- 188. Best Time to Buy and Sell Stock IV</a>
+    <a href="/2022/05/16/78.%20Subsets/">Solution --- 78. Subsets<i class="iconfont iconright"></i></a>
   </nav>
 
       </section>
