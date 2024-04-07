@@ -1,3 +1,4 @@
+http://example.com/2022/11/23/Paper%20Reading-Variational%20Inference%20with%20adversarial%20learning%20for%20end-to-end%20Text-to-Speech/
 http://example.com/2023/04/26/Let%20them%20come%20to%20Berlin/
 http://example.com/2022/12/12/snow/
 http://example.com/2022/10/07/stella/
