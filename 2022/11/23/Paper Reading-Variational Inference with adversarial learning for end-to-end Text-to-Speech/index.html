@@ -188,7 +188,7 @@
     <div class="head-info">
       <span class="post-info-item"><i class="iconfont iconcalendar"></i>November 23, 2022</span>
       
-      <span class="post-info-item"><i class="iconfont iconfont-size"></i>8257</span>
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>8255</span>
     </div>
   </div>
 </section>
@@ -203,7 +203,7 @@
 <ol>
 <li>Reconstruction Loss<br>During training, VITS still generates Mel-spectrograms to guide the model training. The target sample points in the reconstruction loss are Mel-spectrograms rather than the original waveform:</li>
 </ol>
-<p>$$L_{recon}&#x3D;||x_{mel}-\hat{x}_{mel}||_1$$</p>
+<p>$L_{recon}&#x3D;||x_{mel}-\hat{x}_{mel}||_1$</p>
 <p>However, during inference, there is no need to generate Mel-spectrograms. Mel-spectrograms are only used to compute this reconstruction loss.</p>
 <ol start="2">
 <li>KL Divergence<br>The input to the prior encoder $c$ includes phonemes generated from the text $c_{text}$ and the alignment between phonemes and latent variables $A$. The alignment matrix $A$ is of size $|c_{text}|\times |z|$, representing the strictly monotonic attention matrix for each phoneme’s duration. Therefore, the KL divergence is:</li>
