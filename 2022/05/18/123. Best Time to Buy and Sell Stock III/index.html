@@ -188,7 +188,7 @@
     <div class="head-info">
       <span class="post-info-item"><i class="iconfont iconcalendar"></i>May 18, 2022</span>
       
-      <span class="post-info-item"><i class="iconfont iconfont-size"></i>2635</span>
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>2637</span>
     </div>
   </div>
 </section>
@@ -201,7 +201,7 @@
 <h2 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h2><p>Example 1:<br>Input: prices &#x3D; [3,3,5,0,0,3,1,4]<br>Output: 6<br>Explanation: Buy on day 4 (price &#x3D; 0) and sell on day 6 (price &#x3D; 3), profit &#x3D; 3-0 &#x3D; 3.<br>Then buy on day 7 (price &#x3D; 1) and sell on day 8 (price &#x3D; 4), profit &#x3D; 4-1 &#x3D; 3.</p>
 <p>Example 2:<br>Input: prices &#x3D; [1,2,3,4,5]<br>Output: 4<br>Explanation: Buy on day 1 (price &#x3D; 1) and sell on day 5 (price &#x3D; 5), profit &#x3D; 5-1 &#x3D; 4.<br>Note that you cannot buy on day 1, buy on day 2 and sell them later, as you are engaging multiple transactions at the same time. You must sell before buying again.</p>
 <p>Example 3:<br>Input: prices &#x3D; [7,6,4,3,1]<br>Output: 0<br>Explanation: In this case, no transaction is done, i.e. max profit &#x3D; 0.</p>
-<p>Constraints:<br>1 &lt;&#x3D; prices.length &lt;&#x3D; 105<br>0 &lt;&#x3D; prices[i] &lt;&#x3D; 105</p>
+<p>Constraints:<br>1 &lt;&#x3D; prices.length &lt;&#x3D; 10^5<br>0 &lt;&#x3D; prices[i] &lt;&#x3D; 10^5</p>
 <h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h1><p>Initialize two 2D arrays, g and l, both of size Nx3, where N is the length of the prices array. g[i][j] represents the maximum profit up to day i with j transactions allowed and the last transaction being a sell. Similarly, l[i][j] represents the maximum profit up to day i with j transactions allowed and the last transaction being a buy.<br>Iterate through the prices array starting from the second day (index 1). For each day i, calculate the difference between the current day’s price and the previous day’s price.<br>For each day i and for each possible number of transactions j (from 1 to 2), update l[i][j] and g[i][j] according to the following rules:</p>
 <ul>
 <li>l[i][j] is updated based on whether it’s more profitable to start a new transaction at day i or extend the previous transaction from day i-1.</li>
