@@ -1,0 +1,322 @@
+
+
+<!DOCTYPE html>
+<html lang="en" color-mode=light>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Solution --- 621. Task Scheduler - Avidya</title>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="google" content="notranslate" />
+  
+  <meta name="description" content="DescriptionYou are given an...">
+  <meta name="author" content="Kou">
+  <link rel="icon" href="/images/icons/favicon-32x32.png" type="image/png" sizes="16x16">
+  <link rel="icon" href="/images/icons/favicon-64x64.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/images/icons/apple-touch-icon.png" sizes="180x180">
+  <meta rel="mask-icon" href="/images/icons/stun-logo.svg" color="#333333">
+  
+    <meta rel="msapplication-TileImage" content="/images/icons/favicon-144x144.png">
+    <meta rel="msapplication-TileColor" content="#000000">
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+    
+<link rel="stylesheet" href="https://at.alicdn.com/t/font_1445822_p6ry5n7lrr.css">
+
+  
+
+  
+    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+
+  
+
+  
+    
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/foundation.min.css" name="highlight-style" mode="light">
+
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/solarized-dark.min.css" name="highlight-style" mode="dark">
+
+      
+  
+
+  <script>
+    var CONFIG = window.CONFIG || {};
+    var ZHAOO = window.ZHAOO || {};
+    CONFIG = {
+      isHome: false,
+      fancybox: true,
+      pjax: false,
+      loading: {
+        gif: '/images/theme/loading.gif',
+        lottie: ''
+      },
+      lazyload: {
+        enable: true,
+        only_post: 'false',
+        loading: {
+          gif: '/images/theme/loading.gif',
+          lottie: ''
+        }
+      },
+      donate: {
+        enable: false,
+        alipay: '',
+        wechat: ''
+      },
+      galleries: {
+        enable: false
+      },
+      fab: {
+        enable: true,
+        always_show: false
+      },
+      carrier: {
+        enable: true
+      },
+      daovoice: {
+        enable: false
+      },
+      preview: {
+        background: {
+          default: '',
+          api: ''
+        },
+        motto: {
+          default: 'もしも僕が主人公なら、僕は人の心が見えて',
+          typing: true,
+          api: '',
+          data_contents: '["data","content"]'
+        },
+      },
+      qrcode: {
+        enable: false,
+        type: 'url',
+        image: 'https://pic.izhaoo.com/weapp-code.jpg',
+      },
+      toc: {
+        enable: true
+      },
+      scrollbar: {
+        type: 'default'
+      },
+      notification: {
+        enable: false,
+        delay: 4500,
+        list: '',
+        page_white_list: '',
+        page_black_list: ''
+      },
+      search: {
+        enable: false,
+        path: ''
+      }
+    }
+  </script>
+
+  
+
+  
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body class="lock-screen">
+  <div class="loading" id="loading"></div>
+  
+    
+
+
+  <nav class="navbar">
+    <div class="left">
+      
+        <i class="iconfont iconhome j-navbar-back-home"></i>
+      
+      
+      
+        <i class="iconfont iconmoono" id="color-toggle" color-toggle="light"></i>
+      
+      
+    </div>
+    <div class="center">Solution --- 621. Task Scheduler</div>
+    <div class="right">
+      <i class="iconfont iconmenu j-navbar-menu"></i>
+    </div>
+    
+  </nav>
+
+  
+  
+
+<nav class="menu">
+  <div class="menu-container">
+    <div class="menu-close">
+      <i class="iconfont iconbaseline-close-px"></i>
+    </div>
+    <ul class="menu-content"><li class="menu-item">
+        <a href="/ " class="underline "> home</a>
+      </li><li class="menu-item">
+        <a href="/archives/ " class="underline "> archives</a>
+      </li><li class="menu-item">
+        <a href="/about/ " class="underline "> about</a>
+      </li></ul>
+    
+  </div>
+</nav>
+  <main id="main">
+  <div class="article-wrap">
+    <div class="row container">
+      <div class="col-xl-3"></div>
+      <div class="col-xl-6"><article class="article">
+  <div class="wrap">
+    <section class="head">
+  <img   class="lazyload" data-original="/images/theme/post-image.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+  <div class="head-mask">
+    <h1 class="head-title">Solution --- 621. Task Scheduler</h1>
+    <div class="head-info">
+      <span class="post-info-item"><i class="iconfont iconcalendar"></i>May 28, 2022</span>
+      
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>2036</span>
+    </div>
+  </div>
+</section>
+    <section class="main">
+      <section class="content">
+        
+        <h1 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h1><p>You are given an array of CPU tasks, each represented by letters A to Z, and a cooling time, n. Each cycle or interval allows the completion of one task. Tasks can be completed in any order, but there’s a constraint: identical tasks must be separated by at least n intervals due to cooling time.</p>
+<p>​Return the minimum number of intervals required to complete all tasks</p>
+<h2 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h2><p>Example 1:<br>Input: tasks &#x3D; [“A”,”A”,”A”,”B”,”B”,”B”], n &#x3D; 2<br>Output: 8<br>Explanation: A possible sequence is: A -&gt; B -&gt; idle -&gt; A -&gt; B -&gt; idle -&gt; A -&gt; B.<br>After completing task A, you must wait two cycles before doing A again. The same applies to task B. In the 3rd interval, neither A nor B can be done, so you idle. By the 4th cycle, you can do A again as 2 intervals have passed.</p>
+<p>Example 2:<br>Input: tasks &#x3D; [“A”,”C”,”A”,”B”,”D”,”B”], n &#x3D; 1<br>Output: 6<br>Explanation: A possible sequence is: A -&gt; B -&gt; C -&gt; D -&gt; A -&gt; B.<br>With a cooling interval of 1, you can repeat a task after just one other task.</p>
+<p>Constraints:<br>1 &lt;&#x3D; tasks.length &lt;&#x3D; 104<br>tasks[i] is an uppercase English letter.<br>0 &lt;&#x3D; n &lt;&#x3D; 100</p>
+<h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h1><p>If you want to minimize the total time, you must reduce the idle time as much as possible. Assuming that a task appears the most times, represented by $f_max$, then the theoretical maximum idle time is ($f_{max-1}$) * n. We can insert other tasks into these n-1 slots as much as possible. In each cycle, the task with the highest frequency is selected, inserted into each gap, and the frequency of the task is reduced by $f_{max-1}$. This is a typical greedy strategy.</p>
+<h1 id="Codes"><a href="#Codes" class="headerlink" title="Codes"></a>Codes</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span>:<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">leastInterval</span>(<span class="hljs-params">self, tasks: <span class="hljs-type">List</span>[<span class="hljs-built_in">str</span>], n: <span class="hljs-built_in">int</span></span>) -&gt; <span class="hljs-built_in">int</span>:<br>        freq = [<span class="hljs-number">0</span>] * <span class="hljs-number">26</span><br>        <span class="hljs-keyword">for</span> task <span class="hljs-keyword">in</span> tasks:<br>            freq[<span class="hljs-built_in">ord</span>(task) - <span class="hljs-built_in">ord</span>(<span class="hljs-string">&#x27;A&#x27;</span>)] += <span class="hljs-number">1</span><br>        freq.sort()<br>        chunk = freq[<span class="hljs-number">25</span>] - <span class="hljs-number">1</span><br>        idle = chunk * n<br><br>        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">24</span>, -<span class="hljs-number">1</span>, -<span class="hljs-number">1</span>):<br>            idle -= <span class="hljs-built_in">min</span>(chunk, freq[i])<br><br>        <span class="hljs-keyword">return</span> <span class="hljs-built_in">len</span>(tasks) + idle <span class="hljs-keyword">if</span> idle &gt;= <span class="hljs-number">0</span> <span class="hljs-keyword">else</span> <span class="hljs-built_in">len</span>(tasks)<br></code></pre></td></tr></table></figure>
+      </section>
+      <section class="extra">
+        
+          
+        
+        
+        
+        
+  <nav class="nav">
+    <a href="/2022/05/31/House%20Robber/"><i class="iconfont iconleft"></i>Solution --- House Robber</a>
+    <a href="/2022/05/24/190.%20Reverse%20Bits/">Solution --- 190. Reverse Bits<i class="iconfont iconright"></i></a>
+  </nav>
+
+      </section>
+      
+    </section>
+  </div>
+</article></div>
+      <div class="col-xl-3">
+        
+          
+  <aside class="toc-wrap">
+    <h3 class="toc-title">Index</h3>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Description"><span class="toc-text">Description</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Examples"><span class="toc-text">Examples</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Solution"><span class="toc-text">Solution</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Codes"><span class="toc-text">Codes</span></a></li></ol>
+  </aside>
+
+        
+      </div>
+    </div>
+  </div>
+</main>
+  
+
+  <footer class="footer">
+    <div class="footer-social"><a href="mailto:Avidya@ieee.org " target="_blank"
+  class="footer-social-item" onMouseOver="this.style.color=#FF3B00"
+  onMouseOut="this.style.color='#33333D'">
+  <i class="iconfont  iconmail"></i>
+  </a></div>
+    
+  </footer>
+  
+      <div class="fab fab-plus">
+    <i class="iconfont iconplus"></i>
+  </div>
+  
+  
+  
+  <div class="fab fab-up">
+    <i class="iconfont iconcaret-up"></i>
+  </div>
+  
+  
+  
+    
+<script src="/js/color-mode.js"></script>
+
+  
+  
+</body>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+
+
+
+  
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+
+
+
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+
+
+
+
+
+
+
+<script src="/js/utils.js"></script>
+<script src="/js/script.js"></script>
+
+
+
+
+
+
+
+  <script>
+    (function () {
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      } else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
