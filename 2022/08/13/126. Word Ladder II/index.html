@@ -1,0 +1,324 @@
+
+
+<!DOCTYPE html>
+<html lang="en" color-mode=light>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Solution --- 126. Word Ladder II - Avidya</title>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="google" content="notranslate" />
+  
+  <meta name="description" content="DescriptionA transformation...">
+  <meta name="author" content="Kou">
+  <link rel="icon" href="/images/icons/favicon-32x32.png" type="image/png" sizes="16x16">
+  <link rel="icon" href="/images/icons/favicon-64x64.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/images/icons/apple-touch-icon.png" sizes="180x180">
+  <meta rel="mask-icon" href="/images/icons/stun-logo.svg" color="#333333">
+  
+    <meta rel="msapplication-TileImage" content="/images/icons/favicon-144x144.png">
+    <meta rel="msapplication-TileColor" content="#000000">
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+    
+<link rel="stylesheet" href="https://at.alicdn.com/t/font_1445822_p6ry5n7lrr.css">
+
+  
+
+  
+    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+
+  
+
+  
+    
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/foundation.min.css" name="highlight-style" mode="light">
+
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/solarized-dark.min.css" name="highlight-style" mode="dark">
+
+      
+  
+
+  <script>
+    var CONFIG = window.CONFIG || {};
+    var ZHAOO = window.ZHAOO || {};
+    CONFIG = {
+      isHome: false,
+      fancybox: true,
+      pjax: false,
+      loading: {
+        gif: '/images/theme/loading.gif',
+        lottie: ''
+      },
+      lazyload: {
+        enable: true,
+        only_post: 'false',
+        loading: {
+          gif: '/images/theme/loading.gif',
+          lottie: ''
+        }
+      },
+      donate: {
+        enable: false,
+        alipay: 'https://pic.izhaoo.com/alipay.jpg',
+        wechat: 'https://pic.izhaoo.com/wechat.jpg'
+      },
+      galleries: {
+        enable: true
+      },
+      fab: {
+        enable: true,
+        always_show: false
+      },
+      carrier: {
+        enable: true
+      },
+      daovoice: {
+        enable: false
+      },
+      preview: {
+        background: {
+          default: '',
+          api: ''
+        },
+        motto: {
+          default: 'もしも僕が主人公なら、僕は人の心が見えて',
+          typing: true,
+          api: '',
+          data_contents: '["data","content"]'
+        },
+      },
+      qrcode: {
+        enable: false,
+        type: 'url',
+        image: 'https://pic.izhaoo.com/weapp-code.jpg',
+      },
+      toc: {
+        enable: true
+      },
+      scrollbar: {
+        type: 'default'
+      },
+      notification: {
+        enable: false,
+        delay: 4500,
+        list: '',
+        page_white_list: '',
+        page_black_list: ''
+      },
+      search: {
+        enable: false,
+        path: ''
+      }
+    }
+  </script>
+
+  
+
+  
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body class="lock-screen">
+  <div class="loading" id="loading"></div>
+  
+    
+
+
+  <nav class="navbar">
+    <div class="left">
+      
+        <i class="iconfont iconhome j-navbar-back-home"></i>
+      
+      
+      
+        <i class="iconfont iconmoono" id="color-toggle" color-toggle="light"></i>
+      
+      
+    </div>
+    <div class="center">Solution --- 126. Word Ladder II</div>
+    <div class="right">
+      <i class="iconfont iconmenu j-navbar-menu"></i>
+    </div>
+    
+  </nav>
+
+  
+  
+
+<nav class="menu">
+  <div class="menu-container">
+    <div class="menu-close">
+      <i class="iconfont iconbaseline-close-px"></i>
+    </div>
+    <ul class="menu-content"><li class="menu-item">
+        <a href="/ " class="underline "> home</a>
+      </li><li class="menu-item">
+        <a href="/archives/ " class="underline "> archives</a>
+      </li><li class="menu-item">
+        <a href="/about/ " class="underline "> about</a>
+      </li></ul>
+    
+  </div>
+</nav>
+  <main id="main">
+  <div class="article-wrap">
+    <div class="row container">
+      <div class="col-xl-3"></div>
+      <div class="col-xl-6"><article class="article">
+  <div class="wrap">
+    <section class="head">
+  <img   class="lazyload" data-original="/images/theme/post-image.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+  <div class="head-mask">
+    <h1 class="head-title">Solution --- 126. Word Ladder II</h1>
+    <div class="head-info">
+      <span class="post-info-item"><i class="iconfont iconcalendar"></i>August 13, 2022</span>
+      
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>3759</span>
+    </div>
+  </div>
+</section>
+    <section class="main">
+      <section class="content">
+        
+        <h1 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h1><p>A transformation sequence from word beginWord to word endWord using a dictionary wordList is a sequence of words beginWord -&gt; s1 -&gt; s2 -&gt; … -&gt; sk such that:</p>
+<p>Every adjacent pair of words differs by a single letter.<br>Every si for 1 &lt;&#x3D; i &lt;&#x3D; k is in wordList. Note that beginWord does not need to be in wordList.<br>sk &#x3D;&#x3D; endWord<br>Given two words, beginWord and endWord, and a dictionary wordList, return all the shortest transformation sequences from beginWord to endWord, or an empty list if no such sequence exists. Each sequence should be returned as a list of the words [beginWord, s1, s2, …, sk].</p>
+<h2 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h2><p>Input: beginWord &#x3D; “hit”, endWord &#x3D; “cog”, wordList &#x3D; [“hot”,”dot”,”dog”,”lot”,”log”,”cog”]<br>Output: [[“hit”,”hot”,”dot”,”dog”,”cog”],[“hit”,”hot”,”lot”,”log”,”cog”]]<br>Explanation: There are 2 shortest transformation sequences:<br>“hit” -&gt; “hot” -&gt; “dot” -&gt; “dog” -&gt; “cog”<br>“hit” -&gt; “hot” -&gt; “lot” -&gt; “log” -&gt; “cog”</p>
+<p>Example 2:<br>Input: beginWord &#x3D; “hit”, endWord &#x3D; “cog”, wordList &#x3D; [“hot”,”dot”,”dog”,”lot”,”log”]<br>Output: []<br>Explanation: The endWord “cog” is not in wordList, therefore there is no valid transformation sequence.</p>
+<p>Constraints:<br>1 &lt;&#x3D; beginWord.length &lt;&#x3D; 5<br>endWord.length &#x3D;&#x3D; beginWord.length<br>1 &lt;&#x3D; wordList.length &lt;&#x3D; 500<br>wordList[i].length &#x3D;&#x3D; beginWord.length<br>beginWord, endWord, and wordList[i] consist of lowercase English letters.<br>beginWord !&#x3D; endWord<br>All the words in wordList are unique.<br>The sum of all shortest transformation sequences does not exceed $10^5$.</p>
+<h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h1><p>Compared to the Word Ladder problem, this one involves finding the path itself rather than just its length, still utilizing BFS but with a slight complication.</p>
+<p>There’s a significant difference between finding a single path and finding all paths. When seeking a single path, each state node only needs to record one predecessor. However, when finding all paths, some state nodes might have multiple parent nodes, necessitating the recording of multiple predecessors.</p>
+<p>If the current path length exceeds the current shortest path length, it’s possible to terminate the processing of that path, as we’re aiming to find the shortest path.</p>
+<h1 id="Codes"><a href="#Codes" class="headerlink" title="Codes"></a>Codes</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span>:<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">findLadders</span>(<span class="hljs-params">self, beginWord: <span class="hljs-built_in">str</span>, endWord: <span class="hljs-built_in">str</span>, wordList: <span class="hljs-type">List</span>[<span class="hljs-built_in">str</span>]</span>) -&gt; <span class="hljs-type">List</span>[<span class="hljs-type">List</span>[<span class="hljs-built_in">str</span>]]:<br>        <span class="hljs-keyword">def</span> <span class="hljs-title function_">append_path</span>(<span class="hljs-params">start,end,curr_path,level,length</span>):<br>            <span class="hljs-keyword">if</span> level&gt;length:<br>                <span class="hljs-keyword">return</span><br>            curr_path.append(end)<br>            <span class="hljs-keyword">if</span> end==start:<br>                ans.append(curr_path[::-<span class="hljs-number">1</span>].copy())<br>            <span class="hljs-keyword">for</span> parent <span class="hljs-keyword">in</span> path[end]:<br>                append_path(start,parent,curr_path,level+<span class="hljs-number">1</span>,length)<br>            curr_path.pop()<br>        <br>        adj = collections.defaultdict(<span class="hljs-built_in">list</span>)<br>        <span class="hljs-keyword">for</span> word <span class="hljs-keyword">in</span> wordList:<br>            <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-built_in">len</span>(word)):<br>                adj[word[:i]+<span class="hljs-string">&#x27;*&#x27;</span>+word[i+<span class="hljs-number">1</span>:]].append(word)<br>        <br>        visited = <span class="hljs-built_in">set</span>()<br>        q = collections.deque()<br>        q.append((beginWord,<span class="hljs-number">1</span>))<br>        path = collections.defaultdict(<span class="hljs-built_in">set</span>)<br>        length=<span class="hljs-number">0</span><br>        <span class="hljs-keyword">while</span> q:<br>            word,k = q.popleft()<br>            <span class="hljs-keyword">if</span> word == endWord:<br>                length = k<br>                <span class="hljs-keyword">break</span><br>                <br>            <br>            <span class="hljs-keyword">if</span> word <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> visited:<br>                visited.add(word)<br>                <br>                <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-built_in">len</span>(word)):<br>                    neighbors = word[:i]+<span class="hljs-string">&#x27;*&#x27;</span>+word[i+<span class="hljs-number">1</span>:]<br>                    <span class="hljs-keyword">for</span> neigh <span class="hljs-keyword">in</span> adj[neighbors]:<br>                        <span class="hljs-keyword">if</span> neigh <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> visited:<br>                            path[neigh].add(word)<br>                            q.append((neigh,k+<span class="hljs-number">1</span>))<br>        ans = []<br>        append_path(beginWord,endWord,[],<span class="hljs-number">1</span>,length)<br>        <span class="hljs-keyword">return</span> ans<br><br></code></pre></td></tr></table></figure>
+      </section>
+      <section class="extra">
+        
+          
+        
+        
+        
+        
+  <nav class="nav">
+    <a href="/2022/09/30/triumph/"><i class="iconfont iconleft"></i>😤</a>
+    <a href="/2022/08/06/127.%20Word%20Ladder/">Solution --- 127. Word Ladder<i class="iconfont iconright"></i></a>
+  </nav>
+
+      </section>
+      
+    </section>
+  </div>
+</article></div>
+      <div class="col-xl-3">
+        
+          
+  <aside class="toc-wrap">
+    <h3 class="toc-title">Index</h3>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Description"><span class="toc-text">Description</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Examples"><span class="toc-text">Examples</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Solution"><span class="toc-text">Solution</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Codes"><span class="toc-text">Codes</span></a></li></ol>
+  </aside>
+
+        
+      </div>
+    </div>
+  </div>
+</main>
+  
+
+  <footer class="footer">
+    <div class="footer-social"><a href="mailto:izhaoo@163.com " target="_blank"
+  class="footer-social-item" onMouseOver="this.style.color=#FF3B00"
+  onMouseOut="this.style.color='#33333D'">
+  <i class="iconfont  iconmail"></i>
+  </a></div>
+    
+  </footer>
+  
+      <div class="fab fab-plus">
+    <i class="iconfont iconplus"></i>
+  </div>
+  
+  
+  
+  <div class="fab fab-up">
+    <i class="iconfont iconcaret-up"></i>
+  </div>
+  
+  
+  
+    
+<script src="/js/color-mode.js"></script>
+
+  
+  
+</body>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+
+
+
+  
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+
+
+
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+
+
+
+
+
+
+
+<script src="/js/utils.js"></script>
+<script src="/js/script.js"></script>
+
+
+
+
+
+
+
+  <script>
+    (function () {
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      } else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
