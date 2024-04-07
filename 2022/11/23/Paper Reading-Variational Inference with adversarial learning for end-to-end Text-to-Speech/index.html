@@ -188,7 +188,7 @@
     <div class="head-info">
       <span class="post-info-item"><i class="iconfont iconcalendar"></i>November 23, 2022</span>
       
-      <span class="post-info-item"><i class="iconfont iconfont-size"></i>8255</span>
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>8260</span>
     </div>
   </div>
 </section>
@@ -203,7 +203,7 @@
 <ol>
 <li>Reconstruction Loss<br>During training, VITS still generates Mel-spectrograms to guide the model training. The target sample points in the reconstruction loss are Mel-spectrograms rather than the original waveform:</li>
 </ol>
-<p>$L_{recon}&#x3D;||x_{mel}-\hat{x}_{mel}||_1$</p>
+<p>$$<br>L_{recon}&#x3D;||x_{mel}-\hat{x}_{mel}||_1<br>$$</p>
 <p>However, during inference, there is no need to generate Mel-spectrograms. Mel-spectrograms are only used to compute this reconstruction loss.</p>
 <ol start="2">
 <li>KL Divergence<br>The input to the prior encoder $c$ includes phonemes generated from the text $c_{text}$ and the alignment between phonemes and latent variables $A$. The alignment matrix $A$ is of size $|c_{text}|\times |z|$, representing the strictly monotonic attention matrix for each phoneme’s duration. Therefore, the KL divergence is:</li>
@@ -218,10 +218,10 @@
 <ol>
 <li>Monotonic Alignment Search<br>To estimate the alignment $A$ between text and speech, VITS employs a method similar to Monotonic Alignment Search (MAS) used in Glow-TTS. This method aims to find an optimal alignment path to maximize the log-likelihood of the data parameterized by the normalization flow $f$:</li>
 </ol>
-<p>$$<br>A&#x3D;\mathop{argmax}<em>\limits{\hat{A}}\mathop{log}p(x|c</em>{text},\hat{A})\ &#x3D;\mathop{argmax}<em>\limits{\hat{A}}\mathop{log}N(f(x);\mu(c</em>{text},\hat{A}),\sigma(c_{text},\hat{A}))<br>$$</p>
-<p>MAS Constraints: The optimal alignment obtained through MAS must be monotonic and non-skipping. However, directly applying MAS to VITS is not feasible because VITS optimizes the ELBO rather than the log-likelihood of deterministic latent variables $z$. Therefore, a slight modification to MAS is made to find the optimal alignment path that maximizes the ELBO:<br>$$<br>\mathop{argmax}<em>\limits{\hat{A}}\mathop{log}p</em>{\theta}(x_{mel}|z)-\mathop{log}\frac{q_\phi(z|x_{lin})}{p_\theta(z|c_{text},\hat{A})}&#x3D;\mathop{argmax}<em>\limits{\hat{A}}\mathop{log}p_\theta(z|c</em>{text},\hat{A})&#x3D;\mathop{log}N(f_{\theta}(z);\mu_{\theta}(c_{text},\hat{A}),\sigma_{\theta}(c_{text},\hat{A}))<br>$$</p>
+<p>$$<br>A&#x3D;\mathop{argmax}\limits{\hat{A}}\mathop{log}p(x|c_{text},\hat{A})\ &#x3D;\mathop{argmax}\limits{\hat{A}}\mathop{log}N(f(x);\mu(c_{text},\hat{A}),\sigma(c_{text},\hat{A}))<br>$$</p>
+<p>MAS Constraints: The optimal alignment obtained through MAS must be monotonic and non-skipping. However, directly applying MAS to VITS is not feasible because VITS optimizes the ELBO rather than the log-likelihood of deterministic latent variables $z$. Therefore, a slight modification to MAS is made to find the optimal alignment path that maximizes the ELBO:<br>$$<br>\mathop{argmax}\limits{\hat{A}}\mathop{log}p_{\theta}(x_{mel}|z)-\mathop{log}\frac{q_\phi(z|x_{lin})}{p_\theta(z|c_{text},\hat{A})}&#x3D;\mathop{argmax}\limits{\hat{A}}\mathop{log}p_\theta(z|c_{text},\hat{A})&#x3D;\mathop{log}N(f_{\theta}(z);\mu_{\theta}(c_{text},\hat{A}),\sigma_{\theta}(c_{text},\hat{A}))<br>$$</p>
 <p>2.<br>Predicting Duration from Text</p>
-<p>The stochastic duration predictor is a flow-based generative model that introduces random variables $u$ and $v$ with the same time resolution and dimensionality as the duration sequence. It samples these two variables using the approximate posterior distribution $q_{\phi}(u,v|d,c_{text})$. The training objective is the variational lower bound of the phoneme duration log-likelihood:<br>$$<br>\mathop{log}p_\theta(d|c_{text})\geq \mathbb{E}<em>{q</em>{\phi}(u,v|d,c_{text})}[\mathop{log}\frac{p_{\theta}(d-u,v|c_{text})}{q_{\phi}(u,v|d,c_{text})}]<br>$$</p>
+<p>The stochastic duration predictor is a flow-based generative model that introduces random variables $u$ and $v$ with the same time resolution and dimensionality as the duration sequence. It samples these two variables using the approximate posterior distribution $q_{\phi}(u,v|d,c_{text})$. The training objective is the variational lower bound of the phoneme duration log-likelihood:<br>$$<br>\mathop{log}p\theta(d|c_{text})\geq \mathbb{E}<em>{q</em>{\phi}(u,v|d,c_{text})}[\mathop{log}\frac{p_{\theta}(d-u,v|c_{text})}{q_{\phi}(u,v|d,c_{text})}]<br>$$</p>
 <p>During training, the gradients of the stochastic duration predictor are disconnected to prevent them from affecting other modules. Phoneme durations are sampled from random noise through the reversible transformation of the stochastic duration predictor and then converted into integer values.</p>
 <h2 id="Adversarial-Training"><a href="#Adversarial-Training" class="headerlink" title="Adversarial Training"></a>Adversarial Training</h2><p>The discriminator $D$ is introduced to distinguish whether the output is generated by the decoder $G$ or real waveform $y$. VITS employs two types of loss functions. The first one is the least-squares loss function used for adversarial training:<br>$$<br>L_{adv}(D)&#x3D;\mathbb{E}_{(y,z)}[(D(y)-1)^2+(D(G(z)))^2]<br>$$</p>
 <p>$$<br>L_{adv}(G)&#x3D;\mathbb{E}_z[(D(G(z))-1)^2]<br>$$</p>
