@@ -1,0 +1,366 @@
+
+
+<!DOCTYPE html>
+<html lang="en" color-mode=light>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Paper Reading-Audio-Visual Efficient Conformer for Robust Speech Recognition - Avidya</title>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="google" content="notranslate" />
+  
+  <meta name="description" content="https://github.com/burchim/...">
+  <meta name="author" content="Kou">
+  <link rel="icon" href="/images/icons/favicon-32x32.png" type="image/png" sizes="16x16">
+  <link rel="icon" href="/images/icons/favicon-64x64.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/images/icons/apple-touch-icon.png" sizes="180x180">
+  <meta rel="mask-icon" href="/images/icons/stun-logo.svg" color="#333333">
+  
+    <meta rel="msapplication-TileImage" content="/images/icons/favicon-144x144.png">
+    <meta rel="msapplication-TileColor" content="#000000">
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+    
+<link rel="stylesheet" href="https://at.alicdn.com/t/font_1445822_p6ry5n7lrr.css">
+
+  
+
+  
+    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+
+  
+
+  
+    
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/foundation.min.css" name="highlight-style" mode="light">
+
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/solarized-dark.min.css" name="highlight-style" mode="dark">
+
+      
+  
+
+  <script>
+    var CONFIG = window.CONFIG || {};
+    var ZHAOO = window.ZHAOO || {};
+    CONFIG = {
+      isHome: false,
+      fancybox: true,
+      pjax: false,
+      loading: {
+        gif: '/images/theme/loading.gif',
+        lottie: ''
+      },
+      lazyload: {
+        enable: true,
+        only_post: 'false',
+        loading: {
+          gif: '/images/theme/loading.gif',
+          lottie: ''
+        }
+      },
+      donate: {
+        enable: false,
+        alipay: '',
+        wechat: ''
+      },
+      galleries: {
+        enable: false
+      },
+      fab: {
+        enable: true,
+        always_show: false
+      },
+      carrier: {
+        enable: true
+      },
+      daovoice: {
+        enable: false
+      },
+      preview: {
+        background: {
+          default: '',
+          api: ''
+        },
+        motto: {
+          default: 'もしも僕が主人公なら、僕は人の心が見えて',
+          typing: true,
+          api: '',
+          data_contents: '["data","content"]'
+        },
+      },
+      qrcode: {
+        enable: false,
+        type: 'url',
+        image: '/images/theme/qr-code.png',
+      },
+      toc: {
+        enable: true
+      },
+      scrollbar: {
+        type: 'default'
+      },
+      notification: {
+        enable: false,
+        delay: 4500,
+        list: '',
+        page_white_list: '',
+        page_black_list: ''
+      },
+      search: {
+        enable: false,
+        path: ''
+      }
+    }
+  </script>
+
+  
+
+  
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body class="lock-screen">
+  <div class="loading" id="loading"></div>
+  
+    
+
+
+  <nav class="navbar">
+    <div class="left">
+      
+        <i class="iconfont iconhome j-navbar-back-home"></i>
+      
+      
+      
+        <i class="iconfont iconmoono" id="color-toggle" color-toggle="light"></i>
+      
+      
+    </div>
+    <div class="center">Paper Reading-Audio-Visual Efficient Conformer for Robust Speech Recognition</div>
+    <div class="right">
+      <i class="iconfont iconmenu j-navbar-menu"></i>
+    </div>
+    
+  </nav>
+
+  
+  
+
+<nav class="menu">
+  <div class="menu-container">
+    <div class="menu-close">
+      <i class="iconfont iconbaseline-close-px"></i>
+    </div>
+    <ul class="menu-content"><li class="menu-item">
+        <a href="/ " class="underline "> home</a>
+      </li><li class="menu-item">
+        <a href="/archives/ " class="underline "> archives</a>
+      </li><li class="menu-item">
+        <a href="/about/ " class="underline "> about</a>
+      </li></ul>
+    
+  </div>
+</nav>
+  <main id="main">
+  <div class="article-wrap">
+    <div class="row container">
+      <div class="col-xl-3"></div>
+      <div class="col-xl-6"><article class="article">
+  <div class="wrap">
+    <section class="head">
+  <img   class="lazyload" data-original="/images%5Ctheme%5Cmaxresdefault.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+  <div class="head-mask">
+    <h1 class="head-title">Paper Reading-Audio-Visual Efficient Conformer for Robust Speech Recognition</h1>
+    <div class="head-info">
+      <span class="post-info-item"><i class="iconfont iconcalendar"></i>August 29, 2024</span>
+      
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>20808</span>
+    </div>
+  </div>
+</section>
+    <section class="main">
+      <section class="content">
+        
+        <p><a target="_blank" rel="noopener" href="https://github.com/burchim/AVEC">https://github.com/burchim/AVEC</a></p>
+<h1 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h1><p>In recent years, the combination of end-to-end speech recognition and large-scale manually annotated datasets has achieved very low Word Error Rates (WER) on many datasets. However, the low error rates are largely due to the relatively good quality of many datasets, with error rates soaring immediately on noisy datasets. This article aims to improve noise robustness through a multimodal architecture integrating speech and vision. Building upon a ResNet-18 visual frontend, an efficient and consistent backend is employed, and lip-reading methods are enhanced by incorporating intermediate CTC losses between Conformer blocks. The CTC residual module is utilized to place intermediate block features conditioned on early predictions to alleviate the assumption of conditional independence in CTC-based models. Additionally, Grouped Attention is replaced by a more efficient and simpler attention mechanism named Patch Attention. Experiments are conducted on publicly available LRS2 and LRS3 datasets. The results demonstrate that utilizing audio and visual modalities leads to better speech recognition in the presence of environmental noise, significantly speeding up training, with training speed reduced to one-fourth, and achieving lower WER. The Audio-Visual Efficient Consistency (AVEC) model achieves state-of-the-art performance, achieving 2.3% and 1.8% on the LRS2 and LRS3 test sets, respectively.</p>
+<h1 id="The-article-presents-four-main-contributions"><a href="#The-article-presents-four-main-contributions" class="headerlink" title="The article presents four main contributions:"></a>The article presents four main contributions:</h1><ul>
+<li><p>Integration of audio and visual modalities using the Conformer architecture, facilitating multimodal fusion for improved speech recognition.</p>
+</li>
+<li><p>Introduction of CTC residual modules to confine intermediate consistency block features to early predictions, thereby relaxing the conditional independence assumption of CTC models. This leads to a reduction in the Word Error Rate (WER) gap between autoregressive and non-autoregressive methods.</p>
+</li>
+<li><p>Replacement of Grouped Attention with Patch Attention, which proves to be equally effective while reducing computational complexity.</p>
+</li>
+<li><p>Achievement of state-of-the-art (SOTA) performance on publicly available LRS2 and LRS3 datasets, showcasing the effectiveness of the proposed methods in real-world scenarios.</p>
+</li>
+</ul>
+<h1 id="3-Model-Architecture"><a href="#3-Model-Architecture" class="headerlink" title="3. Model Architecture"></a>3. Model Architecture</h1><p><img   class="lazyload" data-original="https://pic1.zhimg.com/v2-a9e0abccd14057d9b33c4ad0adc3ea6c_b.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" ></p>
+<h2 id="Audio-Frontend"><a href="#Audio-Frontend" class="headerlink" title="Audio Frontend"></a>Audio Frontend</h2><ol>
+<li><p>Raw waveform audio is transformed into 257-dimensional spectrogram features using Fast Fourier Transform (FFT) with a window length of 20ms and a step size of 10ms.</p>
+</li>
+<li><p>The 257-dimensional spectrogram features are converted into 80-dimensional Mel features.</p>
+</li>
+<li><p>Convolutional Neural Network (CNN) is employed to extract time-frequency features.</p>
+</li>
+<li><p>Linear layer is applied to reduce the frequency domain dimensionality to 1.</p>
+</li>
+</ol>
+<p><img   class="lazyload" data-original="https://pic4.zhimg.com/v2-4fd7e9c427d86bf3a9840cea6e9bf7b3_b.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" ></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">AudioEfficientConformerEncoder</span>(nn.Module):<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, include_head=<span class="hljs-literal">True</span>, vocab_size=<span class="hljs-number">256</span>, att_type=<span class="hljs-string">&quot;patch&quot;</span>, interctc_blocks=[<span class="hljs-number">3</span>, <span class="hljs-number">6</span>, <span class="hljs-number">10</span>, <span class="hljs-number">13</span>], num_blocks=[<span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">5</span>], loss_prefix=<span class="hljs-string">&quot;ctc&quot;</span></span>):<br>        <span class="hljs-built_in">super</span>(AudioEfficientConformerEncoder, self).__init__()<br>        <span class="hljs-keyword">assert</span> att_type <span class="hljs-keyword">in</span> [<span class="hljs-string">&quot;regular&quot;</span>, <span class="hljs-string">&quot;grouped&quot;</span>, <span class="hljs-string">&quot;patch&quot;</span>]<br>        <span class="hljs-comment"># Params</span><br>        sample_rate=<span class="hljs-number">16000</span><br>        n_fft=<span class="hljs-number">512</span><br>        win_length_ms=<span class="hljs-number">25</span><br>        hop_length_ms=<span class="hljs-number">10</span><br>        n_mels=<span class="hljs-number">80</span><br>        mF=<span class="hljs-number">2</span><br>        F=<span class="hljs-number">27</span><br>        mT=<span class="hljs-number">5</span><br>        pS=<span class="hljs-number">0.05</span><br>        kernel_size=<span class="hljs-number">15</span><br>        drop_rate=<span class="hljs-number">0.1</span><br>        attn_drop_rate=<span class="hljs-number">0.0</span><br>        max_pos_encoding=<span class="hljs-number">10000</span><br>        causal=<span class="hljs-literal">False</span><br>        subsampling_filters=<span class="hljs-number">180</span><br>        dim_model=[<span class="hljs-number">180</span>, <span class="hljs-number">256</span>, <span class="hljs-number">360</span>]<br>        num_heads=<span class="hljs-number">4</span><br><br>        <span class="hljs-comment"># Audio Preprocessing (B, T) -&gt; (B, n_mels, T // hop_length + 1)</span><br>        self.audio_preprocessing = preprocessing.AudioPreprocessing(<br>            sample_rate=sample_rate,<br>            n_fft=n_fft,<br>            win_length_ms=win_length_ms,<br>            hop_length_ms=hop_length_ms,<br>            n_mels=n_mels,<br>            normalize=<span class="hljs-literal">False</span>,<br>            mean=-<span class="hljs-number">5.6501</span>,<br>            std=<span class="hljs-number">4.2280</span><br>        )<br><br>        <span class="hljs-comment"># Spec Augment</span><br>        self.spec_augment = preprocessing.SpecAugment(<br>            mF=mF,<br>            F=F,<br>            mT=mT,<br>            pS=pS<br>        )<br><br>        <span class="hljs-comment"># Unsqueeze (B, N, T) -&gt; (B, 1, N, T)</span><br>        self.unsqueeze = layers.Unsqueeze(dim=<span class="hljs-number">1</span>)<br><br>        <span class="hljs-comment"># Stem (B, 1, N, T) -&gt; (B, C, N&#x27;, T&#x27;)</span><br>        self.subsampling_module = modules.ConvNeuralNetwork(<br>            dim_input=<span class="hljs-number">1</span>,<br>            dim_layers=subsampling_filters,<br>            kernel_size=<span class="hljs-number">3</span>,<br>            strides=<span class="hljs-number">2</span>,<br>            norm=<span class="hljs-string">&quot;BatchNorm2d&quot;</span>,<br>            act_fun=<span class="hljs-string">&quot;Swish&quot;</span>,<br>            drop_rate=<span class="hljs-number">0.0</span>,<br>            dim=<span class="hljs-number">2</span><br>        )<br><br>        <span class="hljs-comment"># Reshape (B, C, N, T) -&gt; (B, D, T)</span><br>        self.reshape = layers.Reshape(shape=(subsampling_filters * n_mels // <span class="hljs-number">2</span>, -<span class="hljs-number">1</span>), include_batch=<span class="hljs-literal">False</span>)<br><br>        <span class="hljs-comment"># Transpose (B, D, T) -&gt; (B, T, D)</span><br>        self.transpose = layers.Transpose(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>)<br><br>        <span class="hljs-comment"># Linear Proj</span><br>        self.linear = layers.Linear(subsampling_filters * n_mels // <span class="hljs-number">2</span>, dim_model[<span class="hljs-number">0</span>])<br><br>        <span class="hljs-comment"># Conformer</span><br>        self.back_end = ConformerInterCTC(<br>            dim_model=dim_model,<br>            num_blocks=num_blocks,<br>            interctc_blocks=interctc_blocks,<br>            vocab_size=vocab_size,<br>            att_params=[<br>                &#123;<span class="hljs-string">&quot;class&quot;</span>: <span class="hljs-string">&quot;RelPos1dMultiHeadAttention&quot;</span>, <span class="hljs-string">&quot;params&quot;</span>: &#123;<span class="hljs-string">&quot;num_heads&quot;</span>: num_heads, <span class="hljs-string">&quot;attn_drop_rate&quot;</span>: attn_drop_rate, <span class="hljs-string">&quot;num_pos_embeddings&quot;</span>: max_pos_encoding, <span class="hljs-string">&quot;weight_init&quot;</span>: <span class="hljs-string">&quot;default&quot;</span>, <span class="hljs-string">&quot;bias_init&quot;</span>: <span class="hljs-string">&quot;default&quot;</span>&#125;&#125;,<br>                &#123;<span class="hljs-string">&quot;class&quot;</span>: <span class="hljs-string">&quot;RelPos1dMultiHeadAttention&quot;</span>, <span class="hljs-string">&quot;params&quot;</span>: &#123;<span class="hljs-string">&quot;num_heads&quot;</span>: num_heads, <span class="hljs-string">&quot;attn_drop_rate&quot;</span>: attn_drop_rate, <span class="hljs-string">&quot;num_pos_embeddings&quot;</span>: max_pos_encoding, <span class="hljs-string">&quot;weight_init&quot;</span>: <span class="hljs-string">&quot;default&quot;</span>, <span class="hljs-string">&quot;bias_init&quot;</span>: <span class="hljs-string">&quot;default&quot;</span>&#125;&#125;,<br>                &#123;<span class="hljs-string">&quot;class&quot;</span>: <span class="hljs-string">&quot;RelPos1dMultiHeadAttention&quot;</span>, <span class="hljs-string">&quot;params&quot;</span>: &#123;<span class="hljs-string">&quot;num_heads&quot;</span>: num_heads, <span class="hljs-string">&quot;attn_drop_rate&quot;</span>: attn_drop_rate, <span class="hljs-string">&quot;num_pos_embeddings&quot;</span>: max_pos_encoding, <span class="hljs-string">&quot;weight_init&quot;</span>: <span class="hljs-string">&quot;default&quot;</span>, <span class="hljs-string">&quot;bias_init&quot;</span>: <span class="hljs-string">&quot;default&quot;</span>&#125;&#125;<br>            ] <span class="hljs-keyword">if</span> att_type == <span class="hljs-string">&quot;regular&quot;</span> <span class="hljs-keyword">else</span> [<br>                &#123;<span class="hljs-string">&quot;class&quot;</span>: <span class="hljs-string">&quot;GroupedRelPosMultiHeadSelfAttention&quot;</span>, <span class="hljs-string">&quot;params&quot;</span>: &#123;<span class="hljs-string">&quot;num_heads&quot;</span>: num_heads, <span class="hljs-string">&quot;group_size&quot;</span>: <span class="hljs-number">3</span>, <span class="hljs-string">&quot;attn_drop_rate&quot;</span>: attn_drop_rate, <span class="hljs-string">&quot;max_pos_encoding&quot;</span>: max_pos_encoding, <span class="hljs-string">&quot;causal&quot;</span>: causal&#125;&#125;,<br>                &#123;<span class="hljs-string">&quot;class&quot;</span>: <span class="hljs-string">&quot;GroupedRelPosMultiHeadSelfAttention&quot;</span>, <span class="hljs-string">&quot;params&quot;</span>: &#123;<span class="hljs-string">&quot;num_heads&quot;</span>: num_heads, <span class="hljs-string">&quot;group_size&quot;</span>: <span class="hljs-number">1</span>, <span class="hljs-string">&quot;attn_drop_rate&quot;</span>: attn_drop_rate, <span class="hljs-string">&quot;max_pos_encoding&quot;</span>: max_pos_encoding, <span class="hljs-string">&quot;causal&quot;</span>: causal&#125;&#125;,<br>                &#123;<span class="hljs-string">&quot;class&quot;</span>: <span class="hljs-string">&quot;GroupedRelPosMultiHeadSelfAttention&quot;</span>, <span class="hljs-string">&quot;params&quot;</span>: &#123;<span class="hljs-string">&quot;num_heads&quot;</span>: num_heads, <span class="hljs-string">&quot;group_size&quot;</span>: <span class="hljs-number">1</span>, <span class="hljs-string">&quot;attn_drop_rate&quot;</span>: attn_drop_rate, <span class="hljs-string">&quot;max_pos_encoding&quot;</span>: max_pos_encoding, <span class="hljs-string">&quot;causal&quot;</span>: causal&#125;&#125;<br>            ] <span class="hljs-keyword">if</span> att_type == <span class="hljs-string">&quot;grouped&quot;</span> <span class="hljs-keyword">else</span> [<br>                &#123;<span class="hljs-string">&quot;class&quot;</span>: <span class="hljs-string">&quot;RelPosPatch1dMultiHeadAttention&quot;</span>, <span class="hljs-string">&quot;params&quot;</span>: &#123;<span class="hljs-string">&quot;num_heads&quot;</span>: num_heads, <span class="hljs-string">&quot;patch_size&quot;</span>: <span class="hljs-number">3</span>, <span class="hljs-string">&quot;attn_drop_rate&quot;</span>: attn_drop_rate, <span class="hljs-string">&quot;num_pos_embeddings&quot;</span>: max_pos_encoding, <span class="hljs-string">&quot;weight_init&quot;</span>: <span class="hljs-string">&quot;default&quot;</span>, <span class="hljs-string">&quot;bias_init&quot;</span>: <span class="hljs-string">&quot;default&quot;</span>&#125;&#125;,<br>                &#123;<span class="hljs-string">&quot;class&quot;</span>: <span class="hljs-string">&quot;RelPos1dMultiHeadAttention&quot;</span>, <span class="hljs-string">&quot;params&quot;</span>: &#123;<span class="hljs-string">&quot;num_heads&quot;</span>: num_heads, <span class="hljs-string">&quot;attn_drop_rate&quot;</span>: attn_drop_rate, <span class="hljs-string">&quot;num_pos_embeddings&quot;</span>: max_pos_encoding, <span class="hljs-string">&quot;weight_init&quot;</span>: <span class="hljs-string">&quot;default&quot;</span>, <span class="hljs-string">&quot;bias_init&quot;</span>: <span class="hljs-string">&quot;default&quot;</span>&#125;&#125;,<br>                &#123;<span class="hljs-string">&quot;class&quot;</span>: <span class="hljs-string">&quot;RelPos1dMultiHeadAttention&quot;</span>, <span class="hljs-string">&quot;params&quot;</span>: &#123;<span class="hljs-string">&quot;num_heads&quot;</span>: num_heads, <span class="hljs-string">&quot;attn_drop_rate&quot;</span>: attn_drop_rate, <span class="hljs-string">&quot;num_pos_embeddings&quot;</span>: max_pos_encoding, <span class="hljs-string">&quot;weight_init&quot;</span>: <span class="hljs-string">&quot;default&quot;</span>, <span class="hljs-string">&quot;bias_init&quot;</span>: <span class="hljs-string">&quot;default&quot;</span>&#125;&#125;<br>            ],<br>            conv_params=&#123; <span class="hljs-string">&quot;class&quot;</span>: <span class="hljs-string">&quot;Conv1d&quot;</span>, <span class="hljs-string">&quot;params&quot;</span>: &#123;<span class="hljs-string">&quot;padding&quot;</span>: <span class="hljs-string">&quot;same&quot;</span>, <span class="hljs-string">&quot;kernel_size&quot;</span>: kernel_size&#125;&#125;,<br>            ff_ratio=<span class="hljs-number">4</span>,<br>            drop_rate=drop_rate,<br>            pos_embedding=<span class="hljs-literal">None</span>, <br>            mask=attentions.Mask(), <br>            conv_stride=<span class="hljs-number">2</span>, <br>            batch_norm=<span class="hljs-literal">True</span>,<br>            loss_prefix=loss_prefix<br>        )<br><br>        <span class="hljs-comment"># Head</span><br>        self.head = layers.Linear(dim_model[-<span class="hljs-number">1</span>], vocab_size) <span class="hljs-keyword">if</span> include_head <span class="hljs-keyword">else</span> nn.Identity()<br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">forward</span>(<span class="hljs-params">self, x, lengths</span>):<br><br>        <span class="hljs-comment"># Audio Preprocessing </span><br>        x, lengths = self.audio_preprocessing(x, lengths)<br>        <span class="hljs-comment"># Spec Augment</span><br>        x = self.spec_augment(x, lengths)<br>        <span class="hljs-comment"># Unsqueeze </span><br>        x = self.unsqueeze(x)<br>        <span class="hljs-comment"># Stem</span><br>        x, lengths = self.subsampling_module(x, lengths)<br>        <span class="hljs-comment"># Reshape</span><br>        x = self.reshape(x)<br>        <span class="hljs-comment"># Transpose</span><br>        x = self.transpose(x)<br>        <span class="hljs-comment"># Linear Proj</span><br>        x = self.linear(x)<br>        <span class="hljs-comment"># Conformer</span><br>        x, lengths, interctc_outputs = self.back_end(x, lengths)<br><br>        <span class="hljs-comment"># Head</span><br>        x = self.head(x)<br>        <span class="hljs-keyword">return</span> x, lengths, interctc_outputs<br></code></pre></td></tr></table></figure>
+
+
+
+
+<h2 id="Visual-Frontend"><a href="#Visual-Frontend" class="headerlink" title="Visual Frontend"></a>Visual Frontend</h2><ol>
+<li><p>3D convolution (5x7x7) is applied to process sequences of video frames.</p>
+</li>
+<li><p>Residual layer + Pooling + Projection</p>
+</li>
+</ol>
+<p><img   class="lazyload" data-original="https://pic3.zhimg.com/v2-45c948a65637ccb70a5ea00552440a5e_b.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" ></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">VisualEfficientConformerEncoder</span>(nn.Module):<br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, include_head=<span class="hljs-literal">True</span>, vocab_size=<span class="hljs-number">256</span>, interctc_blocks=[<span class="hljs-number">3</span>, <span class="hljs-number">6</span>, <span class="hljs-number">9</span>], num_blocks=[<span class="hljs-number">6</span>, <span class="hljs-number">6</span>], loss_prefix=<span class="hljs-string">&quot;ctc&quot;</span></span>):<br>        <span class="hljs-built_in">super</span>(VisualEfficientConformerEncoder, self).__init__()<br><br>        <span class="hljs-comment"># Params</span><br>        dim_model=[<span class="hljs-number">256</span>, <span class="hljs-number">360</span>]<br>        num_heads=<span class="hljs-number">4</span><br>        kernel_size=<span class="hljs-number">15</span><br>        drop_rate=<span class="hljs-number">0.1</span><br>        attn_drop_rate=<span class="hljs-number">0.0</span><br>        max_pos_encoding=<span class="hljs-number">10000</span><br><br>        <span class="hljs-comment"># Stem 88 -&gt; 44</span><br>        <span class="hljs-comment"># MaxPool 44 -&gt; 22 </span><br>        <span class="hljs-comment"># ResNet 22 -&gt; 11 -&gt; 6 -&gt; 3</span><br>        <span class="hljs-comment"># GlobalPool 3 -&gt; 1</span><br>        self.front_end = nn.Sequential(<br>            modules.ConvNeuralNetwork(<br>                dim_input=<span class="hljs-number">1</span>,<br>                dim_layers=<span class="hljs-number">64</span>,<br>                kernel_size=(<span class="hljs-number">5</span>, <span class="hljs-number">7</span>, <span class="hljs-number">7</span>),<br>                strides=(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>),<br>                norm=<span class="hljs-string">&quot;BatchNorm3d&quot;</span>,<br>                act_fun=<span class="hljs-string">&quot;ReLU&quot;</span>,<br>                drop_rate=<span class="hljs-number">0.0</span>,<br>                dim=<span class="hljs-number">3</span><br>            ),<br>            layers.MaxPool3d(kernel_size=(<span class="hljs-number">1</span>, <span class="hljs-number">3</span>, <span class="hljs-number">3</span>), stride=(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>), padding=<span class="hljs-string">&quot;same&quot;</span>),<br>            transforms.VideoToImages(), <span class="hljs-comment"># (B, C, T, H, W) -&gt; (BT, C, H, W)</span><br>            ResNet(include_stem=<span class="hljs-literal">False</span>, dim_output=dim_model[<span class="hljs-number">0</span>], model=<span class="hljs-string">&quot;ResNet18&quot;</span>)<br>        )<br><br>        self.expand_time = transforms.ImagesToVideos()<br><br>        <span class="hljs-comment"># Conformer</span><br>        self.back_end = ConformerInterCTC(<br>            dim_model=dim_model,<br>            num_blocks=num_blocks,<br>            interctc_blocks=interctc_blocks,<br>            vocab_size=vocab_size,<br>            att_params=&#123;<span class="hljs-string">&quot;class&quot;</span>: <span class="hljs-string">&quot;RelPos1dMultiHeadAttention&quot;</span>, <span class="hljs-string">&quot;params&quot;</span>: &#123;<span class="hljs-string">&quot;num_heads&quot;</span>: num_heads, <span class="hljs-string">&quot;attn_drop_rate&quot;</span>: attn_drop_rate, <span class="hljs-string">&quot;num_pos_embeddings&quot;</span>: max_pos_encoding, <span class="hljs-string">&quot;weight_init&quot;</span>: <span class="hljs-string">&quot;default&quot;</span>, <span class="hljs-string">&quot;bias_init&quot;</span>: <span class="hljs-string">&quot;default&quot;</span>&#125;&#125;,<br>            conv_params=&#123;<span class="hljs-string">&quot;class&quot;</span>: <span class="hljs-string">&quot;Conv1d&quot;</span>, <span class="hljs-string">&quot;params&quot;</span>: &#123;<span class="hljs-string">&quot;padding&quot;</span>: <span class="hljs-string">&quot;same&quot;</span>, <span class="hljs-string">&quot;kernel_size&quot;</span>: kernel_size&#125;&#125;,<br>            ff_ratio=<span class="hljs-number">4</span>,<br>            drop_rate=drop_rate,<br>            pos_embedding=<span class="hljs-literal">None</span>, <br>            mask=attentions.Mask(), <br>            conv_stride=<span class="hljs-number">2</span>, <br>            batch_norm=<span class="hljs-literal">True</span>,<br>            loss_prefix=loss_prefix<br>        )<br><br>        <span class="hljs-comment"># Head</span><br>        self.head = layers.Linear(dim_model[-<span class="hljs-number">1</span>], vocab_size) <span class="hljs-keyword">if</span> include_head <span class="hljs-keyword">else</span> nn.Identity()<br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">forward</span>(<span class="hljs-params">self, x, lengths</span>):<br><br>        <span class="hljs-comment"># Frontend</span><br>        time = x.shape[<span class="hljs-number">2</span>]<br>        x = self.front_end(x) <span class="hljs-comment"># (B, C, T, H, W) -&gt; (BT, C)</span><br>        x = x.unsqueeze(dim=-<span class="hljs-number">1</span>).unsqueeze(dim=-<span class="hljs-number">1</span>) <span class="hljs-comment"># (BT, C) -&gt; (BT, C, 1, 1)</span><br>        x = self.expand_time(x, time) <span class="hljs-comment"># (BT, C, 1, 1) -&gt; (B, C, T, 1, 1)</span><br>        x = x.squeeze(dim=-<span class="hljs-number">1</span>).squeeze(dim=-<span class="hljs-number">1</span>).transpose(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>) <span class="hljs-comment"># (B, C, T, 1, 1) -&gt; (B, T, C)</span><br><br>        <span class="hljs-comment"># Backend</span><br>        x, lengths, interctc_outputs = self.back_end(x, lengths)<br><br>        <span class="hljs-comment"># Head</span><br>        x = self.head(x)<br><br>        <span class="hljs-keyword">return</span> x, lengths, interctc_outputs<br></code></pre></td></tr></table></figure>
+
+<h2 id="Backend"><a href="#Backend" class="headerlink" title="Backend"></a>Backend</h2><p>Both the video backend and the visual backend adopt the Conformer architecture.<br>Here, it is essential to ensure synchronization of the frame rates between the audio stream and the visual stream, achieving temporal alignment at the feature level. This synchronization enables feature fusion.</p>
+<p><img   class="lazyload" data-original="https://pic1.zhimg.com/v2-4259fffaf40ff1084d047075ff00f954_b.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" ></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">AudioVisualEfficientConformerEncoder</span>(nn.Module):<br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, include_head=<span class="hljs-literal">True</span>, vocab_size=<span class="hljs-number">256</span>, v_interctc_blocks=[<span class="hljs-number">3</span>, <span class="hljs-number">6</span>], a_interctc_blocks=[<span class="hljs-number">8</span>, <span class="hljs-number">11</span>], f_interctc_blocks=[<span class="hljs-number">2</span>]</span>):<br>        <span class="hljs-built_in">super</span>(AudioVisualEfficientConformerEncoder, self).__init__()<br><br>        <span class="hljs-comment"># Params</span><br>        dim_model = <span class="hljs-number">360</span><br>        num_blocks = <span class="hljs-number">5</span><br>        num_heads = <span class="hljs-number">4</span><br>        drop_rate = <span class="hljs-number">0.1</span><br>        attn_drop_rate = <span class="hljs-number">0.0</span><br>        max_pos_encoding = <span class="hljs-number">10000</span><br>        kernel_size = <span class="hljs-number">15</span><br>        v_num_blocks = [<span class="hljs-number">6</span>, <span class="hljs-number">1</span>]<br>        a_num_blocks = [<span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">1</span>]<br><br>        <span class="hljs-comment"># Visual Encoder</span><br>        self.video_encoder = VisualEfficientConformerEncoder(include_head=<span class="hljs-literal">False</span>, vocab_size=vocab_size, interctc_blocks=v_interctc_blocks, num_blocks=v_num_blocks, loss_prefix=<span class="hljs-string">&quot;v_ctc&quot;</span>)<br><br>        <span class="hljs-comment"># Audio Encoder</span><br>        self.audio_encoder = AudioEfficientConformerEncoder(include_head=<span class="hljs-literal">False</span>, vocab_size=vocab_size, interctc_blocks=a_interctc_blocks, num_blocks=a_num_blocks, loss_prefix=<span class="hljs-string">&quot;a_ctc&quot;</span>)<br><br>        <span class="hljs-comment"># Fusion Module</span><br>        self.fusion_module = modules.FusionModule(a_dim_model=dim_model, v_dim_model=dim_model, f_dim_model=dim_model)<br><br>        <span class="hljs-comment"># Audio-visual Encoder</span><br>        self.audio_visual_encoder = ConformerInterCTC(<br>            dim_model=dim_model,<br>            num_blocks=num_blocks,<br>            interctc_blocks=f_interctc_blocks,<br>            vocab_size=vocab_size,<br>            att_params=&#123;<span class="hljs-string">&quot;class&quot;</span>: <span class="hljs-string">&quot;RelPos1dMultiHeadAttention&quot;</span>, <span class="hljs-string">&quot;params&quot;</span>: &#123;<span class="hljs-string">&quot;num_heads&quot;</span>: num_heads, <span class="hljs-string">&quot;attn_drop_rate&quot;</span>: attn_drop_rate, <span class="hljs-string">&quot;num_pos_embeddings&quot;</span>: max_pos_encoding, <span class="hljs-string">&quot;weight_init&quot;</span>: <span class="hljs-string">&quot;default&quot;</span>, <span class="hljs-string">&quot;bias_init&quot;</span>: <span class="hljs-string">&quot;default&quot;</span>&#125;&#125;,<br>            conv_params=&#123;<span class="hljs-string">&quot;class&quot;</span>: <span class="hljs-string">&quot;Conv1d&quot;</span>, <span class="hljs-string">&quot;params&quot;</span>: &#123;<span class="hljs-string">&quot;padding&quot;</span>: <span class="hljs-string">&quot;same&quot;</span>, <span class="hljs-string">&quot;kernel_size&quot;</span>: kernel_size&#125;&#125;,<br>            ff_ratio=<span class="hljs-number">4</span>,<br>            drop_rate=drop_rate,<br>            pos_embedding=<span class="hljs-literal">None</span>, <br>            mask=attentions.Mask(), <br>            conv_stride=<span class="hljs-number">2</span>, <br>            batch_norm=<span class="hljs-literal">True</span>,<br>            loss_prefix=<span class="hljs-string">&quot;f_ctc&quot;</span><br>        )<br><br>        <span class="hljs-comment"># Head</span><br>        self.head = layers.Linear(dim_model, vocab_size) <span class="hljs-keyword">if</span> include_head <span class="hljs-keyword">else</span> nn.Identity()<br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">forward</span>(<span class="hljs-params">self, video, video_len, audio, audio_len</span>):<br>        <span class="hljs-comment"># Visual Encoder</span><br>        video, video_len, video_interctc_outputs = self.video_encoder(video, video_len)<br>        <span class="hljs-comment"># Audio Encoder</span><br>        audio, audio_len, audio_interctc_outputs = self.audio_encoder(audio, audio_len)<br>        <span class="hljs-comment"># Fusion Module</span><br>        x = self.fusion_module(audio, video)<br>        lengths = audio_len<br>        <span class="hljs-comment"># Audio-visual Encoder</span><br>        x, lengths, interctc_outputs = self.audio_visual_encoder(x, lengths)<br>        interctc_outputs.update(video_interctc_outputs)<br>        interctc_outputs.update(audio_interctc_outputs)<br><br>        <span class="hljs-comment"># Head</span><br>        x = self.head(x)<br><br>        <span class="hljs-keyword">return</span> x, lengths, interctc_outputs<br></code></pre></td></tr></table></figure>
+
+<h1 id="Patch-Attention"><a href="#Patch-Attention" class="headerlink" title="Patch Attention"></a>Patch Attention</h1><p>In the Efficient Conformer model, within the initial encoder layer, the Multi-head Self-Attention is replaced with Grouped Multi-head Self-Attention. This approach, akin to the concept of Group Convolution, aims to reduce memory consumption and computational load.</p>
+<p>The Patch Attention introduced in this paper represents a further optimization of this approach.</p>
+<p><img   class="lazyload" data-original="https://pic3.zhimg.com/v2-6f20ef69c2d91480e569b089a9963aa6_b.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" ></p>
+<p><img   class="lazyload" data-original="https://pic1.zhimg.com/v2-4ca8faa748fb19834c58fc0f01013210_b.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" ></p>
+<h1 id="Intermediate-CTC-Prediction"><a href="#Intermediate-CTC-Prediction" class="headerlink" title="Intermediate CTC Prediction"></a>Intermediate CTC Prediction</h1><p>Intermediate CTC residual modules are added between the Conformer blocks in the audio encoder. This addition aims to mitigate the impact of the conditional independence assumption of CTC, thereby approximating the performance of autoregressive S2S models.</p>
+<p><img   class="lazyload" data-original="https://pic1.zhimg.com/v2-a184db4b6c69b65a09ac034c706b4f70_b.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" ></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">ConformerInterCTC</span>(nn.Module):<br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, dim_model, num_blocks, interctc_blocks, vocab_size, loss_prefix=<span class="hljs-string">&quot;ctc&quot;</span>, att_params=&#123;<span class="hljs-string">&quot;class&quot;</span>: <span class="hljs-string">&quot;MultiHeadAttention&quot;</span>, <span class="hljs-string">&quot;num_heads&quot;</span>: <span class="hljs-number">4</span>&#125;, conv_params=&#123;<span class="hljs-string">&quot;class&quot;</span>: <span class="hljs-string">&quot;Conv1d&quot;</span>, <span class="hljs-string">&quot;params&quot;</span>: &#123;<span class="hljs-string">&quot;padding&quot;</span>: <span class="hljs-string">&quot;same&quot;</span>, <span class="hljs-string">&quot;kernel_size&quot;</span>: <span class="hljs-number">31</span>&#125;&#125;, ff_ratio=<span class="hljs-number">4</span>, drop_rate=<span class="hljs-number">0.1</span>, pos_embedding=<span class="hljs-literal">None</span>, mask=<span class="hljs-literal">None</span>, conv_stride=<span class="hljs-number">1</span>, batch_norm=<span class="hljs-literal">True</span></span>):<br>        <span class="hljs-built_in">super</span>(ConformerInterCTC, self).__init__()<br><br>        <span class="hljs-comment"># Inter CTC Params</span><br>        self.interctc_blocks = interctc_blocks<br>        self.loss_prefix = loss_prefix<br><br>        <span class="hljs-comment"># Single Stage</span><br>        <span class="hljs-keyword">if</span> <span class="hljs-built_in">isinstance</span>(dim_model, <span class="hljs-built_in">int</span>):<br>            dim_model = [dim_model]<br>        <span class="hljs-keyword">if</span> <span class="hljs-built_in">isinstance</span>(num_blocks, <span class="hljs-built_in">int</span>):<br>            num_blocks = [num_blocks]<br>        <br>        <span class="hljs-comment"># Positional Embedding</span><br>        self.pos_embedding = pos_embedding<br><br>        <span class="hljs-comment"># Input Dropout</span><br>        self.dropout = nn.Dropout(p=drop_rate)<br><br>        <span class="hljs-comment"># Mask</span><br>        self.mask = mask<br><br>        <span class="hljs-comment"># Conformer Stages</span><br>        i = <span class="hljs-number">1</span><br>        self.conformer_blocks = nn.ModuleList()<br>        self.interctc_modules = nn.ModuleList()<br>        <span class="hljs-keyword">for</span> stage_id <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-built_in">len</span>(num_blocks)):<br><br>            <span class="hljs-comment"># Conformer Blocks</span><br>            <span class="hljs-keyword">for</span> block_id <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(num_blocks[stage_id]):<br><br>                <span class="hljs-comment"># Transposed Block</span><br>                transposed_block = <span class="hljs-string">&quot;Transpose&quot;</span> <span class="hljs-keyword">in</span> conv_params[<span class="hljs-string">&quot;class&quot;</span>]<br><br>                <span class="hljs-comment"># Downsampling Block</span><br>                down_block = ((block_id == <span class="hljs-number">0</span>) <span class="hljs-keyword">and</span> (stage_id &gt; <span class="hljs-number">0</span>)) <span class="hljs-keyword">if</span> transposed_block <span class="hljs-keyword">else</span> ((block_id == num_blocks[stage_id] - <span class="hljs-number">1</span>) <span class="hljs-keyword">and</span> (stage_id &lt; <span class="hljs-built_in">len</span>(num_blocks) - <span class="hljs-number">1</span>))<br><br>                <span class="hljs-comment"># Block</span><br>                self.conformer_blocks.append(blocks.ConformerBlock(<br>                    dim_model=dim_model[stage_id - (<span class="hljs-number">1</span> <span class="hljs-keyword">if</span> transposed_block <span class="hljs-keyword">and</span> down_block <span class="hljs-keyword">else</span> <span class="hljs-number">0</span>)],<br>                    dim_expand=dim_model[stage_id + (<span class="hljs-number">1</span> <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> transposed_block <span class="hljs-keyword">and</span> down_block <span class="hljs-keyword">else</span> <span class="hljs-number">0</span>)],<br>                    ff_ratio=ff_ratio,<br>                    drop_rate=drop_rate,<br>                    att_params=att_params[stage_id - (<span class="hljs-number">1</span> <span class="hljs-keyword">if</span> transposed_block <span class="hljs-keyword">and</span> down_block <span class="hljs-keyword">else</span> <span class="hljs-number">0</span>)] <span class="hljs-keyword">if</span> <span class="hljs-built_in">isinstance</span>(att_params, <span class="hljs-built_in">list</span>) <span class="hljs-keyword">else</span> att_params,<br>                    conv_stride=<span class="hljs-number">1</span> <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> down_block <span class="hljs-keyword">else</span> conv_stride[stage_id] <span class="hljs-keyword">if</span> <span class="hljs-built_in">isinstance</span>(conv_stride, <span class="hljs-built_in">list</span>) <span class="hljs-keyword">else</span> conv_stride,<br>                    conv_params=conv_params[stage_id] <span class="hljs-keyword">if</span> <span class="hljs-built_in">isinstance</span>(conv_params, <span class="hljs-built_in">list</span>) <span class="hljs-keyword">else</span> conv_params,<br>                    batch_norm=batch_norm<br>                ))<br><br>                <span class="hljs-comment"># InterCTC Block</span><br>                <span class="hljs-keyword">if</span> i <span class="hljs-keyword">in</span> interctc_blocks:<br>                    self.interctc_modules.append(modules.InterCTCResModule(<br>                        dim_model=dim_model[stage_id + (<span class="hljs-number">1</span> <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> transposed_block <span class="hljs-keyword">and</span> down_block <span class="hljs-keyword">else</span> <span class="hljs-number">0</span>)], <br>                        vocab_size=vocab_size<br>                    ))<br><br>                i += <span class="hljs-number">1</span><br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">forward</span>(<span class="hljs-params">self, x, lengths</span>):<br><br>        <span class="hljs-comment"># Pos Embedding</span><br>        <span class="hljs-keyword">if</span> self.pos_embedding != <span class="hljs-literal">None</span>:<br>            x = self.pos_embedding(x)<br>            <br>        <span class="hljs-comment"># Dropout</span><br>        x = self.dropout(x)<br><br>        <span class="hljs-comment"># Mask (1 or B, 1, N, N)</span><br>        <span class="hljs-keyword">if</span> self.mask != <span class="hljs-literal">None</span>:<br>            mask = self.mask(x, lengths)<br>        <span class="hljs-keyword">else</span>:<br>            mask = <span class="hljs-literal">None</span><br><br>        <span class="hljs-comment"># Conformer Blocks</span><br>        interctc_outputs = &#123;&#125;<br>        j = <span class="hljs-number">0</span><br>        <span class="hljs-keyword">for</span> i, block <span class="hljs-keyword">in</span> <span class="hljs-built_in">enumerate</span>(self.conformer_blocks):<br><br>            <span class="hljs-comment"># Conformer Block</span><br>            x = block(x, mask=mask)<br><br>            <span class="hljs-comment"># InterCTC Block</span><br>            <span class="hljs-keyword">if</span> i + <span class="hljs-number">1</span> <span class="hljs-keyword">in</span> self.interctc_blocks:<br>                x, logits = self.interctc_modules[j](x)<br>                j += <span class="hljs-number">1</span><br>                key = self.loss_prefix + <span class="hljs-string">&quot;_&quot;</span> + <span class="hljs-built_in">str</span>(i)<br>            <span class="hljs-keyword">else</span>:<br>                logits = <span class="hljs-literal">None</span><br><br>            <span class="hljs-comment"># Strided Block</span><br>            <span class="hljs-keyword">if</span> block.stride &gt; <span class="hljs-number">1</span>:<br><br>                <span class="hljs-comment"># Stride Mask (1 or B, 1, T // S, T // S)</span><br>                <span class="hljs-keyword">if</span> mask <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> <span class="hljs-literal">None</span>:<br>                    mask = mask[:, :, ::block.stride, ::block.stride]<br><br>                <span class="hljs-comment"># Update Seq Lengths</span><br>                <span class="hljs-keyword">if</span> lengths <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> <span class="hljs-literal">None</span>:<br>                    lengths = torch.div(lengths - <span class="hljs-number">1</span>, block.stride, rounding_mode=<span class="hljs-string">&#x27;floor&#x27;</span>) + <span class="hljs-number">1</span><br><br>            <span class="hljs-keyword">if</span> logits != <span class="hljs-literal">None</span>:<br>                interctc_outputs[key] = [logits, lengths]<br><br>        <span class="hljs-keyword">return</span> x, lengths, interctc_outputs<br></code></pre></td></tr></table></figure>
+
+
+      </section>
+      <section class="extra">
+        
+          
+        
+        
+        
+        
+  <nav class="nav">
+    <a></a>
+    <a href="/2024/03/23/skh/">😰<i class="iconfont iconright"></i></a>
+  </nav>
+
+      </section>
+      
+    </section>
+  </div>
+</article></div>
+      <div class="col-xl-3">
+        
+          
+  <aside class="toc-wrap">
+    <h3 class="toc-title">Index</h3>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Abstract"><span class="toc-text">Abstract</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#The-article-presents-four-main-contributions"><span class="toc-text">The article presents four main contributions:</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-Model-Architecture"><span class="toc-text">3. Model Architecture</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Audio-Frontend"><span class="toc-text">Audio Frontend</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Visual-Frontend"><span class="toc-text">Visual Frontend</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Backend"><span class="toc-text">Backend</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Patch-Attention"><span class="toc-text">Patch Attention</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Intermediate-CTC-Prediction"><span class="toc-text">Intermediate CTC Prediction</span></a></li></ol>
+  </aside>
+
+        
+      </div>
+    </div>
+  </div>
+</main>
+  
+
+  <footer class="footer">
+    <div class="footer-social"><a href="mailto:Avidya@ieee.org " target="_blank"
+  class="footer-social-item" onMouseOver="this.style.color=#FF3B00"
+  onMouseOut="this.style.color='#33333D'">
+  <i class="iconfont  iconmail"></i>
+  </a></div>
+    
+  </footer>
+  
+      <div class="fab fab-plus">
+    <i class="iconfont iconplus"></i>
+  </div>
+  
+  
+  
+  <div class="fab fab-up">
+    <i class="iconfont iconcaret-up"></i>
+  </div>
+  
+  
+  
+    
+<script src="/js/color-mode.js"></script>
+
+  
+  
+</body>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+
+
+
+  
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+
+
+
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+
+
+
+
+
+
+
+<script src="/js/utils.js"></script>
+<script src="/js/script.js"></script>
+
+
+
+
+
+
+
+  <script>
+    (function () {
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      } else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
