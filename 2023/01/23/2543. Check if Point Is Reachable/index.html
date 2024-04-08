@@ -6,12 +6,12 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Solution --- 190. Reverse Bits - Avidya</title>
+  <title>Solution --- 2543. Check if Point Is Reachable - Avidya</title>
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="google" content="notranslate" />
   
-  <meta name="description" content="DescriptionReverse bits of ...">
+  <meta name="description" content="DescriptionThere exists an ...">
   <meta name="author" content="Kou">
   <link rel="icon" href="/images/icons/favicon-32x32.png" type="image/png" sizes="16x16">
   <link rel="icon" href="/images/icons/favicon-64x64.png" type="image/png" sizes="32x32">
@@ -150,7 +150,7 @@
       
       
     </div>
-    <div class="center">Solution --- 190. Reverse Bits</div>
+    <div class="center">Solution --- 2543. Check if Point Is Reachable</div>
     <div class="right">
       <i class="iconfont iconmenu j-navbar-menu"></i>
     </div>
@@ -184,25 +184,35 @@
     <section class="head">
   <img   class="lazyload" data-original="/images/theme/post-image.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
   <div class="head-mask">
-    <h1 class="head-title">Solution --- 190. Reverse Bits</h1>
+    <h1 class="head-title">Solution --- 2543. Check if Point Is Reachable</h1>
     <div class="head-info">
-      <span class="post-info-item"><i class="iconfont iconcalendar"></i>May 24, 2022</span>
+      <span class="post-info-item"><i class="iconfont iconcalendar"></i>January 23, 2023</span>
       
-      <span class="post-info-item"><i class="iconfont iconfont-size"></i>1625</span>
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>1085</span>
     </div>
   </div>
 </section>
     <section class="main">
       <section class="content">
         
-        <h1 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h1><p>Reverse bits of a given 32 bits unsigned integer.</p>
-<p>Note:</p>
-<p>Note that in some languages, such as Java, there is no unsigned integer type. In this case, both input and output will be given as a signed integer type. They should not affect your implementation, as the integer’s internal binary representation is the same, whether it is signed or unsigned.<br>In Java, the compiler represents the signed integers using 2’s complement notation. Therefore, in Example 2 above, the input represents the signed integer -3 and the output represents the signed integer -1073741825.</p>
-<h2 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h2><p>Input: n &#x3D; 00000010100101000001111010011100<br>Output:    964176192 (00111001011110000010100101000000)<br>Explanation: The input binary string 00000010100101000001111010011100 represents the unsigned integer 43261596, so return 964176192 which its binary representation is 00111001011110000010100101000000.</p>
-<p>Example 2:<br>Input: n &#x3D; 11111111111111111111111111111101<br>Output:   3221225471 (10111111111111111111111111111111)<br>Explanation: The input binary string 11111111111111111111111111111101 represents the unsigned integer 4294967293, so return 3221225471 which its binary representation is 10111111111111111111111111111111.</p>
-<p>Constraints:<br>The input must be a binary string of length 32</p>
-<h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h1><p>The simplest and most direct way is to take out one bit from right to left and add it to the lowest bit of the newly generated integer.</p>
-<h1 id="Codes"><a href="#Codes" class="headerlink" title="Codes"></a>Codes</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span>:<br>    <span class="hljs-comment"># @param n, an integer</span><br>    <span class="hljs-comment"># @return an integer</span><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">reverseBits</span>(<span class="hljs-params">self, n</span>):<br>        bins = <span class="hljs-built_in">bin</span>(n)[<span class="hljs-number">2</span>:][::-<span class="hljs-number">1</span>]<br>        rev = (bins + <span class="hljs-string">&#x27;0&#x27;</span> * (<span class="hljs-number">32</span> - <span class="hljs-built_in">len</span>(bins)))<br>        <span class="hljs-keyword">return</span> <span class="hljs-built_in">int</span>(rev, <span class="hljs-number">2</span>)<br></code></pre></td></tr></table></figure>
+        <h1 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h1><p>There exists an infinitely large grid. You are currently at point (1, 1), and you need to reach the point (targetX, targetY) using a finite number of steps.</p>
+<p>In one step, you can move from point (x, y) to any one of the following points:<br>(x, y - x)<br>(x - y, y)<br>(2 * x, y)<br>(x, 2 * y)<br>Given two integers targetX and targetY representing the X-coordinate and Y-coordinate of your final position, return true if you can reach the point from (1, 1) using some number of steps, and false otherwise.</p>
+<h2 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h2><p>Example 1:<br>Input: targetX &#x3D; 6, targetY &#x3D; 9<br>Output: false<br>Explanation: It is impossible to reach (6,9) from (1,1) using any sequence of moves, so false is returned.</p>
+<p>Example 2:<br>Input: targetX &#x3D; 4, targetY &#x3D; 7<br>Output: true<br>Explanation: You can follow the path (1,1) -&gt; (1,2) -&gt; (1,4) -&gt; (1,8) -&gt; (1,7) -&gt; (2,7) -&gt; (4,7).</p>
+<p>Constraints:<br>1 &lt;&#x3D; targetX, targetY &lt;&#x3D; <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="3.379ex" height="2.676ex" style="vertical-align: -0.338ex;" viewBox="0 -1006.6 1454.9 1152.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
+<title id="MathJax-SVG-1-Title">10^9</title>
+<defs aria-hidden="true">
+<path stroke-width="1" id="E1-MJMAIN-31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path>
+<path stroke-width="1" id="E1-MJMAIN-30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z"></path>
+<path stroke-width="1" id="E1-MJMAIN-39" d="M352 287Q304 211 232 211Q154 211 104 270T44 396Q42 412 42 436V444Q42 537 111 606Q171 666 243 666Q245 666 249 666T257 665H261Q273 665 286 663T323 651T370 619T413 560Q456 472 456 334Q456 194 396 97Q361 41 312 10T208 -22Q147 -22 108 7T68 93T121 149Q143 149 158 135T173 96Q173 78 164 65T148 49T135 44L131 43Q131 41 138 37T164 27T206 22H212Q272 22 313 86Q352 142 352 280V287ZM244 248Q292 248 321 297T351 430Q351 508 343 542Q341 552 337 562T323 588T293 615T246 625Q208 625 181 598Q160 576 154 546T147 441Q147 358 152 329T172 282Q197 248 244 248Z"></path>
+</defs>
+<g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
+ <use xlink:href="#E1-MJMAIN-31"></use>
+ <use xlink:href="#E1-MJMAIN-30" x="500" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-MJMAIN-39" x="1415" y="583"></use>
+</g>
+</svg></p>
+<h1 id="Codes"><a href="#Codes" class="headerlink" title="Codes"></a>Codes</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span>:<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">isReachable</span>(<span class="hljs-params">self, targetX: <span class="hljs-built_in">int</span>, targetY: <span class="hljs-built_in">int</span></span>) -&gt; <span class="hljs-built_in">bool</span>:<br>        x = gcd(targetX, targetY)<br>        <span class="hljs-keyword">return</span> x &amp; (x - <span class="hljs-number">1</span>) == <span class="hljs-number">0</span><br></code></pre></td></tr></table></figure>
       </section>
       <section class="extra">
         
@@ -212,8 +222,8 @@
         
         
   <nav class="nav">
-    <a href="/2022/05/28/621.%20Task%20Scheduler/"><i class="iconfont iconleft"></i>Solution --- 621. Task Scheduler</a>
-    <a href="/2022/05/21/188.%20Best%20Time%20to%20Buy%20and%20Sell%20Stock%20IV/">Solution --- 188. Best Time to Buy and Sell Stock IV<i class="iconfont iconright"></i></a>
+    <a href="/2023/04/26/Let%20them%20come%20to%20Berlin/"><i class="iconfont iconleft"></i>Let them come to Berlin</a>
+    <a href="/2023/01/16/2537.%20Count%20the%20Number%20of%20Good%20Subarrays/">Solution --- 2537. Count the Number of Good Subarrays<i class="iconfont iconright"></i></a>
   </nav>
 
       </section>
@@ -226,7 +236,7 @@
           
   <aside class="toc-wrap">
     <h3 class="toc-title">Index</h3>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Description"><span class="toc-text">Description</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Examples"><span class="toc-text">Examples</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Solution"><span class="toc-text">Solution</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Codes"><span class="toc-text">Codes</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Description"><span class="toc-text">Description</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Examples"><span class="toc-text">Examples</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Codes"><span class="toc-text">Codes</span></a></li></ol>
   </aside>
 
         
