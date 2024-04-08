@@ -6,12 +6,12 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Solution --- 2537. Count the Number of Good Subarrays - Avidya</title>
+  <title>Solution --- 2551. Put Marbles in Bags - Avidya</title>
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="google" content="notranslate" />
   
-  <meta name="description" content="DescriptionGiven an integer...">
+  <meta name="description" content="DescriptionYou have k bags....">
   <meta name="author" content="Kou">
   <link rel="icon" href="/images/icons/favicon-32x32.png" type="image/png" sizes="16x16">
   <link rel="icon" href="/images/icons/favicon-64x64.png" type="image/png" sizes="32x32">
@@ -150,7 +150,7 @@
       
       
     </div>
-    <div class="center">Solution --- 2537. Count the Number of Good Subarrays</div>
+    <div class="center">Solution --- 2551. Put Marbles in Bags</div>
     <div class="right">
       <i class="iconfont iconmenu j-navbar-menu"></i>
     </div>
@@ -184,29 +184,24 @@
     <section class="head">
   <img   class="lazyload" data-original="/images/theme/post-image.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
   <div class="head-mask">
-    <h1 class="head-title">Solution --- 2537. Count the Number of Good Subarrays</h1>
+    <h1 class="head-title">Solution --- 2551. Put Marbles in Bags</h1>
     <div class="head-info">
-      <span class="post-info-item"><i class="iconfont iconcalendar"></i>January 16, 2023</span>
+      <span class="post-info-item"><i class="iconfont iconcalendar"></i>January 30, 2023</span>
       
-      <span class="post-info-item"><i class="iconfont iconfont-size"></i>1522</span>
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>2074</span>
     </div>
   </div>
 </section>
     <section class="main">
       <section class="content">
         
-        <h1 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h1><p>Given an integer array nums and an integer k, return the number of good subarrays of nums.</p>
-<p>A subarray arr is good if it there are at least k pairs of indices (i, j) such that i &lt; j and arr[i] &#x3D;&#x3D; arr[j].</p>
-<p>A subarray is a contiguous non-empty sequence of elements within an array.</p>
-<h2 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h2><p>Example 1:<br>Input: nums &#x3D; [1,1,1,1,1], k &#x3D; 10<br>Output: 1<br>Explanation: The only good subarray is the array nums itself.</p>
-<p>Example 2:<br>Input: nums &#x3D; [3,1,4,3,2,2,4], k &#x3D; 2<br>Output: 4<br>Explanation: There are 4 different good subarrays:</p>
-<ul>
-<li>[3,1,4,3,2,2] that has 2 pairs.</li>
-<li>[3,1,4,3,2,2,4] that has 3 pairs.</li>
-<li>[1,4,3,2,2,4] that has 2 pairs.</li>
-<li>[4,3,2,2,4] that has 2 pairs.</li>
-</ul>
-<p>Constraints:<br>1 &lt;&#x3D; nums.length &lt;&#x3D; <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="3.379ex" height="2.676ex" style="vertical-align: -0.338ex;" viewBox="0 -1006.6 1454.9 1152.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
+        <h1 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h1><p>You have k bags. You are given a 0-indexed integer array weights where weights[i] is the weight of the ith marble. You are also given the integer k.</p>
+<p>Divide the marbles into the k bags according to the following rules:</p>
+<p>No bag is empty.<br>If the ith marble and jth marble are in a bag, then all marbles with an index between the ith and jth indices should also be in that same bag.<br>If a bag consists of all the marbles with an index from i to j inclusively, then the cost of the bag is weights[i] + weights[j].<br>The score after distributing the marbles is the sum of the costs of all the k bags.</p>
+<p>Return the difference between the maximum and minimum scores among marble distributions.</p>
+<h2 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h2><p>Example 1:<br>Input: weights &#x3D; [1,3,5,1], k &#x3D; 2<br>Output: 4<br>Explanation:<br>The distribution [1],[3,5,1] results in the minimal score of (1+1) + (3+1) &#x3D; 6.<br>The distribution [1,3],[5,1], results in the maximal score of (1+3) + (5+1) &#x3D; 10.<br>Thus, we return their difference 10 - 6 &#x3D; 4.</p>
+<p>Example 2:<br>Input: weights &#x3D; [1, 3], k &#x3D; 2<br>Output: 0<br>Explanation: The only distribution possible is [1],[3].<br>Since both the maximal and minimal score are the same, we return 0.</p>
+<p>Constraints:<br>1 &lt;&#x3D; k &lt;&#x3D; weights.length &lt;&#x3D; <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="3.379ex" height="2.676ex" style="vertical-align: -0.338ex;" viewBox="0 -1006.6 1454.9 1152.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
 <title id="MathJax-SVG-1-Title">10^5</title>
 <defs aria-hidden="true">
 <path stroke-width="1" id="E1-MJMAIN-31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path>
@@ -218,7 +213,7 @@
  <use xlink:href="#E1-MJMAIN-30" x="500" y="0"></use>
  <use transform="scale(0.707)" xlink:href="#E1-MJMAIN-35" x="1415" y="583"></use>
 </g>
-</svg><br>1 &lt;&#x3D; nums[i], k &lt;&#x3D; <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="3.379ex" height="2.676ex" style="vertical-align: -0.338ex;" viewBox="0 -1006.6 1454.9 1152.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
+</svg><br>1 &lt;&#x3D; weights[i] &lt;&#x3D; <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="3.379ex" height="2.676ex" style="vertical-align: -0.338ex;" viewBox="0 -1006.6 1454.9 1152.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
 <title id="MathJax-SVG-1-Title">10^9</title>
 <defs aria-hidden="true">
 <path stroke-width="1" id="E1-MJMAIN-31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path>
@@ -231,8 +226,9 @@
  <use transform="scale(0.707)" xlink:href="#E1-MJMAIN-39" x="1415" y="583"></use>
 </g>
 </svg></p>
-<h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h1><p>Maintain a sliding window using pointers, and updates the frequency map accordingly. It then adds up pairs and moves the left pointer until the condition is no longer satisfied. The process continues until the end of the list.</p>
-<h1 id="Codes"><a href="#Codes" class="headerlink" title="Codes"></a>Codes</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> collections <span class="hljs-keyword">import</span> Counter<br><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span>:<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">countGood</span>(<span class="hljs-params">self, A: <span class="hljs-type">List</span>[<span class="hljs-built_in">int</span>], k: <span class="hljs-built_in">int</span></span>) -&gt; <span class="hljs-built_in">int</span>:<br>        N, count = <span class="hljs-built_in">len</span>(A), Counter()<br>        L =  res = pair_count = <span class="hljs-number">0</span><br><br>        <span class="hljs-keyword">for</span> i, v <span class="hljs-keyword">in</span> <span class="hljs-built_in">enumerate</span>(A):<br>            pair_count += count[v]<br>            count[v] += <span class="hljs-number">1</span><br>            <span class="hljs-keyword">while</span> L &lt; i <span class="hljs-keyword">and</span> pair_count &gt;= k:<br>                result += N - i<br>                count[A[L]] -= <span class="hljs-number">1</span><br>                pair_count -= count[A[L]]<br>                L += <span class="hljs-number">1</span><br>        <span class="hljs-keyword">return</span> res<br></code></pre></td></tr></table></figure>
+<h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h1><p>The encapsulation here actually involves splitting the sequence into k − 1 individual positions, and then calculating the cost as the sum of the elements on both sides of each of these k − 1 intervals.</p>
+<p>Therefore, we only need to consider the cost brought by each of the k − 1 intervals, then sort them, and the difference between the sum of the largest k − 1 elements and the sum of the smallest k − 1 elements will be our final answer.</p>
+<h1 id="Codes"><a href="#Codes" class="headerlink" title="Codes"></a>Codes</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span>:<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">putMarbles</span>(<span class="hljs-params">self, weights: <span class="hljs-type">List</span>[<span class="hljs-built_in">int</span>], k: <span class="hljs-built_in">int</span></span>) -&gt; <span class="hljs-built_in">int</span>:<br>        <span class="hljs-keyword">if</span> k == <span class="hljs-number">1</span>:<br>            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span><br>        n = <span class="hljs-built_in">len</span>(weights)<br>        intervals = [weights[i] + weights[i+<span class="hljs-number">1</span>] <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(n-<span class="hljs-number">1</span>)]<br>        intervals = <span class="hljs-built_in">sorted</span>(intervals)<br>        <span class="hljs-keyword">return</span> <span class="hljs-built_in">sum</span>(intervals[-(k-<span class="hljs-number">1</span>):]) - <span class="hljs-built_in">sum</span>(intervals[:k-<span class="hljs-number">1</span>])<br><br></code></pre></td></tr></table></figure>
       </section>
       <section class="extra">
         
@@ -242,8 +238,8 @@
         
         
   <nav class="nav">
-    <a href="/2023/01/23/2543.%20Check%20if%20Point%20Is%20Reachable/"><i class="iconfont iconleft"></i>Solution --- 2543. Check if Point Is Reachable</a>
-    <a href="/2022/12/25/Biweekly%20Contest%2094/">Biweekly Contest 94<i class="iconfont iconright"></i></a>
+    <a href="/2023/04/26/Let%20them%20come%20to%20Berlin/"><i class="iconfont iconleft"></i>Let them come to Berlin</a>
+    <a href="/2023/01/23/2543.%20Check%20if%20Point%20Is%20Reachable/">Solution --- 2543. Check if Point Is Reachable<i class="iconfont iconright"></i></a>
   </nav>
 
       </section>
