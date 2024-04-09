@@ -585,7 +585,7 @@
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#E1-MJMATHI-7A" x="0" y="0"></use>
 </g>
-</svg>. After the up-sampled encoder output, a series of reversible transformations are applied:<br>MATHJAX-SSR-29</p>
+</svg>. After the up-sampled encoder output, a series of reversible transformations are applied:<br>MATHJAX-SSR-28</p>
 <p>Here, the input <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.007ex" height="1.676ex" style="vertical-align: -0.338ex;" viewBox="0 -576.1 433.5 721.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
 <title id="MathJax-SVG-1-Title">c</title>
 <defs aria-hidden="true">
@@ -787,7 +787,7 @@
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#E1-MJMATHI-7A" x="0" y="0"></use>
 </g>
-</svg>. Therefore, a slight modification to MAS is made to find the optimal alignment path that maximizes the ELBO:<br>MATHJAX-SSR-32</p>
+</svg>. Therefore, a slight modification to MAS is made to find the optimal alignment path that maximizes the ELBO:<br>MATHJAX-SSR-31</p>
 <p>2.<br>Predicting Duration from Text</p>
 <p>The stochastic duration predictor is a flow-based generative model that introduces random variables <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.33ex" height="1.676ex" style="vertical-align: -0.338ex;" viewBox="0 -576.1 572.5 721.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
 <title id="MathJax-SVG-1-Title">u</title>
@@ -843,7 +843,7 @@
 </g>
  <use xlink:href="#E1-MJMAIN-29" x="5887" y="0"></use>
 </g>
-</svg>. The training objective is the variational lower bound of the phoneme duration log-likelihood:<br>MATHJAX-SSR-33</p>
+</svg>. The training objective is the variational lower bound of the phoneme duration log-likelihood:<br>MATHJAX-SSR-32</p>
 <p>During training, the gradients of the stochastic duration predictor are disconnected to prevent them from affecting other modules. Phoneme durations are sampled from random noise through the reversible transformation of the stochastic duration predictor and then converted into integer values.</p>
 <h2 id="Adversarial-Training"><a href="#Adversarial-Training" class="headerlink" title="Adversarial Training"></a>Adversarial Training</h2><p>The discriminator <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.924ex" height="2.176ex" style="vertical-align: -0.338ex;" viewBox="0 -791.3 828.5 936.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
 <title id="MathJax-SVG-1-Title">D</title>
@@ -869,7 +869,7 @@
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#E1-MJMATHI-79" x="0" y="0"></use>
 </g>
-</svg>. VITS employs two types of loss functions. The first one is the least-squares loss function used for adversarial training:<br>MATHJAX-SSR-34</p>
+</svg>. VITS employs two types of loss functions. The first one is the least-squares loss function used for adversarial training:<br>MATHJAX-SSR-33</p>
 <p style="text-align:center"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="30.246ex" height="3.176ex" style="vertical-align: -0.838ex;" viewBox="0 -1006.6 13022.6 1367.4" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
 <title id="MathJax-SVG-1-Title">L_{adv}(G)=\mathbb{E}_z[(D(G(z))-1)^2]</title>
 <defs aria-hidden="true">
