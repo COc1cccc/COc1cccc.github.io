@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://example.com/2024/04/07/GaLore%20Memory-Efficient%20LLM%20Training%20by%20Gradient%20Low-Rank%20Projection/</loc>
+    
+    <lastmod>2024-04-09</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2023/02/06/2556.%20Disconnect%20Path%20in%20a%20Binary%20Matrix%20by%20at%20Most%20One%20Flip/</loc>
+    
+    <lastmod>2024-04-08</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://example.com/2024/04/04/COIG-CQIA%20%20Quality%20is%20All%20You%20Need%20for%20Chinese%20Instruction%20Fine-tuning/</loc>
     
     <lastmod>2024-04-08</lastmod>
@@ -328,7 +346,7 @@
 
   <url>
     <loc>http://example.com/</loc>
-    <lastmod>2024-04-08</lastmod>
+    <lastmod>2024-04-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>

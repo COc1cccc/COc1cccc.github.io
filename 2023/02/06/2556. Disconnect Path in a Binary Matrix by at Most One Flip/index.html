@@ -6,12 +6,12 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Solution --- 2551. Put Marbles in Bags - Avidya</title>
+  <title>Solution --- 2556. Disconnect Path in a Binary Matrix by at Most One Flip - Avidya</title>
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="google" content="notranslate" />
   
-  <meta name="description" content="DescriptionYou have k bags....">
+  <meta name="description" content="DescriptionYou are given a ...">
   <meta name="author" content="Kou">
   <link rel="icon" href="/images/icons/favicon-32x32.png" type="image/png" sizes="16x16">
   <link rel="icon" href="/images/icons/favicon-64x64.png" type="image/png" sizes="32x32">
@@ -150,7 +150,7 @@
       
       
     </div>
-    <div class="center">Solution --- 2551. Put Marbles in Bags</div>
+    <div class="center">Solution --- 2556. Disconnect Path in a Binary Matrix by at Most One Flip</div>
     <div class="right">
       <i class="iconfont iconmenu j-navbar-menu"></i>
     </div>
@@ -184,24 +184,23 @@
     <section class="head">
   <img   class="lazyload" data-original="/images/theme/post-image.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
   <div class="head-mask">
-    <h1 class="head-title">Solution --- 2551. Put Marbles in Bags</h1>
+    <h1 class="head-title">Solution --- 2556. Disconnect Path in a Binary Matrix by at Most One Flip</h1>
     <div class="head-info">
-      <span class="post-info-item"><i class="iconfont iconcalendar"></i>January 30, 2023</span>
+      <span class="post-info-item"><i class="iconfont iconcalendar"></i>February 06, 2023</span>
       
-      <span class="post-info-item"><i class="iconfont iconfont-size"></i>2074</span>
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>2221</span>
     </div>
   </div>
 </section>
     <section class="main">
       <section class="content">
         
-        <h1 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h1><p>You have k bags. You are given a 0-indexed integer array weights where weights[i] is the weight of the ith marble. You are also given the integer k.</p>
-<p>Divide the marbles into the k bags according to the following rules:</p>
-<p>No bag is empty.<br>If the ith marble and jth marble are in a bag, then all marbles with an index between the ith and jth indices should also be in that same bag.<br>If a bag consists of all the marbles with an index from i to j inclusively, then the cost of the bag is weights[i] + weights[j].<br>The score after distributing the marbles is the sum of the costs of all the k bags.</p>
-<p>Return the difference between the maximum and minimum scores among marble distributions.</p>
-<h2 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h2><p>Example 1:<br>Input: weights &#x3D; [1,3,5,1], k &#x3D; 2<br>Output: 4<br>Explanation:<br>The distribution [1],[3,5,1] results in the minimal score of (1+1) + (3+1) &#x3D; 6.<br>The distribution [1,3],[5,1], results in the maximal score of (1+3) + (5+1) &#x3D; 10.<br>Thus, we return their difference 10 - 6 &#x3D; 4.</p>
-<p>Example 2:<br>Input: weights &#x3D; [1, 3], k &#x3D; 2<br>Output: 0<br>Explanation: The only distribution possible is [1],[3].<br>Since both the maximal and minimal score are the same, we return 0.</p>
-<p>Constraints:<br>1 &lt;&#x3D; k &lt;&#x3D; weights.length &lt;&#x3D; <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="3.379ex" height="2.676ex" style="vertical-align: -0.338ex;" viewBox="0 -1006.6 1454.9 1152.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
+        <h1 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h1><p>You are given a 0-indexed m x n binary matrix grid. You can move from a cell (row, col) to any of the cells (row + 1, col) or (row, col + 1) that has the value 1. The matrix is disconnected if there is no path from (0, 0) to (m - 1, n - 1).</p>
+<p>You can flip the value of at most one (possibly none) cell. You cannot flip the cells (0, 0) and (m - 1, n - 1).</p>
+<p>Return true if it is possible to make the matrix disconnect or false otherwise.</p>
+<p>Note that flipping a cell changes its value from 0 to 1 or from 1 to 0.</p>
+<h2 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h2><p>Example 1:<br>Input: grid &#x3D; [[1,1,1],[1,0,0],[1,1,1]]<br>Output: true<br>Explanation: We can change the cell shown in the diagram above. There is no path from (0, 0) to (2, 2) in the resulting grid.<br>Example 2:<br>Input: grid &#x3D; [[1,1,1],[1,0,1],[1,1,1]]<br>Output: false<br>Explanation: It is not possible to change at most one cell such that there is not path from (0, 0) to (2, 2).</p>
+<p>Constraints:<br>m &#x3D;&#x3D; grid.length<br>n &#x3D;&#x3D; grid[i].length<br>1 &lt;&#x3D; m, n &lt;&#x3D; 1000<br>1 &lt;&#x3D; m * n &lt;&#x3D; <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="3.379ex" height="2.676ex" style="vertical-align: -0.338ex;" viewBox="0 -1006.6 1454.9 1152.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
 <title id="MathJax-SVG-1-Title">10^5</title>
 <defs aria-hidden="true">
 <path stroke-width="1" id="E1-MJMAIN-31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path>
@@ -213,22 +212,11 @@
  <use xlink:href="#E1-MJMAIN-30" x="500" y="0"></use>
  <use transform="scale(0.707)" xlink:href="#E1-MJMAIN-35" x="1415" y="583"></use>
 </g>
-</svg><br>1 &lt;&#x3D; weights[i] &lt;&#x3D; <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="3.379ex" height="2.676ex" style="vertical-align: -0.338ex;" viewBox="0 -1006.6 1454.9 1152.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
-<title id="MathJax-SVG-1-Title">10^9</title>
-<defs aria-hidden="true">
-<path stroke-width="1" id="E1-MJMAIN-31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path>
-<path stroke-width="1" id="E1-MJMAIN-30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z"></path>
-<path stroke-width="1" id="E1-MJMAIN-39" d="M352 287Q304 211 232 211Q154 211 104 270T44 396Q42 412 42 436V444Q42 537 111 606Q171 666 243 666Q245 666 249 666T257 665H261Q273 665 286 663T323 651T370 619T413 560Q456 472 456 334Q456 194 396 97Q361 41 312 10T208 -22Q147 -22 108 7T68 93T121 149Q143 149 158 135T173 96Q173 78 164 65T148 49T135 44L131 43Q131 41 138 37T164 27T206 22H212Q272 22 313 86Q352 142 352 280V287ZM244 248Q292 248 321 297T351 430Q351 508 343 542Q341 552 337 562T323 588T293 615T246 625Q208 625 181 598Q160 576 154 546T147 441Q147 358 152 329T172 282Q197 248 244 248Z"></path>
-</defs>
-<g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
- <use xlink:href="#E1-MJMAIN-31"></use>
- <use xlink:href="#E1-MJMAIN-30" x="500" y="0"></use>
- <use transform="scale(0.707)" xlink:href="#E1-MJMAIN-39" x="1415" y="583"></use>
-</g>
-</svg></p>
-<h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h1><p>The encapsulation here actually involves splitting the sequence into k − 1 individual positions, and then calculating the cost as the sum of the elements on both sides of each of these k − 1 intervals.</p>
-<p>Therefore, we only need to consider the cost brought by each of the k − 1 intervals, then sort them, and the difference between the sum of the largest k − 1 elements and the sum of the smallest k − 1 elements will be our final answer.</p>
-<h1 id="Codes"><a href="#Codes" class="headerlink" title="Codes"></a>Codes</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span>:<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">putMarbles</span>(<span class="hljs-params">self, weights: <span class="hljs-type">List</span>[<span class="hljs-built_in">int</span>], k: <span class="hljs-built_in">int</span></span>) -&gt; <span class="hljs-built_in">int</span>:<br>        <span class="hljs-keyword">if</span> k == <span class="hljs-number">1</span>:<br>            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span><br>        n = <span class="hljs-built_in">len</span>(weights)<br>        intervals = [weights[i] + weights[i+<span class="hljs-number">1</span>] <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(n-<span class="hljs-number">1</span>)]<br>        intervals = <span class="hljs-built_in">sorted</span>(intervals)<br>        <span class="hljs-keyword">return</span> <span class="hljs-built_in">sum</span>(intervals[-(k-<span class="hljs-number">1</span>):]) - <span class="hljs-built_in">sum</span>(intervals[:k-<span class="hljs-number">1</span>])<br><br></code></pre></td></tr></table></figure>
+</svg><br>grid[i][j] is either 0 or 1.<br>grid[0][0] &#x3D;&#x3D; grid[m - 1][n - 1] &#x3D;&#x3D; 1</p>
+<h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h1><p>One major approach for this problem is to find the total number of routes passing through each point on the grid.</p>
+<p>The number of routes passing through a point exactly equals the total number of routes if every route must pass through that point. Removing such a point would then disconnect the overall graph.</p>
+<p>To find the total number of routes passing through each point, we can calculate the number of routes from the starting point to that point and from that point to the destination. Multiplying these two values gives us the total number of routes passing through that point.</p>
+<h1 id="Codes"><a href="#Codes" class="headerlink" title="Codes"></a>Codes</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span>:<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">isPossibleToCutPath</span>(<span class="hljs-params">self, grid: <span class="hljs-type">List</span>[<span class="hljs-type">List</span>[<span class="hljs-built_in">int</span>]]</span>) -&gt; <span class="hljs-built_in">bool</span>:<br>        <span class="hljs-keyword">def</span> <span class="hljs-title function_">dfs</span>(<span class="hljs-params">i, j</span>):<br>            <span class="hljs-keyword">if</span> i &gt;= m <span class="hljs-keyword">or</span> j &gt;= n <span class="hljs-keyword">or</span> grid[i][j] == <span class="hljs-number">0</span>:<br>                <span class="hljs-keyword">return</span> <span class="hljs-literal">False</span><br>            grid[i][j] = <span class="hljs-number">0</span><br>            <span class="hljs-keyword">if</span> i == m - <span class="hljs-number">1</span> <span class="hljs-keyword">and</span> j == n - <span class="hljs-number">1</span>:<br>                <span class="hljs-keyword">return</span> <span class="hljs-literal">True</span><br>            <span class="hljs-keyword">return</span> dfs(i + <span class="hljs-number">1</span>, j) <span class="hljs-keyword">or</span> dfs(i, j + <span class="hljs-number">1</span>)<br><br>        m, n = <span class="hljs-built_in">len</span>(grid), <span class="hljs-built_in">len</span>(grid[<span class="hljs-number">0</span>])<br>        a = dfs(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>)<br>        grid[<span class="hljs-number">0</span>][<span class="hljs-number">0</span>] = grid[-<span class="hljs-number">1</span>][-<span class="hljs-number">1</span>] = <span class="hljs-number">1</span><br>        b = dfs(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>)<br>        <span class="hljs-keyword">return</span> <span class="hljs-keyword">not</span> (a <span class="hljs-keyword">and</span> b)<br></code></pre></td></tr></table></figure>
       </section>
       <section class="extra">
         
@@ -238,8 +226,8 @@
         
         
   <nav class="nav">
-    <a href="/2023/02/06/2556.%20Disconnect%20Path%20in%20a%20Binary%20Matrix%20by%20at%20Most%20One%20Flip/"><i class="iconfont iconleft"></i>Solution --- 2556. Disconnect Path in a Binary Matrix by at Most One Flip</a>
-    <a href="/2023/01/23/2543.%20Check%20if%20Point%20Is%20Reachable/">Solution --- 2543. Check if Point Is Reachable<i class="iconfont iconright"></i></a>
+    <a href="/2023/04/26/Let%20them%20come%20to%20Berlin/"><i class="iconfont iconleft"></i>Let them come to Berlin</a>
+    <a href="/2023/01/30/2551.%20Put%20Marbles%20in%20Bags/">Solution --- 2551. Put Marbles in Bags<i class="iconfont iconright"></i></a>
   </nav>
 
       </section>
