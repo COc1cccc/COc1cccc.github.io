@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://example.com/2023/11/25/Bert-VITS2OpenVoiceVITS2/</loc>
+    
+    <lastmod>2024-04-09</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://example.com/2024/04/07/GaLore%20Memory-Efficient%20LLM%20Training%20by%20Gradient%20Low-Rank%20Projection/</loc>
     
     <lastmod>2024-04-09</lastmod>

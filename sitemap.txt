@@ -1,3 +1,4 @@
+http://example.com/2023/11/25/Bert-VITS2OpenVoiceVITS2/
 http://example.com/2024/04/07/GaLore%20Memory-Efficient%20LLM%20Training%20by%20Gradient%20Low-Rank%20Projection/
 http://example.com/2023/02/06/2556.%20Disconnect%20Path%20in%20a%20Binary%20Matrix%20by%20at%20Most%20One%20Flip/
 http://example.com/2024/04/04/COIG-CQIA%20%20Quality%20is%20All%20You%20Need%20for%20Chinese%20Instruction%20Fine-tuning/

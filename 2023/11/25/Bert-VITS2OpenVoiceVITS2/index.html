@@ -1,0 +1,416 @@
+
+
+<!DOCTYPE html>
+<html lang="en" color-mode=light>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bert-VITS2 - Avidya</title>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="google" content="notranslate" />
+  
+  <meta name="description" content="IntroductionVITS2 proposed ...">
+  <meta name="author" content="Kou">
+  <link rel="icon" href="/images/icons/favicon-32x32.png" type="image/png" sizes="16x16">
+  <link rel="icon" href="/images/icons/favicon-64x64.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/images/icons/apple-touch-icon.png" sizes="180x180">
+  <meta rel="mask-icon" href="/images/icons/stun-logo.svg" color="#333333">
+  
+    <meta rel="msapplication-TileImage" content="/images/icons/favicon-144x144.png">
+    <meta rel="msapplication-TileColor" content="#000000">
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+    
+<link rel="stylesheet" href="https://at.alicdn.com/t/font_1445822_p6ry5n7lrr.css">
+
+  
+
+  
+    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+
+  
+
+  
+    
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/foundation.min.css" name="highlight-style" mode="light">
+
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/solarized-dark.min.css" name="highlight-style" mode="dark">
+
+      
+  
+
+  <script>
+    var CONFIG = window.CONFIG || {};
+    var ZHAOO = window.ZHAOO || {};
+    CONFIG = {
+      isHome: false,
+      fancybox: true,
+      pjax: false,
+      loading: {
+        gif: '/images/theme/loading.gif',
+        lottie: ''
+      },
+      lazyload: {
+        enable: true,
+        only_post: 'false',
+        loading: {
+          gif: '/images/theme/loading.gif',
+          lottie: ''
+        }
+      },
+      donate: {
+        enable: false,
+        alipay: '',
+        wechat: ''
+      },
+      galleries: {
+        enable: false
+      },
+      fab: {
+        enable: true,
+        always_show: false
+      },
+      carrier: {
+        enable: true
+      },
+      daovoice: {
+        enable: false
+      },
+      preview: {
+        background: {
+          default: '',
+          api: ''
+        },
+        motto: {
+          default: 'もしも僕が主人公なら、僕は人の心が見えて',
+          typing: true,
+          api: '',
+          data_contents: '["data","content"]'
+        },
+      },
+      qrcode: {
+        enable: false,
+        type: 'url',
+        image: '/images/theme/qr-code.png',
+      },
+      toc: {
+        enable: true
+      },
+      scrollbar: {
+        type: 'default'
+      },
+      notification: {
+        enable: false,
+        delay: 4500,
+        list: '',
+        page_white_list: '',
+        page_black_list: ''
+      },
+      search: {
+        enable: false,
+        path: ''
+      }
+    }
+  </script>
+
+  
+
+  
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body class="lock-screen">
+  <div class="loading" id="loading"></div>
+  
+    
+
+
+  <nav class="navbar">
+    <div class="left">
+      
+        <i class="iconfont iconhome j-navbar-back-home"></i>
+      
+      
+      
+        <i class="iconfont iconmoono" id="color-toggle" color-toggle="light"></i>
+      
+      
+    </div>
+    <div class="center">Bert-VITS2</div>
+    <div class="right">
+      <i class="iconfont iconmenu j-navbar-menu"></i>
+    </div>
+    
+  </nav>
+
+  
+  
+
+<nav class="menu">
+  <div class="menu-container">
+    <div class="menu-close">
+      <i class="iconfont iconbaseline-close-px"></i>
+    </div>
+    <ul class="menu-content"><li class="menu-item">
+        <a href="/ " class="underline "> home</a>
+      </li><li class="menu-item">
+        <a href="/archives/ " class="underline "> archives</a>
+      </li><li class="menu-item">
+        <a href="/about/ " class="underline "> about</a>
+      </li></ul>
+    
+  </div>
+</nav>
+  <main id="main">
+  <div class="article-wrap">
+    <div class="row container">
+      <div class="col-xl-3"></div>
+      <div class="col-xl-6"><article class="article">
+  <div class="wrap">
+    <section class="head">
+  <img   class="lazyload" data-original="/images/theme/post-image.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+  <div class="head-mask">
+    <h1 class="head-title">Bert-VITS2</h1>
+    <div class="head-info">
+      <span class="post-info-item"><i class="iconfont iconcalendar"></i>November 25, 2023</span>
+      
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>16593</span>
+    </div>
+  </div>
+</section>
+    <section class="main">
+      <section class="content">
+        
+        <h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p><a target="_blank" rel="noopener" href="https://github.com/p0p4k/vits2_pytorch">VITS2</a> proposed an adversarially trained random duration predictor, which improves normalization flow by better modeling features of multiple speakers using Transformer blocks and a speaker-conditioned text encoder. The proposed approach enhances both quality and efficiency. Additionally, experiments using normalized text as input to the model reduce reliance on phoneme conversion. Consequently, these methods are closer to fully end-to-end single-stage approaches.<br><img   class="lazyload" data-original="/images%5Ctheme%5Cvits2.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" ></p>
+<h1 id="Method"><a href="#Method" class="headerlink" title="Method"></a>Method</h1><p>There are four improvements based on VITS</p>
+<h2 id="Stochastic-Duration-Predictor-with-Time-Step-wise-Conditional-Discriminator"><a href="#Stochastic-Duration-Predictor-with-Time-Step-wise-Conditional-Discriminator" class="headerlink" title="Stochastic Duration Predictor with Time Step-wise Conditional Discriminator"></a>Stochastic Duration Predictor with Time Step-wise Conditional Discriminator</h2><p><img    class="lazyload" data-original="/images%5Ctheme%5Cvits2-1.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption"> Training of the duration predictor</span></p>
+<p>This picture shows the proposed duration predictor and discriminator trained using adversarial learning. The conditional discriminator is applied to distinguish the predicted duration appropriately from the input data of the generator.</p>
+<p>The generator G takes the hidden representations of text (htext) and Gaussian noise <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="2.68ex" height="2.509ex" style="vertical-align: -0.671ex;" viewBox="0 -791.3 1153.7 1080.4" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
+<title id="MathJax-SVG-1-Title">Z_d</title>
+<defs aria-hidden="true">
+<path stroke-width="1" id="E1-MJMATHI-5A" d="M58 8Q58 23 64 35Q64 36 329 334T596 635L586 637Q575 637 512 637H500H476Q442 637 420 635T365 624T311 598T266 548T228 469Q227 466 226 463T224 458T223 453T222 450L221 448Q218 443 202 443Q185 443 182 453L214 561Q228 606 241 651Q249 679 253 681Q256 683 487 683H718Q723 678 723 675Q723 673 717 649Q189 54 188 52L185 49H274Q369 50 377 51Q452 60 500 100T579 247Q587 272 590 277T603 282H607Q628 282 628 271Q547 5 541 2Q538 0 300 0H124Q58 0 58 8Z"></path>
+<path stroke-width="1" id="E1-MJMATHI-64" d="M366 683Q367 683 438 688T511 694Q523 694 523 686Q523 679 450 384T375 83T374 68Q374 26 402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487H491Q506 153 506 145Q506 140 503 129Q490 79 473 48T445 8T417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157Q33 205 53 255T101 341Q148 398 195 420T280 442Q336 442 364 400Q369 394 369 396Q370 400 396 505T424 616Q424 629 417 632T378 637H357Q351 643 351 645T353 664Q358 683 366 683ZM352 326Q329 405 277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q233 26 290 98L298 109L352 326Z"></path>
+</defs>
+<g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
+ <use xlink:href="#E1-MJMATHI-5A" x="0" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-MJMATHI-64" x="966" y="-213"></use>
+</g>
+</svg> as inputs. MAS (Masked Attention for Selection) is utilized to obtain <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="4.465ex" height="2.509ex" style="vertical-align: -0.671ex;" viewBox="0 -791.3 1922.4 1080.4" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
+<title id="MathJax-SVG-1-Title">h_{text}</title>
+<defs aria-hidden="true">
+<path stroke-width="1" id="E1-MJMATHI-68" d="M137 683Q138 683 209 688T282 694Q294 694 294 685Q294 674 258 534Q220 386 220 383Q220 381 227 388Q288 442 357 442Q411 442 444 415T478 336Q478 285 440 178T402 50Q403 36 407 31T422 26Q450 26 474 56T513 138Q516 149 519 151T535 153Q555 153 555 145Q555 144 551 130Q535 71 500 33Q466 -10 419 -10H414Q367 -10 346 17T325 74Q325 90 361 192T398 345Q398 404 354 404H349Q266 404 205 306L198 293L164 158Q132 28 127 16Q114 -11 83 -11Q69 -11 59 -2T48 16Q48 30 121 320L195 616Q195 629 188 632T149 637H128Q122 643 122 645T124 664Q129 683 137 683Z"></path>
+<path stroke-width="1" id="E1-MJMATHI-74" d="M26 385Q19 392 19 395Q19 399 22 411T27 425Q29 430 36 430T87 431H140L159 511Q162 522 166 540T173 566T179 586T187 603T197 615T211 624T229 626Q247 625 254 615T261 596Q261 589 252 549T232 470L222 433Q222 431 272 431H323Q330 424 330 420Q330 398 317 385H210L174 240Q135 80 135 68Q135 26 162 26Q197 26 230 60T283 144Q285 150 288 151T303 153H307Q322 153 322 145Q322 142 319 133Q314 117 301 95T267 48T216 6T155 -11Q125 -11 98 4T59 56Q57 64 57 83V101L92 241Q127 382 128 383Q128 385 77 385H26Z"></path>
+<path stroke-width="1" id="E1-MJMATHI-65" d="M39 168Q39 225 58 272T107 350T174 402T244 433T307 442H310Q355 442 388 420T421 355Q421 265 310 237Q261 224 176 223Q139 223 138 221Q138 219 132 186T125 128Q125 81 146 54T209 26T302 45T394 111Q403 121 406 121Q410 121 419 112T429 98T420 82T390 55T344 24T281 -1T205 -11Q126 -11 83 42T39 168ZM373 353Q367 405 305 405Q272 405 244 391T199 357T170 316T154 280T149 261Q149 260 169 260Q282 260 327 284T373 353Z"></path>
+<path stroke-width="1" id="E1-MJMATHI-78" d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z"></path>
+</defs>
+<g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
+ <use xlink:href="#E1-MJMATHI-68" x="0" y="0"></use>
+<g transform="translate(576,-150)">
+ <use transform="scale(0.707)" xlink:href="#E1-MJMATHI-74" x="0" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-MJMATHI-65" x="361" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-MJMATHI-78" x="828" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-MJMATHI-74" x="1400" y="0"></use>
+</g>
+</g>
+</svg> in a logarithmic scale.</p>
+<p>The duration, either predicted from the logarithmic scale representation (<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.216ex" height="2.176ex" style="vertical-align: -0.338ex;" viewBox="0 -791.3 523.5 936.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
+<title id="MathJax-SVG-1-Title">d</title>
+<defs aria-hidden="true">
+<path stroke-width="1" id="E1-MJMATHI-64" d="M366 683Q367 683 438 688T511 694Q523 694 523 686Q523 679 450 384T375 83T374 68Q374 26 402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487H491Q506 153 506 145Q506 140 503 129Q490 79 473 48T445 8T417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157Q33 205 53 255T101 341Q148 398 195 420T280 442Q336 442 364 400Q369 394 369 396Q370 400 396 505T424 616Q424 629 417 632T378 637H357Q351 643 351 645T353 664Q358 683 366 683ZM352 326Q329 405 277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q233 26 290 98L298 109L352 326Z"></path>
+</defs>
+<g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
+ <use xlink:href="#E1-MJMATHI-64" x="0" y="0"></use>
+</g>
+</svg>) or from the duration predictor represented as <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.216ex" height="2.176ex" style="vertical-align: -0.338ex;" viewBox="0 -791.3 523.5 936.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
+<title id="MathJax-SVG-1-Title">d</title>
+<defs aria-hidden="true">
+<path stroke-width="1" id="E1-MJMATHI-64" d="M366 683Q367 683 438 688T511 694Q523 694 523 686Q523 679 450 384T375 83T374 68Q374 26 402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487H491Q506 153 506 145Q506 140 503 129Q490 79 473 48T445 8T417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157Q33 205 53 255T101 341Q148 398 195 420T280 442Q336 442 364 400Q369 394 369 396Q370 400 396 505T424 616Q424 629 417 632T378 637H357Q351 643 351 645T353 664Q358 683 366 683ZM352 326Q329 405 277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q233 26 290 98L298 109L352 326Z"></path>
+</defs>
+<g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
+ <use xlink:href="#E1-MJMATHI-64" x="0" y="0"></use>
+</g>
+</svg>, is used as input for the discriminator D along with <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="4.465ex" height="2.509ex" style="vertical-align: -0.671ex;" viewBox="0 -791.3 1922.4 1080.4" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
+<title id="MathJax-SVG-1-Title">h_{text}</title>
+<defs aria-hidden="true">
+<path stroke-width="1" id="E1-MJMATHI-68" d="M137 683Q138 683 209 688T282 694Q294 694 294 685Q294 674 258 534Q220 386 220 383Q220 381 227 388Q288 442 357 442Q411 442 444 415T478 336Q478 285 440 178T402 50Q403 36 407 31T422 26Q450 26 474 56T513 138Q516 149 519 151T535 153Q555 153 555 145Q555 144 551 130Q535 71 500 33Q466 -10 419 -10H414Q367 -10 346 17T325 74Q325 90 361 192T398 345Q398 404 354 404H349Q266 404 205 306L198 293L164 158Q132 28 127 16Q114 -11 83 -11Q69 -11 59 -2T48 16Q48 30 121 320L195 616Q195 629 188 632T149 637H128Q122 643 122 645T124 664Q129 683 137 683Z"></path>
+<path stroke-width="1" id="E1-MJMATHI-74" d="M26 385Q19 392 19 395Q19 399 22 411T27 425Q29 430 36 430T87 431H140L159 511Q162 522 166 540T173 566T179 586T187 603T197 615T211 624T229 626Q247 625 254 615T261 596Q261 589 252 549T232 470L222 433Q222 431 272 431H323Q330 424 330 420Q330 398 317 385H210L174 240Q135 80 135 68Q135 26 162 26Q197 26 230 60T283 144Q285 150 288 151T303 153H307Q322 153 322 145Q322 142 319 133Q314 117 301 95T267 48T216 6T155 -11Q125 -11 98 4T59 56Q57 64 57 83V101L92 241Q127 382 128 383Q128 385 77 385H26Z"></path>
+<path stroke-width="1" id="E1-MJMATHI-65" d="M39 168Q39 225 58 272T107 350T174 402T244 433T307 442H310Q355 442 388 420T421 355Q421 265 310 237Q261 224 176 223Q139 223 138 221Q138 219 132 186T125 128Q125 81 146 54T209 26T302 45T394 111Q403 121 406 121Q410 121 419 112T429 98T420 82T390 55T344 24T281 -1T205 -11Q126 -11 83 42T39 168ZM373 353Q367 405 305 405Q272 405 244 391T199 357T170 316T154 280T149 261Q149 260 169 260Q282 260 327 284T373 353Z"></path>
+<path stroke-width="1" id="E1-MJMATHI-78" d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z"></path>
+</defs>
+<g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
+ <use xlink:href="#E1-MJMATHI-68" x="0" y="0"></use>
+<g transform="translate(576,-150)">
+ <use transform="scale(0.707)" xlink:href="#E1-MJMATHI-74" x="0" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-MJMATHI-65" x="361" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-MJMATHI-78" x="828" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-MJMATHI-74" x="1400" y="0"></use>
+</g>
+</g>
+</svg> obtained from MAS. Typically, discriminators in generative adversarial networks are fed fixed-length inputs, whereas each token’s duration is predicted for variable-length inputs, and the input sequence length varies for each training instance. To properly distinguish variable-length inputs, the authors propose a timestep discriminator, which discriminates each predicted duration for all tokens.</p>
+<p>Two types of losses are employed: a least squares loss function for adversarial learning and a mean squared error loss function.<br>MATHJAX-SSR-9<br>The proposed duration predictor and training mechanism enable learning of durations in short steps, and the duration predictor is separately trained as the final training step, reducing the overall computational time for training.</p>
+<h2 id="Monotonic-Alignment-Search-with-Gaussian-Noise"><a href="#Monotonic-Alignment-Search-with-Gaussian-Noise" class="headerlink" title="Monotonic Alignment Search with Gaussian Noise"></a>Monotonic Alignment Search with Gaussian Noise</h2><p>MAS (Masked Attention for Selection) is introduced into the model to learn alignment. The algorithm generates alignments between text and audio with the highest probability among all possible monotonic alignments, and trains the model to maximize their probability. This method is effective; however, exploration for more suitable alignments is limited after searching and optimizing specific alignments. To alleviate this situation, a small Gaussian noise is added to the computed probabilities. This provides the model with additional opportunities to search for alternative alignments. This noise is only added at the beginning of training because MAS enables the model to quickly learn alignments. Referring to previous work, which describes the algorithm in detail, Q-values are calculated as the maximum log likelihood over all possible positions for positive operations. A small Gaussian noise is added to the computed Q-values during operation.<br>$
+P_{i, j} & =\log \mathcal{N}\left(z_{j} ; \mu_{i}, \sigma_{i}\right) \\
+Q_{i, j} & =\max _{A} \sum_{k=1}^{j} \log \mathcal{N}\left(z_{k} ; \mu_{A(k)}, \sigma_{A(k)}\right) \\
+& =\max \left(Q_{i-1, j-1}, Q_{i, j-1}\right)+P_{i, j}+\epsilon
+$</p>
+<h2 id="Normalizing-Flows-using-Transformer-Block"><a href="#Normalizing-Flows-using-Transformer-Block" class="headerlink" title="Normalizing Flows using Transformer Block"></a>Normalizing Flows using Transformer Block</h2><p>Previous work has demonstrated the ability of variational autoencoders enhanced with normalization flows to synthesize high-quality speech audio. Normalization flows include convolutional blocks, which are effective structures for capturing patterns in adjacent data and enabling the model to synthesize high-quality speech. When transforming distributions, the ability to capture long-term dependencies is crucial because each part of speech is correlated with non-adjacent parts. While convolutional blocks effectively capture adjacent patterns, they have limitations in capturing long-term dependencies due to their limited receptive field.</p>
+<p>Therefore, a small Transformer block with residual connections is added to the normalization flow to capture long-term dependencies.<br><img    class="lazyload" data-original="/images%5Ctheme%5Cvits2-2.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption"> Training of the duration predictor</span></p>
+<h2 id="Speaker-Conditioned-Text-Encoder"><a href="#Speaker-Conditioned-Text-Encoder" class="headerlink" title="Speaker-Conditioned Text Encoder"></a>Speaker-Conditioned Text Encoder</h2><p>Since a multi-speaker model synthesizes speech with various characteristics based on speaker conditioning using a single model, expressing individual speech characteristics for each speaker is an important quality factor as well as naturalness. Previous work has shown that single-stage models can effectively model multiple speakers with high quality. Considering that certain features such as specific pronunciation and intonation significantly affect the expression of each speaker’s speech characteristics but are not included in the input text, a text encoder conditioned on speaker information is designed to better emulate various speech characteristics of each speaker by learning features while encoding the input text. The speaker vector is adjusted on the third Transformer block of the text encoder.<br><img    class="lazyload" data-original="/images%5Ctheme%5Cvits2-3.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption"> Training of the duration predictor</span></p>
+<h1 id="Bert-VITS2"><a href="#Bert-VITS2" class="headerlink" title="Bert-VITS2"></a>Bert-VITS2</h1><p><a target="_blank" rel="noopener" href="https://github.com/fishaudio/Bert-VITS2">https://github.com/fishaudio/Bert-VITS2</a><br>Its idea is to introduce Bert to VITS2 to improve the performance on tone</p>
+<h2 id="Segmentation"><a href="#Segmentation" class="headerlink" title="Segmentation"></a>Segmentation</h2><p>Using the g2p module, segment the text into sentences and convert them into phones (phonetic representations), tones (intonations), and word-to-phoneme mappings (word2ph).</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">g2p</span>(<span class="hljs-params">text</span>):<br>    phones = []<br>    tones = []<br>    phone_len = []<br>    <span class="hljs-comment"># words = sep_text(text)</span><br>    <span class="hljs-comment"># tokens = [tokenizer.tokenize(i) for i in words]</span><br>    words = text_to_words(text)<br><br>    <span class="hljs-keyword">for</span> word <span class="hljs-keyword">in</span> words:<br>        temp_phones, temp_tones = [], []<br>        <span class="hljs-keyword">if</span> <span class="hljs-built_in">len</span>(word) &gt; <span class="hljs-number">1</span>:<br>            <span class="hljs-keyword">if</span> <span class="hljs-string">&quot;&#x27;&quot;</span> <span class="hljs-keyword">in</span> word:<br>                word = [<span class="hljs-string">&quot;&quot;</span>.join(word)]<br>        <span class="hljs-keyword">for</span> w <span class="hljs-keyword">in</span> word:<br>            <span class="hljs-keyword">if</span> w <span class="hljs-keyword">in</span> punctuation:<br>                temp_phones.append(w)<br>                temp_tones.append(<span class="hljs-number">0</span>)<br>                <span class="hljs-keyword">continue</span><br>            <span class="hljs-keyword">if</span> w.upper() <span class="hljs-keyword">in</span> eng_dict:<br>                phns, tns = refine_syllables(eng_dict[w.upper()])<br>                temp_phones += [post_replace_ph(i) <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> phns]<br>                temp_tones += tns<br>                <span class="hljs-comment"># w2ph.append(len(phns))</span><br>            <span class="hljs-keyword">else</span>:<br>                phone_list = <span class="hljs-built_in">list</span>(<span class="hljs-built_in">filter</span>(<span class="hljs-keyword">lambda</span> p: p != <span class="hljs-string">&quot; &quot;</span>, _g2p(w)))<br>                phns = []<br>                tns = []<br>                <span class="hljs-keyword">for</span> ph <span class="hljs-keyword">in</span> phone_list:<br>                    <span class="hljs-keyword">if</span> ph <span class="hljs-keyword">in</span> arpa:<br>                        ph, tn = refine_ph(ph)<br>                        phns.append(ph)<br>                        tns.append(tn)<br>                    <span class="hljs-keyword">else</span>:<br>                        phns.append(ph)<br>                        tns.append(<span class="hljs-number">0</span>)<br>                temp_phones += [post_replace_ph(i) <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> phns]<br>                temp_tones += tns<br>        phones += temp_phones<br>        tones += temp_tones<br>        phone_len.append(<span class="hljs-built_in">len</span>(temp_phones))<br>        <span class="hljs-comment"># phones = [post_replace_ph(i) for i in phones]</span><br><br>    word2ph = []<br>    <span class="hljs-keyword">for</span> token, pl <span class="hljs-keyword">in</span> <span class="hljs-built_in">zip</span>(words, phone_len):<br>        word_len = <span class="hljs-built_in">len</span>(token)<br><br>        aaa = distribute_phone(pl, word_len)<br>        word2ph += aaa<br><br>    phones = [<span class="hljs-string">&quot;_&quot;</span>] + phones + [<span class="hljs-string">&quot;_&quot;</span>]<br>    tones = [<span class="hljs-number">0</span>] + tones + [<span class="hljs-number">0</span>]<br>    word2ph = [<span class="hljs-number">1</span>] + word2ph + [<span class="hljs-number">1</span>]<br>    <span class="hljs-keyword">assert</span> <span class="hljs-built_in">len</span>(phones) == <span class="hljs-built_in">len</span>(tones), text<br>    <span class="hljs-keyword">assert</span> <span class="hljs-built_in">len</span>(phones) == <span class="hljs-built_in">sum</span>(word2ph), text<br><br>    <span class="hljs-keyword">return</span> phones, tones, word2ph<br></code></pre></td></tr></table></figure>
+<h2 id="Tone-encoding"><a href="#Tone-encoding" class="headerlink" title="Tone encoding"></a>Tone encoding</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">clean_text_bert</span>(<span class="hljs-params">text, language</span>):<br>    language_module = language_module_map[language]<br>    norm_text = language_module.text_normalize(text)<br>    phones, tones, word2ph = language_module.g2p(norm_text)<br>    bert = language_module.get_bert_feature(norm_text, word2ph)<br>    <span class="hljs-keyword">return</span> phones, tones, bert<br></code></pre></td></tr></table></figure>
+
+<h2 id="Extracting-BERT-features-from-text-data"><a href="#Extracting-BERT-features-from-text-data" class="headerlink" title="Extracting BERT features from text data"></a>Extracting BERT features from text data</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">get_bert_feature</span>(<span class="hljs-params"></span><br><span class="hljs-params">    text,</span><br><span class="hljs-params">    word2ph,</span><br><span class="hljs-params">    device=config.bert_gen_config.device,</span><br><span class="hljs-params">    style_text=<span class="hljs-literal">None</span>,</span><br><span class="hljs-params">    style_weight=<span class="hljs-number">0.7</span>,</span><br><span class="hljs-params"></span>):<br>    <span class="hljs-keyword">if</span> (<br>        sys.platform == <span class="hljs-string">&quot;darwin&quot;</span><br>        <span class="hljs-keyword">and</span> torch.backends.mps.is_available()<br>        <span class="hljs-keyword">and</span> device == <span class="hljs-string">&quot;cpu&quot;</span><br>    ):<br>        device = <span class="hljs-string">&quot;mps&quot;</span><br>    <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> device:<br>        device = <span class="hljs-string">&quot;cuda&quot;</span><br>    <span class="hljs-keyword">if</span> device <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> models.keys():<br>        models[device] = DebertaV2Model.from_pretrained(LOCAL_PATH).to(device)<br>    <span class="hljs-keyword">with</span> torch.no_grad():<br>        inputs = tokenizer(text, return_tensors=<span class="hljs-string">&quot;pt&quot;</span>)<br>        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> inputs:<br>            inputs[i] = inputs[i].to(device)<br>        res = models[device](**inputs, output_hidden_states=<span class="hljs-literal">True</span>)<br>        res = torch.cat(res[<span class="hljs-string">&quot;hidden_states&quot;</span>][-<span class="hljs-number">3</span>:-<span class="hljs-number">2</span>], -<span class="hljs-number">1</span>)[<span class="hljs-number">0</span>].cpu()<br>        <span class="hljs-keyword">if</span> style_text:<br>            style_inputs = tokenizer(style_text, return_tensors=<span class="hljs-string">&quot;pt&quot;</span>)<br>            <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> style_inputs:<br>                style_inputs[i] = style_inputs[i].to(device)<br>            style_res = models[device](**style_inputs, output_hidden_states=<span class="hljs-literal">True</span>)<br>            style_res = torch.cat(style_res[<span class="hljs-string">&quot;hidden_states&quot;</span>][-<span class="hljs-number">3</span>:-<span class="hljs-number">2</span>], -<span class="hljs-number">1</span>)[<span class="hljs-number">0</span>].cpu()<br>            style_res_mean = style_res.mean(<span class="hljs-number">0</span>)<br>    <span class="hljs-keyword">assert</span> <span class="hljs-built_in">len</span>(word2ph) == res.shape[<span class="hljs-number">0</span>], (text, res.shape[<span class="hljs-number">0</span>], <span class="hljs-built_in">len</span>(word2ph))<br>    word2phone = word2ph<br>    phone_level_feature = []<br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-built_in">len</span>(word2phone)):<br>        <span class="hljs-keyword">if</span> style_text:<br>            repeat_feature = (<br>                res[i].repeat(word2phone[i], <span class="hljs-number">1</span>) * (<span class="hljs-number">1</span> - style_weight)<br>                + style_res_mean.repeat(word2phone[i], <span class="hljs-number">1</span>) * style_weight<br>            )<br>        <span class="hljs-keyword">else</span>:<br>            repeat_feature = res[i].repeat(word2phone[i], <span class="hljs-number">1</span>)<br>        phone_level_feature.append(repeat_feature)<br><br>    phone_level_feature = torch.cat(phone_level_feature, dim=<span class="hljs-number">0</span>)<br><br>    <span class="hljs-keyword">return</span> phone_level_feature.T<br></code></pre></td></tr></table></figure>
+
+<h2 id="TextEncoder"><a href="#TextEncoder" class="headerlink" title="TextEncoder"></a>TextEncoder</h2><p>The input data for the TextEncoder network of BERT-VITS2 has been augmented with BERT features.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">TextEncoder</span>(nn.Module):<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params"></span><br><span class="hljs-params">        self,</span><br><span class="hljs-params">        n_vocab,</span><br><span class="hljs-params">        out_channels,</span><br><span class="hljs-params">        hidden_channels,</span><br><span class="hljs-params">        filter_channels,</span><br><span class="hljs-params">        n_heads,</span><br><span class="hljs-params">        n_layers,</span><br><span class="hljs-params">        kernel_size,</span><br><span class="hljs-params">        p_dropout,</span><br><span class="hljs-params">        gin_channels=<span class="hljs-number">0</span>,</span><br><span class="hljs-params">    </span>):<br>        <span class="hljs-built_in">super</span>().__init__()<br>        self.n_vocab = n_vocab<br>        self.out_channels = out_channels<br>        self.hidden_channels = hidden_channels<br>        self.filter_channels = filter_channels<br>        self.n_heads = n_heads<br>        self.n_layers = n_layers<br>        self.kernel_size = kernel_size<br>        self.p_dropout = p_dropout<br>        self.gin_channels = gin_channels<br>        self.emb = nn.Embedding(<span class="hljs-built_in">len</span>(symbols), hidden_channels)<br>        nn.init.normal_(self.emb.weight, <span class="hljs-number">0.0</span>, hidden_channels**-<span class="hljs-number">0.5</span>)<br>        self.tone_emb = nn.Embedding(num_tones, hidden_channels)<br>        nn.init.normal_(self.tone_emb.weight, <span class="hljs-number">0.0</span>, hidden_channels**-<span class="hljs-number">0.5</span>)<br>        self.language_emb = nn.Embedding(num_languages, hidden_channels)<br>        nn.init.normal_(self.language_emb.weight, <span class="hljs-number">0.0</span>, hidden_channels**-<span class="hljs-number">0.5</span>)<br>        self.bert_proj = nn.Conv1d(<span class="hljs-number">1024</span>, hidden_channels, <span class="hljs-number">1</span>)<br><br>        <span class="hljs-comment"># Remove emo_vq since it&#x27;s not working well.</span><br>        self.style_proj = nn.Linear(<span class="hljs-number">256</span>, hidden_channels)<br><br>        self.encoder = attentions.Encoder(<br>            hidden_channels,<br>            filter_channels,<br>            n_heads,<br>            n_layers,<br>            kernel_size,<br>            p_dropout,<br>            gin_channels=self.gin_channels,<br>        )<br>        self.proj = nn.Conv1d(hidden_channels, out_channels * <span class="hljs-number">2</span>, <span class="hljs-number">1</span>)<br></code></pre></td></tr></table></figure>
+
+<h1 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h1><p>The rough processing flow of VITS (Voice Inference from Text Sequences) is as follows:</p>
+<ul>
+<li>TextEncoder receives input text sequences of shape [1, len], obtains embeddings and transposes them to shape [1, 192, len].<br>The text sequences are encoded using transformer structures, resulting in encoded representations of shape [1, 192, len].</li>
+<li>The Speaker Diarization Predictor (SDP) predicts the length information for each text sequence, resulting in predictions of shape [1, 1, len]. The specific length values are summed to obtain the total length (ALen).</li>
+<li>The text sequence data of shape [1, 192, len] is multiplied to obtain phoneme data of shape [1, 192, ALen].</li>
+<li>The Residual Coupling Block is applied to transform the latent variable x into z with the desired distribution.</li>
+<li>The Decoder generates audio data by upsampling the input from [1, 192, ALen] to [1, 96, ALen2] to [1, 48, ALen4]… to [1, 1, wav_len], resulting in the generated audio data.</li>
+<li>The short audio results generated from the short text sequences are concatenated with intervals inserted in between.</li>
+</ul>
+<p>VITS2 builds upon VITS1 with optimizations.<br>BERT-VITS2, based on VITS2, introduces the bert_feature input in the TextEncoder network. The network extracts BERT features for each language, each of which is approximately 1.3GB. The main VITS network is around 700MB.</p>
+<p>VITS-based models tend to receive short audio files as training data which could be splited and labeled with the following codes:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># speech_to_text.py</span><br><span class="hljs-keyword">import</span> whisper <br><span class="hljs-keyword">import</span> os <br><span class="hljs-keyword">def</span> <span class="hljs-title function_">check_is_encode_error</span>(<span class="hljs-params">string:<span class="hljs-built_in">str</span></span>)-&gt; <span class="hljs-built_in">bool</span>:<br>    <span class="hljs-keyword">try</span>:<br>        string.encode(<span class="hljs-string">&#x27;gbk&#x27;</span>)<br>    <span class="hljs-keyword">except</span> UnicodeEncodeError:<br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">True</span><br>    <span class="hljs-keyword">return</span> <span class="hljs-literal">False</span><br><br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">process</span>(<span class="hljs-params">file_path:<span class="hljs-built_in">str</span>, name:<span class="hljs-built_in">str</span>, <span class="hljs-built_in">id</span>:<span class="hljs-built_in">int</span></span>):<br>    g = os.walk(file_path)  <br>    voice = []<br>    <span class="hljs-keyword">for</span> path,dir_list,file_list <span class="hljs-keyword">in</span> g:  <br>        <span class="hljs-keyword">for</span> file_name <span class="hljs-keyword">in</span> file_list:  <br>            voice.append(os.path.join(path, file_name))<br><br>    speaker_id = <span class="hljs-built_in">str</span>(<span class="hljs-built_in">id</span>)<br>    contents = []<br>    model = whisper.load_model(<span class="hljs-string">&quot;base&quot;</span>)<br>    <span class="hljs-keyword">for</span> sub <span class="hljs-keyword">in</span> voice:<br>        <span class="hljs-keyword">try</span>:<br>            result = model.transcribe(sub)<br>        <span class="hljs-keyword">except</span>:<br>            <span class="hljs-keyword">continue</span><br>        <span class="hljs-keyword">if</span> check_is_encode_error(result[<span class="hljs-string">&quot;text&quot;</span>]):<br>            <span class="hljs-keyword">continue</span><br>        <span class="hljs-keyword">if</span> <span class="hljs-built_in">len</span>(result[<span class="hljs-string">&quot;text&quot;</span>]) &lt; <span class="hljs-number">10</span>:<br>            <span class="hljs-keyword">continue</span><br>        <span class="hljs-comment">#temp = sub + &#x27;|&#x27; + speaker_id + &#x27;|&#x27; + result[&quot;text&quot;] + &quot;\n&quot;</span><br>        temp = sub + <span class="hljs-string">&#x27;|&#x27;</span> + <span class="hljs-string">&#x27;model31216&#x27;</span> + <span class="hljs-string">&#x27;|&#x27;</span> + <span class="hljs-string">&#x27;JP&#x27;</span> + <span class="hljs-string">&#x27;|&#x27;</span> + result[<span class="hljs-string">&quot;text&quot;</span>] + <span class="hljs-string">&quot;\n&quot;</span><br>        lab_path = sub.split(<span class="hljs-string">&#x27;.&#x27;</span>)[<span class="hljs-number">0</span>] + <span class="hljs-string">&#x27;.lab&#x27;</span><br>        <span class="hljs-keyword">with</span> <span class="hljs-built_in">open</span>(lab_path, <span class="hljs-string">&#x27;w&#x27;</span>) <span class="hljs-keyword">as</span> f:<br>            f.write(result[<span class="hljs-string">&quot;text&quot;</span>])<br>        f.close<br>        <span class="hljs-built_in">print</span>(temp)<br>        contents.append(temp)<br>    <br>    length = <span class="hljs-built_in">len</span>(contents)<br>    train_len = <span class="hljs-built_in">int</span>(length*<span class="hljs-number">0.9</span>)<br>    train_contents = contents[:train_len]<br>    val_contents = contents[train_len:]<br>    train_path = <span class="hljs-string">&quot;path&quot;</span> + <span class="hljs-string">&quot;&#123;&#125;_train.txt&quot;</span>.<span class="hljs-built_in">format</span>(name)<br>    val_path = <span class="hljs-string">&quot;path&quot;</span> + <span class="hljs-string">&quot;&#123;&#125;_val.txt&quot;</span>.<span class="hljs-built_in">format</span>(name)<br>    f=<span class="hljs-built_in">open</span>(train_path, <span class="hljs-string">&quot;w&quot;</span>)<br>    f.writelines(train_contents)<br>    f.close()<br>    f=<span class="hljs-built_in">open</span>(val_path, <span class="hljs-string">&quot;w&quot;</span>)<br>    f.writelines(val_contents)<br>    f.close()<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># sep.py</span><br><span class="hljs-keyword">from</span> pydub <span class="hljs-keyword">import</span> AudioSegment<br><span class="hljs-keyword">from</span> pydub.utils <span class="hljs-keyword">import</span> make_chunks<br><span class="hljs-keyword">from</span> scipy.io.wavfile <span class="hljs-keyword">import</span> write<br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">resample_audio</span>(<span class="hljs-params">audio:AudioSegment, output_file:<span class="hljs-built_in">str</span>, target_sample_rate=<span class="hljs-number">22050</span></span>):<br><br>    <span class="hljs-comment"># Resample the audio to the target sample rate using pydub</span><br>    audio = audio.set_channels(<span class="hljs-number">1</span>)  <span class="hljs-comment"># Ensure mono</span><br>    audio = audio.set_frame_rate(target_sample_rate)<br><br>    <span class="hljs-comment"># Export the resampled audio as a 16-bit WAV file</span><br>    audio.export(output_file, <span class="hljs-built_in">format</span>=<span class="hljs-string">&quot;wav&quot;</span>, codec=<span class="hljs-string">&quot;pcm_s16le&quot;</span>)<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># main.py</span><br><span class="hljs-keyword">from</span> sep <span class="hljs-keyword">import</span> resample_audio<br><span class="hljs-keyword">from</span> speech_to_text <span class="hljs-keyword">import</span> process<br><span class="hljs-keyword">import</span> argparse<br><span class="hljs-keyword">from</span> pydub <span class="hljs-keyword">import</span> AudioSegment<br><span class="hljs-keyword">from</span> pydub.utils <span class="hljs-keyword">import</span> make_chunks<br><span class="hljs-keyword">import</span> os<br><span class="hljs-keyword">import</span> logging<br><br><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&#x27;__main__&#x27;</span>:<br>    parser = argparse.ArgumentParser()<br>    parser.add_argument(<span class="hljs-string">&quot;--name&quot;</span>, default=<span class="hljs-string">&quot;Shichan&quot;</span>)<br>    parser.add_argument(<span class="hljs-string">&quot;--id&quot;</span>, default=<span class="hljs-string">&quot;63&quot;</span>)<br>    args = parser.parse_args()<br><br>    voice_path = <span class="hljs-string">&quot;/home/denghao/pro/sasayaki/voice/&quot;</span> + args.name<br>    g = os.walk(voice_path)  <br>    voice = []<br>    <span class="hljs-keyword">for</span> path,dir_list,file_list <span class="hljs-keyword">in</span> g:  <br>        <span class="hljs-keyword">for</span> file_name <span class="hljs-keyword">in</span> file_list:  <br>            voice.append(os.path.join(path, file_name))<br><br>    logging.info(<span class="hljs-string">&quot;ボイスをロードしました。&quot;</span>)<br>    sep_path = <span class="hljs-string">&quot;/home/denghao/pro/Bert-VITS2/Data/model31216/audios/wavs/&quot;</span> <span class="hljs-comment">#+  args.name + &#x27;/&#x27;</span><br>    <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> os.path.exists(sep_path):<br>        os.makedirs(sep_path)<br>    seq = <span class="hljs-number">0</span><br>    <span class="hljs-keyword">for</span> file <span class="hljs-keyword">in</span> voice:<br>        <span class="hljs-built_in">type</span> = file.split(<span class="hljs-string">&#x27;.&#x27;</span>)[-<span class="hljs-number">1</span>]<br>        audio = AudioSegment.from_file(file, <span class="hljs-built_in">type</span>)<br><br>        size = <span class="hljs-number">3500</span><br><br>        chunks = make_chunks(audio, size)<br><br>        <span class="hljs-keyword">for</span> i, chunk <span class="hljs-keyword">in</span> <span class="hljs-built_in">enumerate</span>(chunks):<br>            j = i+seq<br>            chunk_name = sep_path + args.name + <span class="hljs-string">&#x27;-&#123;0&#125;.wav&#x27;</span>.<span class="hljs-built_in">format</span>(j)<br>            <span class="hljs-comment">#chunk_name = &quot;/home/denghao/pro/vits-finetuning-main/wav/vtb/akane/anko-&#123;0&#125;.wav&quot;.format(j)</span><br>            <span class="hljs-built_in">print</span>(chunk_name)<br>            resample_audio(chunk, chunk_name)<br>        seq += i<br>    logging.info(<span class="hljs-string">&quot;文字転換を始める。&quot;</span>)<br>    process(sep_path, args.name, args.<span class="hljs-built_in">id</span>)<br>    logging.info(<span class="hljs-string">&quot;処理完了。&quot;</span>)<br></code></pre></td></tr></table></figure>
+      </section>
+      <section class="extra">
+        
+          
+        
+        
+        
+        
+  <nav class="nav">
+    <a href="/2023/12/30/AI-Agent/"><i class="iconfont iconleft"></i>Overview of AI Agent</a>
+    <a href="/2023/09/22/selve/">😊<i class="iconfont iconright"></i></a>
+  </nav>
+
+      </section>
+      
+    </section>
+  </div>
+</article></div>
+      <div class="col-xl-3">
+        
+          
+  <aside class="toc-wrap">
+    <h3 class="toc-title">Index</h3>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Introduction"><span class="toc-text">Introduction</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Method"><span class="toc-text">Method</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Stochastic-Duration-Predictor-with-Time-Step-wise-Conditional-Discriminator"><span class="toc-text">Stochastic Duration Predictor with Time Step-wise Conditional Discriminator</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Monotonic-Alignment-Search-with-Gaussian-Noise"><span class="toc-text">Monotonic Alignment Search with Gaussian Noise</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Normalizing-Flows-using-Transformer-Block"><span class="toc-text">Normalizing Flows using Transformer Block</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Speaker-Conditioned-Text-Encoder"><span class="toc-text">Speaker-Conditioned Text Encoder</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Bert-VITS2"><span class="toc-text">Bert-VITS2</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Segmentation"><span class="toc-text">Segmentation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Tone-encoding"><span class="toc-text">Tone encoding</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Extracting-BERT-features-from-text-data"><span class="toc-text">Extracting BERT features from text data</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#TextEncoder"><span class="toc-text">TextEncoder</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Summary"><span class="toc-text">Summary</span></a></li></ol>
+  </aside>
+
+        
+      </div>
+    </div>
+  </div>
+</main>
+  
+
+  <footer class="footer">
+    <div class="footer-social"><a href="mailto:Avidya@ieee.org " target="_blank"
+  class="footer-social-item" onMouseOver="this.style.color=#FF3B00"
+  onMouseOut="this.style.color='#33333D'">
+  <i class="iconfont  iconmail"></i>
+  </a></div>
+    
+  </footer>
+  
+      <div class="fab fab-plus">
+    <i class="iconfont iconplus"></i>
+  </div>
+  
+  
+  
+  <div class="fab fab-up">
+    <i class="iconfont iconcaret-up"></i>
+  </div>
+  
+  
+  
+    
+<script src="/js/color-mode.js"></script>
+
+  
+  
+</body>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+
+
+
+  
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+
+
+
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+
+
+
+
+
+
+
+<script src="/js/utils.js"></script>
+<script src="/js/script.js"></script>
+
+
+
+
+
+
+
+  <script>
+    (function () {
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      } else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
