@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://example.com/2024/05/26/Language%20models%20scale%20reliably%20with%20over-training%20and%20on%20downstream%20tasks/</loc>
+    
+    <lastmod>2024-05-29</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://example.com/2024/05/22/Weekly%20Contest%20398/</loc>
     
     <lastmod>2024-05-23</lastmod>
@@ -382,7 +391,7 @@
 
   <url>
     <loc>http://example.com/</loc>
-    <lastmod>2024-05-23</lastmod>
+    <lastmod>2024-05-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
